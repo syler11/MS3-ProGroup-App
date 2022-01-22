@@ -1,15 +1,30 @@
 
 .textbox {
     width: 350px;
-    border: 1px solid black;
     border-radius: 10px;
     padding: 1rem;
-    position: absolute;
-    top: 200px;
+    position: relative;
+    top: 20%;
     left: 10%;
+    font-size: 15px;
     font-weight: bold;
+    background-color: #fff;
 }
 
 .login {
-    padding: 4rem 2rem;
+    padding: 6rem 2rem;
 }
+
+.hero-image {
+    background-image: url("/static/pictures/hotel_room.jpg");
+    background-color: #cccccc;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  #copyright {
+    bottom: 5rem;
+  }
