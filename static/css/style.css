@@ -25,6 +25,42 @@
     position: relative;
   }
 
-  #copyright {
-    bottom: 5rem;
+  .copyright {
+    position: relative;
+    top: 250px;
+  }
+
+  .card {
+    height: 90vh;
+  }
+
+  .navbar ul li{
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding-top: 2rem;
+    
+  }
+
+  .navbar ul li a{
+    color: #d3a540;
+  }
+
+  .bottom-nav {
+    position: relative;
+    top: 250px;
+  }
+
+  a:hover {
+    font-size: 120%;
+  }
+
+  .widget-top {
+    height: 40vh;
+    padding: 5px;
+    margin-top: 8px;
+  }
+  .widget-bottom {
+    margin-top: 2vh;
+    height: 48vh;
+    padding: 5px;
   }

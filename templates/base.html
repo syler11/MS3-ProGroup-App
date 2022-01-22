@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <title>ProGroup Login</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col m2">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <h3 class="logo">ProGroup</h3>
+                <div class="navbar white-text">
+                    <ul>
+                        <li><a href="">Reservations</a></li>
+                        <li><a href="">Profiles</a></li>
+                        <li><a href="">Users</a></li>
+                    </ul>
+                    <ul class="bottom-nav">
+                        <li><a href="">Help</a></li>
+                        <li><a href="">Log out</a></li>
+                    </ul>
+                    <div class="copyright"><p>&copy; <span id="copyright"></span> ProGroup.</p>
+                    <p>All rights reserved.</p>
+                </div>
+                </div>
+              </div>
+            </div>
+            </div>
+        <div class="col m8 main-container">
+            <div>Main container</div>
+        </div>
+        <div class="col m2 widget">
+            <div class="widget-top blue-grey darken-1">
+                <div class="card-content white-text">
+                    <h5 id="greeting"></h5>
+                    <h5>Time: 14:32</h5>
+                    <h5>Date: Sunday, 23.01.2022</h5>
+              </div>
+            </div>
+            <div class="widget-bottom blue-grey darken-4">
+                <div class="card-content white-text">
+                    <h5 class="center-align">Group stats</h5>
+                    <p>Total Number of Groups: <spam>35</spam></p>
+                    <p>Total Bed Nights: <spam>305</spam></p>
+                    <p>Total Revenue: <spam>£15625.50</spam></p>
+                    <div class="center-align">
+                        <h5>Top 3 Groups</h5>
+                        <ol>
+                            <li>CIE TOURS</li>
+                            <li>AC Tours</li>
+                            <li>Behringer Touristik</li>
+                        </ol>
+                    </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+        integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

@@ -18,7 +18,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 @app.route("/")
 def login():
-    return render_template("login.html")
+    return render_template("base.html")
 
 
 if __name__ == "__main__":
