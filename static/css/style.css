@@ -1,3 +1,15 @@
-body {
-    background-color: red;
+
+.textbox {
+    width: 350px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    position: absolute;
+    top: 200px;
+    left: 10%;
+    font-weight: bold;
+}
+
+.login {
+    padding: 4rem 2rem;
 }

@@ -14,3 +14,7 @@ Css
 Javascript
 Python
 MongoDB
+
+Photos:
+
+1. hotel_room from Pexels via Pixabay
