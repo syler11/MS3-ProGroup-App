@@ -82,3 +82,14 @@
     opacity: 70%;
     box-shadow: 3px 3px 3px 3px white;
   }
+
+  #textarea {
+    height: 150px;
+  }
+
+  .summary {
+    line-height: 10px;
+    font-size: 20px;
+    margin-top: 2rem;
+    letter-spacing: 2px;
+  }
