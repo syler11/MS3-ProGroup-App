@@ -1,7 +1,7 @@
 import os
 from flask import (
     Flask, flash, render_template, url_for)
-from flask_pymongo import pymongo
+from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
@@ -16,6 +16,9 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 
+mongo = PyMongo(app)
+
+
 @app.route("/")
 def reservations():
     return render_template("reservations.html")
@@ -28,7 +31,8 @@ def profiles():
 
 @app.route("/users")
 def users():
-    return render_template("users.html")
+    users = list(mongo.db.users.find())
+    return render_template("users.html", users=users)
 
 
 if __name__ == "__main__":
