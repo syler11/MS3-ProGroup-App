@@ -30,16 +30,29 @@
             <div class="login">
                 <h3 class="logo">ProGroup</h3>
                     <p class="m4"><strong>Login to your account</strong></p>
-                    <form>
+                    <form method="POST" action="{{ url_for('reservations')}}">
+                         <!-- username -->
+                         <div class="row">
+                             <div class="input-field col s12">
+                                 <label for="username">username</label>
+                                 <input id="username" type="text" name="username" minlength="5" 
+                                 maxlenght="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate">
+                                </div>
+                            </div>  
+                        <!-- pasword -->
                         <div class="row">
                             <div class="input-field col s12">
-                                <label for="username">username</label>
-                                <input type="text" name="username" class="validate" required>
+                                <label for="password">password</label>
+                                <input id="password"type="password" name="username" minlength="5" 
+                                maxlenght="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate">
                             </div>
-                            <div class="input-field col s12">
-                                <label for="username">password</label>
-                                <input type="text" name="username" class="validate" required>
-                            </div>
+                        </div>
+                        <!-- login button -->
+                        <div class="row">
+                            <button type="submit" class="col s12 btn-large light-blue darken-4 text-shadow">
+                                Log In <i class="fas fa-sign-in-alt"></i>
+                            </button>
+                        </div>
                     </form>
                     <p class="copyright">&copy; <span id="copyright"></span> ProGroup. All rights reserved.</p>
             </div>
