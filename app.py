@@ -17,8 +17,18 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 
 @app.route("/")
-def login():
+def reservations():
     return render_template("reservations.html")
+
+
+@app.route("/profiles")
+def profiles():
+    return render_template("profiles.html")
+
+
+@app.route("/users")
+def users():
+    return render_template("users.html")
 
 
 if __name__ == "__main__":

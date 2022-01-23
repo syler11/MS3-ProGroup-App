@@ -1,5 +1,6 @@
 $(document).ready(function() {
     $("#copyright").text(new Date().getFullYear());
+    $('.collapsible').collapsible();
 });
 
 // Display full date and greets the session user accoring to teh time of the day
