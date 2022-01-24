@@ -106,6 +106,16 @@
     padding: 6px;
   }
 
+  .is-admin i {
+    font-size: 2rem;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  .is-admin span {
+    color: #aaa;
+  }
+
 
   /*--------------------------------------------Media Queries */
 
