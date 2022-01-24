@@ -57,10 +57,10 @@ def add_user():
     return render_template("add_user.html", users=users)
 
 
-@app.route('/delete_user/<users_id>')
-def delete_user(users_id):
-    mongo.db.users.delete_one({"_id": ObjectId(users_id)})
-    return redirect(url_for("users", users=users))
+@app.route('/delete_user/<user_id>')
+def delete_user(user_id):
+    mongo.db.users.delete_one({"_id": ObjectId(user_id)})
+    return redirect(url_for("users"))
 
 
 
