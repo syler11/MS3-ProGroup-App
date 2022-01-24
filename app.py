@@ -45,7 +45,8 @@ def add_user():
             "last_name": request.form.get('last_name'), 
             "email": request.form.get('email'), 
             "position": request.form.get('position'), 
-            "password": request.form.get('password') 
+            "password": request.form.get('password'),
+            "is_admin": is_admin 
         }
 
         mongo.db.users.insert_one(users)
@@ -54,6 +55,13 @@ def add_user():
 
     users = mongo.db.users.find()
     return render_template("add_user.html", users=users)
+
+
+@app.route('/delete_user/<users_id>')
+def delete_user(users_id):
+    mongo.db.users.delete_one({"_id": ObjectId(users_id)})
+    return redirect(url_for("users", users=users))
+
 
 
 if __name__ == "__main__":
