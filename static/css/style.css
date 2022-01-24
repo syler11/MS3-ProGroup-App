@@ -31,6 +31,14 @@
     border-radius: 5px;
     box-shadow: 3px 3px rgb(100, 99, 99);
   }
+
+  .card-space {
+    padding: 12px;
+  }
+
+  .logo {
+    font-size: 36px;
+  }
   
   .navbar ul li{
     font-size: 20px;
@@ -96,4 +104,32 @@
 
   .users li {
     padding: 6px;
+  }
+
+
+  /*--------------------------------------------Media Queries */
+
+
+  @media only screen and (max-width: 1200px) {
+    .navbar ul li{
+      font-size: 16px;
+      padding-top: 1rem;
+    }
+
+    .logo {
+      font-size: 26px;
+    }
+
+    .widget h5 {
+      margin-top: 1rem;
+  
+    }
+
+  }
+
+  @media only screen and (max-width: 992px) {
+    .widget h5 {
+      font-size: 18px;
+  
+    }
   }
