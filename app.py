@@ -35,6 +35,11 @@ def users():
     return render_template("users.html", users=users)
 
 
+@app.route("/add_user")
+def add_user():
+    return render_template("add_user.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
