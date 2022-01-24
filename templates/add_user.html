@@ -43,21 +43,29 @@
                 <div class="input-field col s12">
                     <i class="fas fa-user-tag prefix left"></i>
                     <input id="username" name="username" minlength="5" maxlength="30" type="text" class="validate"
-                    required>
+                        required>
                     <label for="username">Position</label>
                 </div>
             </div>
             <div class="row">
-            <div class="col is-admin s12 switch left">
-                <i class="fas fa-user-cog left"></i>
-                <span class="left">Role</span> 
-                <label>
-                    User
-                    <input type="checkbox">
-                    <span class="lever"></span>
-                    Admin
-                </label>
+                <div class="col is-admin s12 switch left">
+                    <i class="fas fa-user-cog left"></i>
+                    <span class="left">Role</span>
+                    <label for="is_admin">
+                        User
+                        <input id="is_admin" name="is_admin" type="checkbox">
+                        <span class="lever"></span>
+                        Admin
+                    </label>
+                </div>
             </div>
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button class="btn-large light-blue darken-3 text-shadow" type="submit">
+                        <i class="fas fa-plus-square left"></i>
+                        Add User
+                    </button>
+                </div>
             </div>
         </form>
     </div>
