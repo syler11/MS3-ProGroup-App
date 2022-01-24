@@ -1,6 +1,6 @@
 import os
 from flask import (
-    Flask, flash, render_template, url_for)
+    Flask, flash, render_template, redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -35,9 +35,25 @@ def users():
     return render_template("users.html", users=users)
 
 
-@app.route("/add_user")
+@app.route("/add_user", methods=["GET", "POST"])
 def add_user():
-    return render_template("add_user.html")
+    if request.method == "POST":
+        is_admin = "admin" if request.form.get("is_admin") else "user" 
+        users = {
+            "username": request.form.get('username'),
+            "first_name": request.form.get('first_name').lower(), 
+            "last_name": request.form.get('last_name').lower(), 
+            "email": request.form.get('email'), 
+            "position": request.form.get('position'), 
+            "password": request.form.get('password') 
+        }
+
+        mongo.db.users.insert_one(users)
+        flash("User Successfully Added")
+        return redirect(url_for("users"))
+
+    users = mongo.db.users.find()
+    return render_template("add_user.html", users=users)
 
 
 if __name__ == "__main__":
