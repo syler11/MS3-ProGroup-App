@@ -61,7 +61,8 @@ def add_user():
 def edit_user(user_id):
     if request.method == "POST":
         is_admin = "admin" if request.form.get("is_admin") else "user" 
-        updated_user = {
+        updated_user = {"$set": 
+        {
             "username": request.form.get('username'),
             "first_name": request.form.get('first_name'), 
             "last_name": request.form.get('last_name'), 
@@ -69,6 +70,7 @@ def edit_user(user_id):
             "position": request.form.get('position'), 
             "password": request.form.get('password'),
             "is_admin": is_admin 
+        }
         }
 
         mongo.db.users.update_one({"_id": ObjectId(user_id)}, updated_user)
