@@ -57,9 +57,26 @@ def add_user():
     return render_template("add_user.html", users=users)
 
 
-@app.route('/edit_user/<user_id>')
+@app.route("/edit_user/<user_id>", methods=["GET", "POST"])
 def edit_user(user_id):
-    
+    if request.method == "POST":
+        is_admin = "admin" if request.form.get("is_admin") else "user" 
+        updated_user = {
+            "username": request.form.get('username'),
+            "first_name": request.form.get('first_name'), 
+            "last_name": request.form.get('last_name'), 
+            "email": request.form.get('email'), 
+            "position": request.form.get('position'), 
+            "password": request.form.get('password'),
+            "is_admin": is_admin 
+        }
+
+        mongo.db.users.update_one({"_id": ObjectId(user_id)}, updated_user)
+        return redirect(url_for("users"))
+
+    user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
+    return render_template("edit_user.html", user=user)
+
 
 @app.route('/delete_user/<user_id>')
 def delete_user(user_id):
