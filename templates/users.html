@@ -28,7 +28,7 @@
             <li>Username: {{ user.username }}</li>
             <li>Password: {{ user.password }}</li>
             <li>Role: 
-                {% if user.is_admin == "on" %}
+                {% if user.is_admin == "admin" %}
                     admin
                 {% else %}
                     user
