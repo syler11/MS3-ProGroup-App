@@ -3,7 +3,8 @@ from flask import (
     Flask, flash, render_template, redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
-from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.security import generate_city_hash, check_city_hash
+from werkzeug.security import generate_city_hash, check_city_hash
 if os.path.exists("env.py"):
     import env
 
@@ -30,6 +31,28 @@ def profiles():
     return render_template("profiles.html", profiles=profiles)
 
 
+@app.route("/add_profile", methods=["GET", "POST"])
+def add_profile():
+    if request.method == "POST": 
+        profiles = {
+            "group_name": request.form.get('group_name'),
+            "contact_name": request.form.get('contact_name'), 
+            "contact_email": request.form.get('contact_email'), 
+            "contact_phone": request.form.get('contact_phone'), 
+            "line_address": request.form.get('line_address'), 
+            "city": request.form.get('city'),
+            "postcode": request.form.get('postcode'),
+            "country": request.form.get('country'),
+        }
+
+        mongo.db.profiles.insert_one(profiles)
+        flash("User Successfully Added")
+        return redirect(url_for("profiles"))
+
+    users = mongo.db.profiles.find()
+    return render_template("add_profile.html", profiles=profiles)
+
+
 @app.route("/users")
 def users():
     users = list(mongo.db.users.find())
@@ -43,10 +66,12 @@ def add_user():
         users = {
             "username": request.form.get('username'),
             "first_name": request.form.get('first_name'), 
-            "last_name": request.form.get('last_name'), 
-            "email": request.form.get('email'), 
-            "position": request.form.get('position'), 
-            "password": request.form.get('password'),
+            "contact_email": request.form.get('contact_email'), 
+            "contact_phone": request.form.get('contact_phone'), 
+            "line_address": request.form.get('line_address'), 
+            "city": request.form.get('city'),
+            "city": request.form.get('city'),
+            "city": request.form.get('city'),
             "is_admin": is_admin 
         }
 
@@ -66,10 +91,12 @@ def edit_user(user_id):
         {
             "username": request.form.get('username'),
             "first_name": request.form.get('first_name'), 
-            "last_name": request.form.get('last_name'), 
-            "email": request.form.get('email'), 
-            "position": request.form.get('position'), 
-            "password": request.form.get('password'),
+            "contact_email": request.form.get('contact_email'), 
+            "contact_phone": request.form.get('contact_phone'), 
+            "line_address": request.form.get('line_address'), 
+            "city": request.form.get('city'),
+            "city": request.form.get('city'),
+            "city": request.form.get('city'),
             "is_admin": is_admin 
         }
         }
