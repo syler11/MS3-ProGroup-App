@@ -3,8 +3,7 @@ from flask import (
     Flask, flash, render_template, redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
-from werkzeug.security import generate_city_hash, check_city_hash
-from werkzeug.security import generate_city_hash, check_city_hash
+from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
@@ -49,8 +48,14 @@ def add_profile():
         flash("User Successfully Added")
         return redirect(url_for("profiles"))
 
-    users = mongo.db.profiles.find()
+    profiles = mongo.db.profiles.find()
     return render_template("add_profile.html", profiles=profiles)
+
+
+@app.route('/delete_profile/<profile_id>')
+def delete_profile(profile_id):
+    mongo.db.profiles.delete_one({"_id": ObjectId(profile_id)})
+    return redirect(url_for("profiles"))
 
 
 @app.route("/users")
@@ -66,17 +71,14 @@ def add_user():
         users = {
             "username": request.form.get('username'),
             "first_name": request.form.get('first_name'), 
-            "contact_email": request.form.get('contact_email'), 
-            "contact_phone": request.form.get('contact_phone'), 
-            "line_address": request.form.get('line_address'), 
-            "city": request.form.get('city'),
-            "city": request.form.get('city'),
-            "city": request.form.get('city'),
+            "last_name": request.form.get('last_name'), 
+            "email": request.form.get('email'), 
+            "password": request.form.get('city'),
+            "position": request.form.get('position'),
             "is_admin": is_admin 
         }
 
         mongo.db.users.insert_one(users)
-        flash("User Successfully Added")
         return redirect(url_for("users"))
 
     users = mongo.db.users.find()
@@ -89,14 +91,12 @@ def edit_user(user_id):
         is_admin = "admin" if request.form.get("is_admin") else "user" 
         updated_user = {"$set": 
         {
-            "username": request.form.get('username'),
+             "username": request.form.get('username'),
             "first_name": request.form.get('first_name'), 
-            "contact_email": request.form.get('contact_email'), 
-            "contact_phone": request.form.get('contact_phone'), 
-            "line_address": request.form.get('line_address'), 
-            "city": request.form.get('city'),
-            "city": request.form.get('city'),
-            "city": request.form.get('city'),
+            "last_name": request.form.get('last_name'), 
+            "email": request.form.get('email'), 
+            "password": request.form.get('city'),
+            "position": request.form.get('position'),
             "is_admin": is_admin 
         }
         }
