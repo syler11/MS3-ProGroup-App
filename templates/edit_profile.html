@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+<div class="row">
+    <!-- Card panel to display the user form -->
+    <div class="col offset-l3 l6 offset-l3 s12 card-panel center-align">
+        <h4>Edit User</h4>
+        <form class="col s12" method="POST" action="{{ url_for('edit_user', user_id=user._id) }}">
+            <div class="row">
+                <!-- First Name -->
+                <div class="input-field col s12">
+                    <i class="fas fa-user prefix left"></i>
+                    <input id="first_name" name="first_name" minlength="5" maxlength="30" 
+                        value="{{ user.first_name }}" type="text" class="validate"
+                        required>
+                    <label for="first_name">First Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Last Name -->
+                <div class="input-field col s12">
+                    <i class="fas fa-user prefix left"></i>
+                    <input id="last_name" name="last_name" minlength="5" maxlength="30" 
+                        value="{{ user.last_name }}" type="text" class="validate"
+                        required>
+                    <label for="last_name">Last Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Email -->
+                <div class="input-field col s12">
+                    <i class="fas fa-envelope prefix left"></i>
+                    <input id="email" name="email" minlength="5" maxlength="30" 
+                        value="{{ user.email }}" type="text" class="validate"
+                        required>
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Username -->
+                <div class="input-field col s12">
+                    <i class="fas fa-lock prefix left"></i>
+                    <input id="username" name="username" minlength="5" maxlength="30" 
+                        value="{{ user.username }}" type="text" class="validate"
+                        required>
+                    <label for="username">Username</label>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Password -->
+                <div class="input-field col s12">
+                    <i class="fas fa-lock prefix left"></i>
+                    <input id="password" name="password" minlength="5" maxlength="30" 
+                        value="{{ user.password }}" type="text" class="validate"
+                        required>
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Position -->
+                <div class="input-field col s12">
+                    <i class="fas fa-user-tag prefix left"></i>
+                    <input id="position" name="position" minlength="5" maxlength="30" 
+                        value="{{ user.position }}" type="text" class="validate"
+                        required>
+                    <label for="position">Position</label>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Role selector -->
+                <div class="col is-admin s12 switch left">
+                    <i class="fas fa-user-cog left"></i>
+                    <span class="left">Role</span>
+                    <label for="is_admin">
+                        User
+                        {% if user.is_admin == "admin" %}
+                                <input type="checkbox" id="is_admin" name="is_admin" checked>
+                            {% else %}
+                                <input type="checkbox" id="is_admin" name="is_admin">
+                            {% endif %}
+                        <span class="lever"></span>
+                        Admin
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Submit button -->
+                <div class="col s12 center-align">
+                    <a href="http:{{ url_for('users') }}" class="btn-large red darken-3 text-shadow">Cancel
+                        <i class="fas fa-times-square left"></i>
+                    </a>
+                    <button class="btn-large light-blue darken-3 text-shadow" type="submit">
+                        <i class="fas fa-plus-square left"></i>
+                        Save Changes
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
