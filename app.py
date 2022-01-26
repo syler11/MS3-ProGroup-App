@@ -52,6 +52,29 @@ def add_profile():
     return render_template("add_profile.html", profiles=profiles)
 
 
+@app.route("/edit_profile/<profile_id>", methods=["GET", "POST"])
+def edit_profile(profile_id):
+    if request.method == "POST":
+        updated_profile = {"$set": 
+        {
+             "group_name": request.form.get('group_name'),
+            "contact_name": request.form.get('contact_name'), 
+            "contact_email": request.form.get('contact_email'), 
+            "contact_phone": request.form.get('contact_phone'), 
+            "line_address": request.form.get('line_address'), 
+            "city": request.form.get('city'),
+            "postcode": request.form.get('postcode'),
+            "country": request.form.get('country'),
+        }
+        }
+
+        mongo.db.profiles.update_one({"_id": ObjectId(profile_id)}, updated_profile)
+        return redirect(url_for("profiles"))
+
+    user = mongo.db.profiles.find_one({"_id": ObjectId(profile_id)})
+    return render_template("edit_profile.html", profile=profile)
+
+
 @app.route('/delete_profile/<profile_id>')
 def delete_profile(profile_id):
     mongo.db.profiles.delete_one({"_id": ObjectId(profile_id)})
