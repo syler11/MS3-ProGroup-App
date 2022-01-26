@@ -3,14 +3,18 @@ $(document).ready(function() {
     $('.collapsible').collapsible();
 });
 
+var today = new Date();
+
 // Display full date and greets the session user accoring to teh time of the day
 function dateGreeting() {
-var today = new Date();
 var day = today.getDate();
-var month = today.getMonth();
+var monthNames = [ "January", "February", "March", "April", "May", "June",
+"July", "August", "September", "October", "November", "December" ];
+var month = monthNames[today.getMonth()];
 var year = today.getFullYear();
 var hour = today.getHours();
 var greeting;
+
 
 if (hour > 18) {
     greeting = "Good evening, ";
@@ -23,14 +27,18 @@ if (hour > 18) {
 }
 
 document.getElementById("greeting").innerHTML = greeting + 'Szilard';
-document.getElementById("txtDate").innerHTML = 'Date: ' + day + '.' + month+1 + '.' + year;
+document.getElementById("txtDate").innerHTML = day;
+document.getElementById("txtMonth").innerHTML = month;
+document.getElementById("txtYear").innerHTML = year;
 }
 
 // Dispaly counting clock
 window.onload = displayClock();
 function displayClock(){
-  var clock = new Date().toLocaleTimeString();
-  document.getElementById("txtTime").innerHTML = 'Time: ' + clock;
+    var days=['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var dayFull = days[today.getDay()];
+    var clock = new Date().toLocaleTimeString();
+  document.getElementById("txtTime").innerHTML = dayFull +', ' + clock;
   setTimeout(displayClock, 1000); 
 }
 
