@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $("#copyright").text(new Date().getFullYear());
     $('.collapsible').collapsible();
+    $('.sidenav').sidenav();
 });
 
 var today = new Date();

@@ -27,7 +27,7 @@
 
   
   .card {
-    height: 90vh;
+    min-height: 90vh;
     border-radius: 5px;
     box-shadow: 3px 3px rgb(100, 99, 99);
   }
