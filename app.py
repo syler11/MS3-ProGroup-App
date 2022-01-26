@@ -21,7 +21,8 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def reservations():
-    return render_template("reservations.html")
+    reservations = mongo.db.reservations.find()
+    return render_template("reservations.html", reservations=reservations)
 
 
 @app.route("/profiles")
@@ -71,7 +72,7 @@ def edit_profile(profile_id):
         mongo.db.profiles.update_one({"_id": ObjectId(profile_id)}, updated_profile)
         return redirect(url_for("profiles"))
 
-    user = mongo.db.profiles.find_one({"_id": ObjectId(profile_id)})
+    profile = mongo.db.profiles.find_one({"_id": ObjectId(profile_id)})
     return render_template("edit_profile.html", profile=profile)
 
 
