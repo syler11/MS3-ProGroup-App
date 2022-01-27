@@ -8,6 +8,19 @@
     <div class="col s12 card-panel center-align">
         <h4>Add New Reservation</h4>
         <form class="col s12" method="POST" action="{{ url_for('add_reservation') }}">
+            <!-- Group Selector -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+                    <select id="group_name" name="group_name" class="validate" required>
+                        <option value="" disabled selected>Choose Group Profile</option>
+                        {% for profile in profiles %}
+                            <option value="{{ profiles.group_name }}">{{ profile.group_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="group_name">Select Group</label>
+                </div>
+            </div>
             <div class="row">
                 <div class="col l4 m12">
                     <p>Reservation details</p>
