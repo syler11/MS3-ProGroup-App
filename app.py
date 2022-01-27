@@ -25,6 +25,11 @@ def reservations():
     return render_template("reservations.html", reservations=reservations)
 
 
+@app.route("/add_reservation")
+def add_reservation():
+    return render_template("add_reservation.html")
+
+
 @app.route("/profiles")
 def profiles():
     profiles = list(mongo.db.profiles.find())
