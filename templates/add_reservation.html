@@ -6,9 +6,48 @@
 <div class="row">
     <!-- Card panel to display the user form -->
     <div class="col offset-l3 l6 offset-l3 s12 card-panel center-align">
-        <h4>Add New User</h4>
-        <form class="col s12" method="POST" action="{{ url_for('add_user') }}">
+        <h4>Add New Reservation</h4>
+        <form class="col s12" method="POST" action="{{ url_for('add_reservation') }}">
             <div class="row">
+                <div class="col s4">
+                    <!-- Arrival Date -->
+                <div class="input-field col s12">
+                    <i class="fas fa-user prefix left"></i>
+                    <input id="arrival_date" name="arrival_date" placeholder="01/01/2022" minlength="10" maxlength="10" type="text" class="validate"
+                        required>
+                    <label for="arrival_date">arrival_date</label>
+                </div>
+            </div>
+            <div class="row">
+                <!-- LOS -->
+                <div class="input-field col s12">
+                    <i class="fas fa-user prefix left"></i>
+                    <input id="los" name="los" minlength="5" maxlength="30" type="text" class="validate"
+                        required>
+                    <label for="los">los</label>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Status -->
+                <div class="input-field col s12">
+                    <i class="fas fa-envelope prefix left"></i>
+                    <input id="email" name="email" minlength="5" maxlength="30" type="text" class="validate"
+                        required>
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Board -->
+                <div class="input-field col s12">
+                    <i class="fas fa-lock prefix left"></i>
+                    <input id="username" name="username" minlength="5" maxlength="30" type="text" class="validate"
+                        required>
+                    <label for="username">Username</label>
+                </div>
+            </div>
+                </div>
+                <div class="col s4"></div>
+                <div class="col s4"></div>
                 <!-- First Name -->
                 <div class="input-field col s12">
                     <i class="fas fa-user prefix left"></i>
