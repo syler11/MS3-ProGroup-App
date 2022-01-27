@@ -60,6 +60,7 @@
   .copyright {
     position: absolute;
     bottom: 50px;
+    margin-left: 0.5rem;
   }
 
   a:hover {
@@ -116,7 +117,12 @@
   .is-admin span {
     color: #aaa;
   }
+ .collapsible-header span {
+   padding: 0.5rem;
+   border-right: 0.5px solid #bbb;
+ }
 
+ 
 
   /*--------------------------------------------Media Queries */
 
