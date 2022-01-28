@@ -27,30 +27,33 @@
                     <p>Reservation details</p>
                     <!-- Arrival Date -->
                     <div class="input-field s12">
-                        <i class="fas fa-user prefix left"></i>
                         <input id="arrival_date" name="arrival_date" minlength="10"
                             maxlength="10" type="text" class="datepicker validate" required>
                         <label for="arrival_date">Arrival Date</label>
                     </div>
                     <!-- LOS -->
                     <div class="input-field s12">
-                        <i class="fas fa-user prefix left"></i>
                         <input id="los" name="los" type="text" class="validate" required>
                         <label for="los">LOS</label>
                     </div>
                     <!-- Status -->
                     <div class="input-field s12">
-                        <i class="fas fa-envelope prefix left"></i>
-                        <input id="status" name="status"type="text" class="validate"
-                            required>
-                        <label for="status">Status</label>
+                        <select id="status" name="status" class="validate" required>
+                            <option value="" disabled selected>Select Status</option>
+                            <option value="1">Confirmed</option>
+                            <option value="2">Cancelled</option>
+                            <option value="3">Provisional</option>
+                          </select>
+                          <label for="status"></label>
                     </div>
                     <!-- Board -->
                     <div class="input-field s12">
-                        <i class="fas fa-lock prefix left"></i>
-                        <input id="board" name="board" minlength="2" maxlength="3" type="text" class="validate"
-                            required>
-                        <label for="board">Board</label>
+                        <select id="board" name="board" class="validate" required>
+                            <option value="" disabled selected>Select Board</option>
+                            <option value="1">BB</option>
+                            <option value="2">DBB</option>
+                          </select>
+                          <label for="status"></label>
                     </div>
                 </div>
                         <div class="col l2 m6">
@@ -120,7 +123,7 @@
                 <div class="col s12 center-align">
                     <button class="btn-large light-blue darken-3 text-shadow" type="submit">
                         <i class="fas fa-plus-square left"></i>
-                        Add User
+                        Add Reservation
                     </button>
                 </div>
             </div>
