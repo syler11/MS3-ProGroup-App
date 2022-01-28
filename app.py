@@ -22,7 +22,8 @@ mongo = PyMongo(app)
 @app.route("/")
 def reservations():
     reservations = mongo.db.reservations.find()
-    return render_template("reservations.html", reservations=reservations)
+    profiles = mongo.db.profiles.find()
+    return render_template("reservations.html", reservations=reservations, profiles=profiles)
 
 
 @app.route("/add_reservation", methods=["GET", "POST"])
@@ -57,6 +58,12 @@ def add_reservation():
     
     profiles = mongo.db.profiles.find().sort("group_name", 1)
     return render_template("add_reservation.html", profiles=profiles)
+    
+
+@app.route('/delete_reservation/<reservation_id>')
+def delete_reservation(reservation_id):
+    mongo.db.reservations.delete_one({"_id": ObjectId(reservation_id)})
+    return redirect(url_for("reservations"))
 
 
 @app.route("/profiles")
