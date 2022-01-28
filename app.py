@@ -60,9 +60,9 @@ def add_reservation():
     return render_template("add_reservation.html", reservations=reservations)
 
 
-@app.route('edit_reservation<edit_reservation>', methods=["GET", "POST"])
-def edit_reservation():
-    if method.request == "POST":
+@app.route('/edit_reservation<reservation_id>', methods=["GET", "POST"])
+def edit_reservation(reservation_id):
+    if request.method == "POST":
         updated_reservation = {"$set": 
         {
             "group_name": request.form.get('group_name'),
@@ -88,7 +88,7 @@ def edit_reservation():
             "notes": request.form.get('notes'),
         }
         }
-        mongo.db.reservations.update_one({"_id": ObjectId(reservation_id)}, uupdated_reservation))
+        mongo.db.reservations.update_one({"_id": ObjectId(reservation_id)}, updated_reservation)
         return redirect(url_for("reservations"))
     
     reservations = mongo.db.reservation.find().sort("group_name", 1)

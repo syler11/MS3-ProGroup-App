@@ -6,7 +6,7 @@
 <div class="row">
     <!-- Card panel to display the user form -->
     <div class="col s12 card-panel center-align">
-        <h4>Add New Reservation</h4>
+        <h4>Edit Reservation</h4>
         <form class="col s12" method="POST" action="{{ url_for('add_reservation') }}">
             <!-- Group Selector -->
             <div class="row">
@@ -121,9 +121,12 @@
             <div class="row">
                 <!-- Submit button -->
                 <div class="col s12 center-align">
+                    <a href="http:{{ url_for('reservation') }}" class="btn-large red darken-3 text-shadow">Cancel
+                        <i class="fas fa-times-square left"></i>
+                    </a>
                     <button class="btn-large light-blue darken-3 text-shadow" type="submit">
                         <i class="fas fa-plus-square left"></i>
-                        Add Reservation
+                        Save Changes
                     </button>
                 </div>
             </div>
