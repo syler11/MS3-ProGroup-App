@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+<div class="row">
+    <!-- Card panel to display the user form -->
+    <div class="col s12 card-panel center-align">
+        <h4>Add New Reservation</h4>
+        <form class="col s12" method="POST" action="{{ url_for('add_reservation') }}">
+            <!-- Group Selector -->
+            <div class="row">
+                <div class="input-field col xl6 l8 m10 s12">
+                    <i class="fas fa-folder-open prefix right light-blue-text text-darken-4"></i>
+                    <select id="group_name" name="group_name" class="validate" required>
+                        <option value="" disabled selected>Select Group Profile</option>
+                        {% for profile in profiles %}
+                            <option value="{{ profile.group_name }}">{{ profile.group_name }}</option>
+                            {% endfor %}
+                    </select>
+                    <label for="group_name"></label>
+                    <br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col l3 m12">
+                    <p>Reservation details</p>
+                    <!-- Arrival Date -->
+                    <div class="input-field s12">
+                        <input id="arrival_date" name="arrival_date" minlength="10"
+                            maxlength="10" type="text" class="datepicker validate" required>
+                        <label for="arrival_date">Arrival Date</label>
+                    </div>
+                    <!-- LOS -->
+                    <div class="input-field s12">
+                        <input id="los" name="los" type="text" class="validate" required>
+                        <label for="los">LOS</label>
+                    </div>
+                    <!-- Status -->
+                    <div class="input-field grey lighten-3 s12">
+                        <select id="status" name="status" class="validate" required>
+                            <option value="" disabled selected>Select Status</option>
+                            <option value="1">Confirmed</option>
+                            <option value="2">Cancelled</option>
+                            <option value="3">Provisional</option>
+                          </select>
+                          <label for="status"></label>
+                    </div>
+                    <!-- Board -->
+                    <div class="input-field grey lighten-3 s12">
+                        <select id="board" name="board" class="validate" required>
+                            <option value="" selected>Select Board</option>
+                            <option value="1">BB</option>
+                            <option value="2">DBB</option>
+                          </select>
+                          <label for="status"></label>
+                    </div>
+                </div>
+                        <div class="col l3 m6">
+                    <p>Room Configuration</p>
+                    <!-- Single Room-->
+                    <div class="input-field">
+                        <input id="single_room" name="single_room" type="text"
+                            class="validate" required>
+                        <label for="single_room">Single Rooms</label>
+                    </div>
+                    <!-- Double Room-->
+                    <div class="input-field">
+                        <input id="double_room" name="double_room" type="text"
+                            class="s6 validate" required>
+                        <label for="double_room">Double Rooms</label>
+                    </div>
+                    <!-- Twin Room-->
+                    <div class="input-field s12">
+                        <input id="twin_room" name="twin_room" type="text" class="validate"
+                            required>
+                        <label for="twin_room">Twin Rooms</label>
+                    </div>
+                    <!-- Triple Room-->
+                    <div class="input-field s12">
+                        <input id="triple_room" name="triple_room" type="text" class="validate"
+                            required>
+                        <label for="triple_room">Triple Rooms</label>
+                    </div>
+                </div>
+                <div class="col l3 m6">
+                    <p>Room Rates</p>
+                    <!-- Single Rate -->
+                    <div class="input-field">
+                        <input id="single_rate" name="single_rate" type="text"
+                            class="validate" required>
+                        <label for="single_rate">Single Rates</label>
+                    </div>
+                    <!-- Double Rate -->
+                    <div class="input-field">
+                        <input id="double_rate" name="double_rate" type="text"
+                            class="s6 validate" required>
+                        <label for="double_rate">Double Rates</label>
+                    </div>
+                    <!-- Twin Rate -->
+                    <div class="input-field">
+                        <input id="twin_rate" name="twin_rate" type="text" class="validate"
+                            required>
+                        <label for="twin_rate">Twin Rates</label>
+                    </div>
+                    <!-- Triple Rate -->
+                    <div class="input-field s12">
+                        <input id="triple_rate" name="triple_rate" type="text" class="validate"
+                            required>
+                        <label for="triple_rate">Triple Rates</label>
+                    </div>
+                </div>
+                <div class="col l3 m12">
+                    <p>Notes</p>
+                    <div class="input-field s12">
+                        <textarea id="notes" name="notes" style="width:80%;height:150px;"></textarea>
+                        <label for="notes"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Submit button -->
+                <div class="col s12 center-align">
+                    <button class="btn-large light-blue darken-3 text-shadow" type="submit">
+                        <i class="fas fa-plus-square left"></i>
+                        Add Reservation
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
