@@ -2,6 +2,7 @@ $(document).ready(function() {
     $("#copyright").text(new Date().getFullYear());
     $('.collapsible').collapsible();
     $('.sidenav').sidenav();
+    $('select').formSelect();
 });
 
 var today = new Date();

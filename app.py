@@ -25,9 +25,11 @@ def reservations():
     return render_template("reservations.html", reservations=reservations)
 
 
-@app.route("/add_reservation")
+@app.route("/add_reservation", methods=["GET", "POST"])
 def add_reservation():
-    return render_template("add_reservation.html")
+    
+    profiles = mongo.db.profiles.find().sort("group_name", 1)
+    return render_template("add_reservation.html", profiles=profiles)
 
 
 @app.route("/profiles")
