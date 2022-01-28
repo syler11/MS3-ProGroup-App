@@ -3,6 +3,9 @@ $(document).ready(function() {
     $('.collapsible').collapsible();
     $('.sidenav').sidenav();
     $('select').formSelect();
+    $('.datepicker').datepicker({
+        format: "dd/mm/yyyy",
+    });
 });
 
 var today = new Date();

@@ -27,6 +27,33 @@ def reservations():
 
 @app.route("/add_reservation", methods=["GET", "POST"])
 def add_reservation():
+    if request.method == "POST": 
+        reservations = {
+            "group_name": request.form.get('group_name'),
+            "arrival_date": request.form.get('arrival_date'), 
+            "contact_name": request.form.get('contact_name'), 
+            "contact_email": request.form.get('contact_email'), 
+            "contact_phone": request.form.get('contact_phone'), 
+            "line_address": request.form.get('line_address'), 
+            "city": request.form.get('city'),
+            "postcode": request.form.get('postcode'),
+            "country": request.form.get('country'),
+            "los": request.form.get('los'), 
+            "status": request.form.get('status'), 
+            "board": request.form.get('board'), 
+            "single_room": request.form.get('single_room'),
+            "double_room": request.form.get('double_room'),
+            "twin_room": request.form.get('twin_room'),
+            "triple_room": request.form.get('triple_room'),
+            "single_rate": request.form.get('single_rate'),
+            "double_rate": request.form.get('double_rate'),
+            "twin_rate": request.form.get('twin_rate'),
+            "triple_rate": request.form.get('triple_rate'),
+            "notes": request.form.get('notes'),
+        }
+
+        mongo.db.reservations.insert_one(reservations)
+        return redirect(url_for("reservations"))
     
     profiles = mongo.db.profiles.find().sort("group_name", 1)
     return render_template("add_reservation.html", profiles=profiles)
