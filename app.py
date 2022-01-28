@@ -20,10 +20,10 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+@app.route("/reservations")
 def reservations():
     reservations = mongo.db.reservations.find()
-    profiles = mongo.db.profiles.find()
-    return render_template("reservations.html", reservations=reservations, profiles=profiles)
+    return render_template("reservations.html", reservations=reservations)
 
 
 @app.route("/add_reservation", methods=["GET", "POST"])
@@ -91,8 +91,8 @@ def edit_reservation(reservation_id):
         mongo.db.reservations.update_one({"_id": ObjectId(reservation_id)}, updated_reservation)
         return redirect(url_for("reservations"))
     
-    reservations = mongo.db.reservation.find().sort("group_name", 1)
-    return render_template("add_reservation.html", reservations=reservations)
+    reservation = mongo.db.reservations.find().sort("group_name", 1)
+    return render_template("edit_reservation.html", reservation=reservation)
 
 
 @app.route('/delete_reservation/<reservation_id>')
