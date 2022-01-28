@@ -32,8 +32,8 @@
                     </div>
                 </div>
             </li>
-            <li>
             {% for reservation in reservations %}  
+            <li>
             <div class="s12 collapsible-header">
                     <span>Group Name: {{ reservation.group_name }}</span>
                     <span>Arrival Date: {{ reservation.arrival_date }}</span>
@@ -101,10 +101,10 @@
                                 <span class="center-align">£{{ reservation.single_rate }}</span><br>
                             </p>
                             <p>
-                                <span class="center-align">£{{ reservation.doubletwin_rate }}</span><br>
+                                <span class="center-align">£{{ reservation.double_rate }}</span><br>
                             </p>
                             <p>
-                                <span class="center-align">£{{ reservation.doubletwin_rate }}</span><br>
+                                <span class="center-align">£{{ reservation.twin_rate }}</span><br>
                             </p>
                             <p>
                                 <span class="center-align">£{{ reservation.triple_rate }}</span><br>
