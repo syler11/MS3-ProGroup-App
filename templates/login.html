@@ -17,49 +17,49 @@
 
 <body>
     <div class="row">
-<!-- Hero image and text box -->
-<div class="col hero-image m8 s12">
-    <div class="textbox">
-        <p>Track your group reservations with ease from you ProGroup app.</p>
-        <p>Add new reservations, categorize by status all managed by you and your organisation.</p>
-    </div>
-</div>
-
-<!-- Logo and login form -->
-        <div class="col m4 s12">
-            <div class="login">
-                <h3 class="logo">ProGroup</h3>
-                    <p class="m4"><strong>Login to your account</strong></p>
-                    <form method="POST" action="{{ url_for('reservations')}}">
-                         <!-- username -->
-                         <div class="row">
-                             <div class="input-field col s12">
-                                 <label for="username">username</label>
-                                 <input id="username" type="text" name="username" minlength="5" 
-                                 maxlenght="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate">
-                                </div>
-                            </div>  
-                        <!-- pasword -->
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <label for="password">password</label>
-                                <input id="password"type="password" name="username" minlength="5" 
-                                maxlenght="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate">
-                            </div>
-                        </div>
-                        <!-- login button -->
-                        <div class="row">
-                            <button type="submit" class="col s12 btn-large light-blue darken-4 text-shadow">
-                                Log In <i class="fas fa-sign-in-alt"></i>
-                            </button>
-                        </div>
-                    </form>
-                    <p class="copyright">&copy; <span id="copyright"></span> ProGroup. All rights reserved.</p>
+        <!-- Hero image and text box -->
+        <div class="col hero-image m8 s12">
+            <div class="textbox">
+                <p>Track your group reservations with ease from you ProGroup app.</p>
+                <p>Add new reservations, categorize by status all managed by you and your organisation.</p>
             </div>
         </div>
+
+        <!-- Logo and login form -->
+        <form method="POST" action="{{ url_for('login')}}">
+            <div class="col m4 s12">
+                <div class="login">
+                    <h3 class="logo">ProGroup</h3>
+                    <p class="m4"><strong>Login to your account</strong></p>
+                    <!-- username -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <label for="username">username</label>
+                            <input id="username" type="text" name="username" minlength="5" maxlenght="20"
+                                pattern="^[a-zA-Z0-9]{5,15}$" class="validate">
+                        </div>
+                    </div>
+                    <!-- password -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <label for="password">password</label>
+                            <input id="password" type="password" name="password" minlength="5" maxlenght="15"
+                                pattern="^[a-zA-Z0-9]{5,15}$" class="validate">
+                        </div>
+                    </div>
+                    <!-- login button -->
+                    <div class="row">
+                        <button type="submit" class="col s12 btn-large light-blue darken-4 text-shadow">
+                            Log In <i class="fas fa-sign-in-alt"></i>
+                        </button>
+                    </div>
+        </form>
+        <p class="copyright">&copy; <span id="copyright"></span> ProGroup. All rights reserved.</p>
+    </div>
+    </div>
     </div>
 
-<!-- Scripts -->
+    <!-- Scripts -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

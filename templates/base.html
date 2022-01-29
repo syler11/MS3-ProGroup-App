@@ -30,7 +30,7 @@
                         </ul>
                         <ul class="bottom-nav">
                             <li><a href="">Help</a></li>
-                            <li><a href="">Log out</a></li>
+                            <li><a href="{{ url_for('logout') }}">Log out</a></li>
                         </ul>
                         <div class="copyright">
                             <p>&copy; <span id="copyright"></span> ProGroup.</p>
@@ -54,7 +54,7 @@
             <li><a href="{{ url_for('profiles') }}">Profiles</a></li>
             <li><a href="{{ url_for('users') }}">Users</a></li>
             <li><a href="">Help</a></li>
-            <li><a href="">Log out</a></li>
+            <li><a href="{{ url_for('logout') }}">Log out</a></li>
             <div class="copyright">
                 <p>&copy; <span id="copyright"></span> ProGroup.</p>
                 <p>All rights reserved.</p>
@@ -67,7 +67,7 @@
                 {% if messages %}
                 {% for message in messages %}
                 <div class="row">
-                    <div class="col offset-s3 s6 offset-s3 flash">
+                    <div class="col offset-s4 s4 offset-s4 flash">
                         <h5 class="red-text center-align">{{ message }}</h5>
                     </div>
                 </div>

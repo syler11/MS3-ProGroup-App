@@ -20,6 +20,40 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        # check if username exists in db
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            # ensure hashed password matches user input
+            if check_password_hash(
+                existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                return redirect(url_for('reservations'))
+
+            else:
+                # invalid password match
+                flash("Incorrect Password")
+                return redirect(url_for("users"))
+
+        else:
+            # username doesn't exist
+            flash("Incorrect Username")
+            return redirect(url_for("profiles"))
+
+    return render_template("login.html")
+
+
+@app.route("/logout")
+def logout():
+    # remove user from session cookie
+    session.pop("user")
+    return redirect(url_for("login"))
+
+
 @app.route("/reservations")
 def reservations():
     reservations = mongo.db.reservations.find()
@@ -178,7 +212,7 @@ def add_user():
             "first_name": request.form.get('first_name'), 
             "last_name": request.form.get('last_name'), 
             "email": request.form.get('email'), 
-            "password": request.form.get('city'),
+            "password": generate_password_hash(request.form.get('password')),
             "position": request.form.get('position'),
             "is_admin": is_admin 
         }
@@ -201,7 +235,7 @@ def edit_user(user_id):
             "first_name": request.form.get('first_name'), 
             "last_name": request.form.get('last_name'), 
             "email": request.form.get('email'), 
-            "password": request.form.get('city'),
+            "password":  generate_password_hash(request.form.get('password')),
             "position": request.form.get('position'),
             "is_admin": is_admin 
         }
