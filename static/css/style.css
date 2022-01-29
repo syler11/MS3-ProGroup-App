@@ -66,6 +66,15 @@
   a:hover {
     font-size: 120%;
   }
+
+.flash {
+  width: 60%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 3px 3px rgb(100, 99, 99);
+  margin-top: 10px;
+}
+
   .widget-top {
     min-height: 40vh;
     padding: 10px;

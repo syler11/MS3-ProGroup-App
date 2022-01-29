@@ -148,7 +148,6 @@ def edit_profile(profile_id):
             "country": request.form.get('country'),
         }
         }
-
         mongo.db.profiles.update_one({"_id": ObjectId(profile_id)}, updated_profile)
         flash("Profile Updated")
         return redirect(url_for("profiles"))

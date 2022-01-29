@@ -64,13 +64,15 @@
             <section>
                 <!-- flash messages -->
                 {% with messages = get_flashed_messages() %}
-                    {% if messages %}    
-                        {% for message in messages %}
-                            <div class="row_flashes">
-                                <h5 class="light-blue lighten-4 center-align">{{ message }}</h5>
-                            </div>
-                        {% endfor %}
-                    {% endif %}
+                {% if messages %}
+                {% for message in messages %}
+                <div class="row">
+                    <div class="col offset-s3 s6 offset-s3 flash">
+                        <h5 class="red-text center-align">{{ message }}</h5>
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %}
                 {% endwith %}
             </section>
             {% block content %}
