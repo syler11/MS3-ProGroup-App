@@ -40,7 +40,7 @@ def add_reservation():
             "postcode": request.form.get('postcode'),
             "country": request.form.get('country'),
             "los": request.form.get('los'), 
-            "status": request.form.get('status').capitalize(), 
+            "status": request.form.get('status'), 
             "board": request.form.get('board'), 
             "single_room": request.form.get('single_room'),
             "double_room": request.form.get('double_room'),
@@ -56,8 +56,8 @@ def add_reservation():
         mongo.db.reservations.insert_one(reservations)
         return redirect(url_for("reservations"))
     
-    reservations = mongo.db.reservation.find().sort("group_name", 1)
-    return render_template("add_reservation.html", reservations=reservations)
+    profiles = mongo.db.profiles.find().sort("group_name", 1)
+    return render_template("add_reservation.html", profiles=profiles)
 
 
 @app.route('/edit_reservation<reservation_id>', methods=["GET", "POST"])
@@ -91,8 +91,9 @@ def edit_reservation(reservation_id):
         mongo.db.reservations.update_one({"_id": ObjectId(reservation_id)}, updated_reservation)
         return redirect(url_for("reservations"))
     
+    profiles = mongo.db.profiles.find().sort("category_name", 1)
     reservation = mongo.db.reservations.find_one({"_id": ObjectId(reservation_id)})
-    return render_template("edit_reservation.html", reservation=reservation)
+    return render_template("edit_reservation.html", reservation=reservation, profiles=profiles)
 
 
 @app.route('/delete_reservation/<reservation_id>')
