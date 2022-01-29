@@ -54,6 +54,7 @@ def add_reservation():
         }
 
         mongo.db.reservations.insert_one(reservations)
+        flash("Reservation Added")
         return redirect(url_for("reservations"))
     
     profiles = mongo.db.profiles.find().sort("group_name", 1)
@@ -89,6 +90,7 @@ def edit_reservation(reservation_id):
         }
         }
         mongo.db.reservations.update_one({"_id": ObjectId(reservation_id)}, updated_reservation)
+        flash("Reservation Updated")
         return redirect(url_for("reservations"))
     
     profiles = mongo.db.profiles.find().sort("category_name", 1)
@@ -99,6 +101,7 @@ def edit_reservation(reservation_id):
 @app.route('/delete_reservation/<reservation_id>')
 def delete_reservation(reservation_id):
     mongo.db.reservations.delete_one({"_id": ObjectId(reservation_id)})
+    flash("Reservation Deleted")
     return redirect(url_for("reservations"))
 
 
@@ -123,7 +126,7 @@ def add_profile():
         }
 
         mongo.db.profiles.insert_one(profiles)
-        flash("User Successfully Added")
+        flash("Profile Added")
         return redirect(url_for("profiles"))
 
     profiles = mongo.db.profiles.find()
@@ -147,6 +150,7 @@ def edit_profile(profile_id):
         }
 
         mongo.db.profiles.update_one({"_id": ObjectId(profile_id)}, updated_profile)
+        flash("Profile Updated")
         return redirect(url_for("profiles"))
 
     profile = mongo.db.profiles.find_one({"_id": ObjectId(profile_id)})
@@ -156,6 +160,7 @@ def edit_profile(profile_id):
 @app.route('/delete_profile/<profile_id>')
 def delete_profile(profile_id):
     mongo.db.profiles.delete_one({"_id": ObjectId(profile_id)})
+    flash("Profile Deleted")
     return redirect(url_for("profiles"))
 
 
@@ -180,6 +185,7 @@ def add_user():
         }
 
         mongo.db.users.insert_one(users)
+        flash("User Added")
         return redirect(url_for("users"))
 
     users = mongo.db.users.find()
@@ -203,6 +209,7 @@ def edit_user(user_id):
         }
 
         mongo.db.users.update_one({"_id": ObjectId(user_id)}, updated_user)
+        flash("User Updated")
         return redirect(url_for("users"))
 
     user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
@@ -212,6 +219,7 @@ def edit_user(user_id):
 @app.route('/delete_user/<user_id>')
 def delete_user(user_id):
     mongo.db.users.delete_one({"_id": ObjectId(user_id)})
+    flash("User Deleted")
     return redirect(url_for("users"))
 
 
