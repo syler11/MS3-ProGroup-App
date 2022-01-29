@@ -24,10 +24,17 @@
                 <p>Add new reservations, categorize by status all managed by you and your organisation.</p>
             </div>
         </div>
-
+        
         <!-- Logo and login form -->
         <form method="POST" action="{{ url_for('login')}}">
             <div class="col m4 s12">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                <h5 class="light-blue lighten-4 center-align">{{ message }}</h5>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
                 <div class="login">
                     <h3 class="logo">ProGroup</h3>
                     <p class="m4"><strong>Login to your account</strong></p>
@@ -53,11 +60,11 @@
                             Log In <i class="fas fa-sign-in-alt"></i>
                         </button>
                     </div>
-        </form>
-        <p class="copyright">&copy; <span id="copyright"></span> ProGroup. All rights reserved.</p>
+                    <p class="copyright">&copy; <span id="copyright"></span> ProGroup. All rights reserved.</p>
+                </div>
+            </div>
     </div>
-    </div>
-    </div>
+    </form>
 
     <!-- Scripts -->
 

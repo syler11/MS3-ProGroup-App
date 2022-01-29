@@ -37,12 +37,12 @@ def login():
             else:
                 # invalid password match
                 flash("Incorrect Password")
-                return redirect(url_for("users"))
+                return redirect(url_for("login"))
 
         else:
             # username doesn't exist
             flash("Incorrect Username")
-            return redirect(url_for("profiles"))
+            return redirect(url_for("login"))
 
     return render_template("login.html")
 
