@@ -19,11 +19,12 @@
     <div class="row">
         <div class="col hide-on-med-and-down l2">
             <div class="card blue-grey darken-3">
-                <div class="card-space white-text">
-                    <h3 class="logo">ProGroup</h3>
+                <div class="card-space">
+                    <a href="{{ url_for('reservations') }}"><h3 class="logo white-text">ProGroup</h3></a>
                     <div class="navbar white-text">
                         <hr>
                         <ul>
+                            {% if session.user %}
                             <li><a href="{{ url_for('reservations') }}">Reservations</a></li>
                             <li><a href="{{ url_for('profiles') }}">Profiles</a></li>
                             <li><a href="{{ url_for('users') }}">Users</a></li>
@@ -31,6 +32,7 @@
                         <ul class="bottom-nav">
                             <li><a href="">Help</a></li>
                             <li><a href="{{ url_for('logout') }}">Log out</a></li>
+                            {% endif %}
                         </ul>
                         <div class="copyright">
                             <p>&copy; <span id="copyright"></span> ProGroup.</p>
@@ -50,18 +52,20 @@
         </nav>
 
         <ul class="sidenav" id="mobile-demo">
+            {% if session.user %}
             <li><a href="{{ url_for('reservations') }}">Reservations</a></li>
             <li><a href="{{ url_for('profiles') }}">Profiles</a></li>
             <li><a href="{{ url_for('users') }}">Users</a></li>
             <li><a href="">Help</a></li>
             <li><a href="{{ url_for('logout') }}">Log out</a></li>
+            {% endif %}
             <div class="copyright">
                 <p>&copy; <span id="copyright"></span> ProGroup.</p>
                 <p>All rights reserved.</p>
             </div>
         </ul>
         <div class="col l8 m9 main-container">
-            
+
             <section>
                 <!-- flash messages -->
                 {% with messages = get_flashed_messages() %}
