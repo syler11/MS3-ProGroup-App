@@ -13,10 +13,10 @@
                 <div class="input-field col xl6 l8 m10 s12">
                     <i class="fas fa-folder-open prefix right light-blue-text text-darken-4"></i>
                     <select id="group_name" name="group_name" class="validate" required>
-                        <option value="" disabled selected>Select Group Profile</option>
+                        <option value="{{ reservation.group_name }}" selected>{{ reservation.group_name }}</option>
                         {% for profile in profiles %}
                             <option value="{{ profile.group_name }}">{{ profile.group_name }}</option>
-                            {% endfor %}
+                        {% endfor %}
                     </select>
                     <label for="group_name"></label>
                     <br>
@@ -39,19 +39,19 @@
                     <!-- Status -->
                     <div class="input-field grey lighten-3 s12">
                         <select id="status" name="status" class="validate" required>
-                            <option value="" disabled selected>Select Status</option>
-                            <option value="1">Confirmed</option>
-                            <option value="2">Cancelled</option>
-                            <option value="3">Provisional</option>
+                            <option value="{{ reservation.status }}">{{ reservation.status }}</option>
+                            <option value="confirmed">Confirmed</option>
+                            <option value="cancelled">Cancelled</option>
+                            <option value="provisional">Provisional</option>
                           </select>
                           <label for="status"></label>
                     </div>
                     <!-- Board -->
                     <div class="input-field grey lighten-3 s12">
                         <select id="board" name="board" class="validate" required>
-                            <option value="" selected>Select Board</option>
-                            <option value="1">BB</option>
-                            <option value="2">DBB</option>
+                            <option value="{{ reservation.board }}" selected>{{ reservation.board }}</option>
+                            <option value="BB">BB</option>
+                            <option value="DBB">DBB</option>
                           </select>
                           <label for="status"></label>
                     </div>
@@ -61,24 +61,25 @@
                     <!-- Single Room-->
                     <div class="input-field">
                         <input id="single_room" name="single_room" type="text"
-                            class="validate" required>
+                            value="{{ reservation.single_room }}" class="validate" required>
                         <label for="single_room">Single Rooms</label>
                     </div>
                     <!-- Double Room-->
                     <div class="input-field">
                         <input id="double_room" name="double_room" type="text"
-                            class="s6 validate" required>
+                            value="{{ reservation.double_room }}" class="s6 validate" required>
                         <label for="double_room">Double Rooms</label>
                     </div>
                     <!-- Twin Room-->
                     <div class="input-field s12">
-                        <input id="twin_room" name="twin_room" type="text" class="validate"
+                        <input id="twin_room" name="twin_room" type="text" value="{{ reservation.twin_room }}"
+                             class="validate"
                             required>
                         <label for="twin_room">Twin Rooms</label>
                     </div>
                     <!-- Triple Room-->
                     <div class="input-field s12">
-                        <input id="triple_room" name="triple_room" type="text" class="validate"
+                        <input id="triple_room" name="triple_room" type="text" value="{{ reservation.triple_room }}" class="validate"
                             required>
                         <label for="triple_room">Triple Rooms</label>
                     </div>
@@ -88,32 +89,32 @@
                     <!-- Single Rate -->
                     <div class="input-field">
                         <input id="single_rate" name="single_rate" type="text"
-                            class="validate" required>
+                            value="{{ reservation.single_rate }}" class="validate" required>
                         <label for="single_rate">Single Rates</label>
                     </div>
                     <!-- Double Rate -->
                     <div class="input-field">
                         <input id="double_rate" name="double_rate" type="text"
-                            class="s6 validate" required>
+                            value="{{ reservation.double_rate}}" class="s6 validate" required>
                         <label for="double_rate">Double Rates</label>
                     </div>
                     <!-- Twin Rate -->
                     <div class="input-field">
-                        <input id="twin_rate" name="twin_rate" type="text" class="validate"
-                            required>
+                        <input id="twin_rate" name="twin_rate" type="text" 
+                        value="{{ reservation.twin_rate }}" class="validate" required>
                         <label for="twin_rate">Twin Rates</label>
                     </div>
                     <!-- Triple Rate -->
                     <div class="input-field s12">
-                        <input id="triple_rate" name="triple_rate" type="text" class="validate"
-                            required>
+                        <input id="triple_rate" name="triple_rate" type="text" 
+                            value="{{ reservation.triple_rate }}" class="validate" required>
                         <label for="triple_rate">Triple Rates</label>
                     </div>
                 </div>
                 <div class="col l3 m12">
                     <p>Notes</p>
                     <div class="input-field s12">
-                        <textarea id="notes" name="notes" style="width:80%;height:150px;"></textarea>
+                        <textarea id="notes" name="notes" value="{{ reservation.notes }}" style="width:80%;height:150px;"></textarea>
                         <label for="notes"></label>
                     </div>
                 </div>

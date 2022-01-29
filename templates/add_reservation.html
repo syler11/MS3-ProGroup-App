@@ -16,7 +16,7 @@
                         <option value="" disabled selected>Select Group Profile</option>
                         {% for profile in profiles %}
                             <option value="{{ profile.group_name }}">{{ profile.group_name }}</option>
-                            {% endfor %}
+                        {% endfor %}
                     </select>
                     <label for="group_name"></label>
                     <br>
@@ -40,9 +40,9 @@
                     <div class="input-field grey lighten-3 s12">
                         <select id="status" name="status" class="validate" required>
                             <option value="" disabled selected>Select Status</option>
-                            <option value="1">Confirmed</option>
-                            <option value="2">Cancelled</option>
-                            <option value="3">Provisional</option>
+                            <option value="confirmed">Confirmed</option>
+                            <option value="cancelled">Cancelled</option>
+                            <option value="provisional">Provisional</option>
                           </select>
                           <label for="status"></label>
                     </div>
@@ -50,8 +50,8 @@
                     <div class="input-field grey lighten-3 s12">
                         <select id="board" name="board" class="validate" required>
                             <option value="" selected>Select Board</option>
-                            <option value="1">BB</option>
-                            <option value="2">DBB</option>
+                            <option value="BB">BB</option>
+                            <option value="DBB">DBB</option>
                           </select>
                           <label for="status"></label>
                     </div>
@@ -61,7 +61,7 @@
                     <!-- Single Room-->
                     <div class="input-field">
                         <input id="single_room" name="single_room" type="text"
-                            class="validate" required>
+                             class="validate" required>
                         <label for="single_room">Single Rooms</label>
                     </div>
                     <!-- Double Room-->

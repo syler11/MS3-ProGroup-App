@@ -40,7 +40,7 @@ def add_reservation():
             "postcode": request.form.get('postcode'),
             "country": request.form.get('country'),
             "los": request.form.get('los'), 
-            "status": request.form.get('status'), 
+            "status": request.form.get('status').capitalize(), 
             "board": request.form.get('board'), 
             "single_room": request.form.get('single_room'),
             "double_room": request.form.get('double_room'),
@@ -91,7 +91,7 @@ def edit_reservation(reservation_id):
         mongo.db.reservations.update_one({"_id": ObjectId(reservation_id)}, updated_reservation)
         return redirect(url_for("reservations"))
     
-    reservation = mongo.db.reservations.find().sort("group_name", 1)
+    reservation = mongo.db.reservations.find_one({"_id": ObjectId(reservation_id)})
     return render_template("edit_reservation.html", reservation=reservation)
 
 
