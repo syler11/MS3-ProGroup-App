@@ -28,6 +28,7 @@
         <!-- Logo and login form -->
         <form method="POST" action="{{ url_for('login')}}">
             <div class="col m4 s12">
+                <!-- Flash messages -->
                 {% with messages = get_flashed_messages() %}
                 {% if messages %}
                 {% for message in messages %}

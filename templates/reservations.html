@@ -11,6 +11,7 @@
           <label for="query">Search status or group name</label>
         </div>
         <div class="col l3 s6">
+            <!-- Search and Reset button -->
           <a href="{{url_for('reservations') }}" class="btn red text-shadow"><i class="fas fa-times-square left"></i>Reset</a>
             <button type="submit" class="light-blue darken-1 btn text-shadow">
             <i class="fas fa-search left"></i> Search
@@ -28,12 +29,14 @@
                     <div class="col s6">
                         <h4>Reservations</h4>
                     </div>
+                    <!-- Add New Reservation button -->
                     <div class="col s6 right">
                         <a href="{{ url_for('add_reservation') }}"><button class="right btn-large light-blue darken-4 text-shadow">
                             <i class="fas fa-plus-square right"></i>Add New Reservation</button></a>
                     </div>
                 </div>
             </li>
+            <!-- Iterates through the reservations collection and displays -->
             {% for reservation in reservations %}
             <li>
             <div class="s12 collapsible-header">

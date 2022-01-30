@@ -107,10 +107,11 @@
                     <!-- Triple Rate -->
                     <div class="input-field s12">
                         <input id="triple_rate" name="triple_rate" type="text" 
-                            value="{{ reservation.triple_rate }}" class="validate" required>
+                        value="{{ reservation.triple_rate }}" class="validate" required>
                         <label for="triple_rate">Triple Rates</label>
                     </div>
                 </div>
+                <!-- Notes -->
                 <div class="col l3 m12">
                     <p>Notes</p>
                     <div class="input-field s12">
@@ -120,7 +121,7 @@
                 </div>
             </div>
             <div class="row">
-                <!-- Submit button -->
+                <!-- Cancel and Submit button -->
                 <div class="col s12 center-align">
                     <a href="{{ url_for('reservations') }}" class="btn-large red darken-3 text-shadow">Cancel
                         <i class="fas fa-times-square left"></i>
