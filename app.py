@@ -95,6 +95,14 @@ def add_reservation():
     return render_template("add_reservation.html", profiles=profiles)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    reservations = list(mongo.db.reservations.find({"$text": {"$search": query}}))
+    flash("Search filter applied")
+    return render_template("reservations.html", reservations=reservations)
+
+
 @app.route('/edit_reservation<reservation_id>', methods=["GET", "POST"])
 def edit_reservation(reservation_id):
     if request.method == "POST":
@@ -255,12 +263,9 @@ def delete_user(user_id):
     return redirect(url_for("users"))
 
 
-@app.route("/search", methods=["GET", "POST"])
-def search():
-    query = request.form.get("query")
-    reservations = list(mongo.db.reservations.find({"$text": {"$search": query}}))
-    flash("Search filter applied")
-    return render_template("reservations.html", reservations=reservations)
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
 
 
 if __name__ == "__main__":

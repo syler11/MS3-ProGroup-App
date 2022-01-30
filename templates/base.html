@@ -34,7 +34,7 @@
                             {% endif %}
                         </ul>
                         <ul class="bottom-nav">
-                            <li><a href="">Help</a></li>
+                            <li><a href="{{ url_for('contact') }}">Help</a></li>
                             <li><a href="{{ url_for('logout') }}">Log out</a></li>
                             {% endif %}
                         </ul>
@@ -62,7 +62,7 @@
             {% if session.user|lower == "admin" %}
             <li><a href="{{ url_for('users') }}">Users</a></li>
             {% endif %}
-            <li><a href="">Help</a></li>
+            <li><a href="{{ url_for('contact') }}">Help</a></li>
             <li><a href="{{ url_for('logout') }}">Log out</a></li>
             {% endif %}
             <div class="copyright">

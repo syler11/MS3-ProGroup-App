@@ -6,85 +6,34 @@
 <div class="row">
     <!-- Card panel to display the user form -->
     <div class="col offset-l3 l6 offset-l3 s12 card-panel center-align">
-        <h4>Add New User</h4>
-        <form class="col s12" method="POST" action="{{ url_for('add_user') }}">
-            <div class="row">
-                <!-- First Name -->
+        <h4>Get in touch</h4>
+        <!-- Contact form -->
+        <div class="text-center contact-form">
+            <form id="contactForm" onsubmit="return validateEmailForm()" name="contactForm" novalidate>
                 <div class="input-field col s12">
                     <i class="fas fa-user prefix left"></i>
-                    <input id="first_name" name="first_name" minlength="5" maxlength="30" type="text" class="validate"
+                    <input type="text" class="validate" name="fromName" id="fromName" aria-describedby="fromName"
                         required>
-                    <label for="first_name">First Name</label>
+                    <label for="fromName" class="contact-label">Name</label>
                 </div>
-            </div>
-            <div class="row">
-                <!-- Last Name -->
-                <div class="input-field col s12">
-                    <i class="fas fa-user prefix left"></i>
-                    <input id="last_name" name="last_name" minlength="5" maxlength="30" type="text" class="validate"
-                        required>
-                    <label for="last_name">Last Name</label>
-                </div>
-            </div>
-            <div class="row">
-                <!-- Email -->
                 <div class="input-field col s12">
                     <i class="fas fa-envelope prefix left"></i>
-                    <input id="email" name="email" minlength="5" maxlength="30" type="text" class="validate"
+                    <input type="text" class="validate" name="email" id="email" aria-describedby="fromName"
                         required>
-                    <label for="email">Email</label>
+                    <label for="email" class="contact-label">Email</label>
                 </div>
-            </div>
-            <div class="row">
-                <!-- Username -->
                 <div class="input-field col s12">
-                    <i class="fas fa-lock prefix left"></i>
-                    <input id="username" name="username" minlength="5" maxlength="30" type="text" class="validate"
-                        required>
-                    <label for="username">Username</label>
+                    <i class="fas fa-align-left prefix left"></i>
+                    <textarea type="text" class="email-text validate" name="message" id="message" aria-describedby="fromName"
+                        required></textarea>
+                    <label for="message" class="contact-label">Your Message</label>
                 </div>
-            </div>
-            <div class="row">
-                <!-- Password -->
-                <div class="input-field col s12">
-                    <i class="fas fa-lock prefix left"></i>
-                    <input id="password" name="password" minlength="5" maxlength="30" type="text" class="validate"
-                        required>
-                    <label for="password">Password</label>
-                </div>
-            </div>
-            <div class="row">
-                <!-- Position -->
-                <div class="input-field col s12">
-                    <i class="fas fa-user-tag prefix left"></i>
-                    <input id="position" name="position" minlength="5" maxlength="30" type="text" class="validate"
-                        required>
-                    <label for="position">Position</label>
-                </div>
-            </div>
-            <div class="row">
-                <!-- Role selector -->
-                <div class="col is-admin s12 switch left">
-                    <i class="fas fa-user-cog left"></i>
-                    <span class="left">Role</span>
-                    <label for="is_admin">
-                        User
-                        <input id="is_admin" name="is_admin" type="checkbox">
-                        <span class="lever"></span>
-                        Admin
-                    </label>
-                </div>
-            </div>
-            <div class="row">
-                <!-- Submit button -->
-                <div class="col s12 center-align">
-                    <button class="btn-large light-blue darken-3 text-shadow" type="submit">
-                        <i class="fas fa-plus-square left"></i>
-                        Add User
-                    </button>
-                </div>
-            </div>
-        </form>
+                <button type="submit" id="message-button" class="btn text-shadow light-blue darken-3">
+                    Send Message
+                </button>
+            </form>
+            <br>
+        </div>
     </div>
 </div>
 
