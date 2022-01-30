@@ -10,19 +10,36 @@
         <!-- Contact form -->
         <div class="text-center contact-form">
             <form id="contactForm" onsubmit="return validateEmailForm()" name="contactForm" novalidate>
-                <label for="fromName" class="contact-label">Full Name</label>
-                <div id="name-error" class="text-center"></div>
-                <input type="text" class="form-control" name="fromName" id="fromName" aria-describedby="fromName">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <div id="name-error" class="text-center"></div>
+                        <i class="fas fa-user prefix left"></i>
+                        <input type="text" class="validate" name="fromName" id="fromName"
+                        aria-describedby="fromName" required>
+                        <label for="fromName">Full Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">          
+                        <div id="email-error" class="text-center"></div>
+                        <i class="fas fa-envelope prefix left"></i>
+                        <input type="text" class="validate" name="email" id="email" 
+                        aria-describedby="email">
+                        <label for="email">Email Address</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">          
+                        <div id="message-error" class="text-center"></div>
+                        <i class="fas fa-align-left prefix left"></i>
+                        <input type="text" class="form-control message-box" name="message" id="message"
+                            aria-describedby="message">
+                        <label for="message" class="contact-label">Your Message</label>
+                    </div>
+                </div>
 
-                <label for="email" class="contact-label">Email Address</label>
-                <div id="email-error" class="text-center"></div>
-                <input type="text" class="form-control" name="email" id="email" aria-describedby="email">
 
-                <label for="message" class="contact-label">Your Message</label>
-                <div id="message-error" class="text-center"></div>
-                <input type="text" class="form-control message-box" name="message" id="message" aria-describedby="message">
-
-                <button type="submit" id="message-button" class="game-selector">
+                <button type="submit" id="message-button" class="btn light-blue darken-3 text-shadow">
                     Send Message
                 </button>
             </form>
@@ -30,7 +47,6 @@
         </div>
     </div>
 </div>
-
 
 
 

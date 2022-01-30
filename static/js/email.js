@@ -33,7 +33,7 @@ function sendEmail() {
     errorMsgEmail.remove();
     errorMsgMsg.remove();
     emailjs.init('user_TRwsZUpJla2MRcQgJKZEc');
-    emailjs.send('service_vgdcg0c', 'ms2-email', {
+    emailjs.send("service_vgdcg0c","ms2-email", {
        'from_name': formName.value,
        'from_email': formEmail.value,
        'message': message.value
