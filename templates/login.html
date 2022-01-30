@@ -32,7 +32,11 @@
                 {% with messages = get_flashed_messages() %}
                 {% if messages %}
                 {% for message in messages %}
-                <h5 class="light-blue lighten-4 center-align">{{ message }}</h5>
+                <div class="row">
+                    <div class="flash col offset-l3 l6 offset-l3 m12 center-align">
+                        <h5 class="red-text text-shadow lighten-4 center-align">{{ message }}</h5>
+                    </div>
+                </div>
                 {% endfor %}
                 {% endif %}
                 {% endwith %}

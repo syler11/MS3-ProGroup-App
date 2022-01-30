@@ -1,3 +1,5 @@
+// Initialize the materialize js componenets
+
 $(document).ready(function() {
     $("#copyright").text(new Date().getFullYear());
     $('.collapsible').collapsible();

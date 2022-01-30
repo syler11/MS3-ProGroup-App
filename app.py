@@ -3,6 +3,7 @@ from flask import (
     Flask, flash, render_template, redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+import requests
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
@@ -263,7 +264,7 @@ def delete_user(user_id):
     return redirect(url_for("users"))
 
 
-@app.route("/contact")
+@app.route("/contact", methods=["GET", "POST"])
 def contact():
     return render_template("contact.html")
 

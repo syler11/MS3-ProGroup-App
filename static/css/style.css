@@ -67,6 +67,7 @@
     font-size: 120%;
   }
 
+/* Flash messages design apart */
 .flash {
   width: 60%;
   border: 1px solid #ccc;
@@ -116,7 +117,7 @@
   .users li {
     padding: 6px;
   }
-
+/* add user and edit user pages Role selector */
   .is-admin i {
     font-size: 2rem;
     margin-right: 5px;
