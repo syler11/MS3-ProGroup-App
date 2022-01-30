@@ -98,7 +98,7 @@
             <div class="widget-top white-text center-align blue-grey darken-3">
                 <img src="{{ url_for('static', filename='pictures/hotel_logo.png') }}" class="hotel-logo"
                     alt="Hotel Logo" width="100%">
-                <h5 id="greeting"></h5>
+                <h5><span id="greeting"></span>{{ session.user.capitalize() }}</h5>
                 <p id="txtTime"></p>
                 <p id="txtMonth"></p>
                 <h5 id="txtDate"></h5>
@@ -108,7 +108,7 @@
             <div class="widget-bottom blue-grey darken-3">
                 <div class="card-content center-align white-text">
                     <h5>Group stats</h5>
-                    <p>Total Number of Groups: <spam>35</spam>
+                    <p>Total Number of Groups: <span>{{ db.reservations.count() }}</span>
                     </p>
                     <p>Total Bed Nights: <spam>305</spam>
                     </p>

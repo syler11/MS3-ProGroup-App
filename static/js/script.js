@@ -33,7 +33,7 @@ if (hour > 18) {
     greeting = "Welcome"
 }
 
-document.getElementById("greeting").innerHTML = greeting + 'Szilard';
+document.getElementById("greeting").innerHTML = greeting;
 document.getElementById("txtDate").innerHTML = day;
 document.getElementById("txtMonth").innerHTML = month;
 document.getElementById("txtYear").innerHTML = year;

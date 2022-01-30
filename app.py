@@ -58,6 +58,8 @@ def logout():
 @app.route("/reservations")
 def reservations():
     reservations = mongo.db.reservations.find().sort("group_name", 1)
+    first_name = mongo.db.users.find_one(
+        {"username": session["user"]})["first_name"]
     return render_template("reservations.html", reservations=reservations)
 
 
