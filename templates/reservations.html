@@ -5,14 +5,14 @@
     <!-- seach function with reset and submit buttons -->
     <form class="col s12 card-panel" method="POST" action="{{ url_for('search') }}">
       <div class="row valign-wrapper center-align">
-        <div class="input-field col s12 m9">
+        <div class="input-field col l9 s6">
           <i class="fas fa-search prefix light-grey-text text-darken-4"></i>
           <input type="text" name="query" id="query" placeholder=" " class="validate" required>
           <label for="query">Search for date, status or group name</label>
         </div>
-        <div class="col s12 m3">
-          <a href="{{url_for('reservations') }}" class="btn red text-shadow">Reset</a>
-            <button type="submit" class="light-blue darken-1 btn text-shadow">
+        <div class="col right l3 s6">
+          <a href="{{url_for('reservations') }}" class="btn right red text-shadow">Reset</a>
+            <button type="submit" class="light-blue darken-1 right btn text-shadow">
             <i class="fas fa-search left"></i> Search
           </button>
         </div>

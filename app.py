@@ -56,7 +56,7 @@ def logout():
 
 @app.route("/reservations")
 def reservations():
-    reservations = mongo.db.reservations.find()
+    reservations = mongo.db.reservations.find().sort("group_name", 1)
     return render_template("reservations.html", reservations=reservations)
 
 
@@ -235,7 +235,6 @@ def edit_user(user_id):
             "first_name": request.form.get('first_name'), 
             "last_name": request.form.get('last_name'), 
             "email": request.form.get('email'), 
-            "password":  generate_password_hash(request.form.get('password')),
             "position": request.form.get('position'),
             "is_admin": is_admin 
         }
