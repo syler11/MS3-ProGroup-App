@@ -259,6 +259,7 @@ def delete_user(user_id):
 def search():
     query = request.form.get("query")
     reservations = list(mongo.db.reservations.find({"$text": {"$search": query}}))
+    flash("Search filter applied")
     return render_template("reservations.html", reservations=reservations)
 
 
