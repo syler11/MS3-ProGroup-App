@@ -131,10 +131,9 @@
    border-right: 0.5px solid #bbb;
  }
 
- .email-text {
-   border: none;
-   border-bottom: 1px solid #bbb;
- }
+ .message-box {
+  height: 100px;
+}
 
  
 
