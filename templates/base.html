@@ -20,14 +20,18 @@
         <div class="col hide-on-med-and-down l2">
             <div class="card blue-grey darken-3">
                 <div class="card-space">
-                    <a href="{{ url_for('reservations') }}"><h3 class="logo white-text">ProGroup</h3></a>
+                    <a href="{{ url_for('reservations') }}">
+                        <h3 class="logo white-text">ProGroup</h3>
+                    </a>
                     <div class="navbar white-text">
                         <hr>
                         <ul>
                             {% if session.user %}
                             <li><a href="{{ url_for('reservations') }}">Reservations</a></li>
                             <li><a href="{{ url_for('profiles') }}">Profiles</a></li>
+                            {% if session.user|lower == "admin" %}
                             <li><a href="{{ url_for('users') }}">Users</a></li>
+                            {% endif %}
                         </ul>
                         <ul class="bottom-nav">
                             <li><a href="">Help</a></li>
@@ -55,7 +59,9 @@
             {% if session.user %}
             <li><a href="{{ url_for('reservations') }}">Reservations</a></li>
             <li><a href="{{ url_for('profiles') }}">Profiles</a></li>
+            {% if session.user|lower == "admin" %}
             <li><a href="{{ url_for('users') }}">Users</a></li>
+            {% endif %}
             <li><a href="">Help</a></li>
             <li><a href="{{ url_for('logout') }}">Log out</a></li>
             {% endif %}

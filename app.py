@@ -256,6 +256,12 @@ def delete_user(user_id):
     return redirect(url_for("users"))
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    reservations = list(mongo.db.reservations.find({"$text": {"$search": query}}))
+    return render_template("reservations.html", reservations=reservations)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
