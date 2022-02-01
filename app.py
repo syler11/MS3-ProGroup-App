@@ -57,9 +57,7 @@ def logout():
 
 @app.route("/reservations")
 def reservations():
-    reservations = mongo.db.reservations.find().sort("group_name", 1)
-    first_name = mongo.db.users.find_one(
-        {"username": session["user"]})["first_name"]
+    reservations = mongo.db.users.find().sort("group_name", 1)
     return render_template("reservations.html", reservations=reservations)
 
 
@@ -269,6 +267,7 @@ def delete_user(user_id):
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     return render_template("contact.html")
+
 
 
 if __name__ == "__main__":
