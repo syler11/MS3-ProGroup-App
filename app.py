@@ -45,14 +45,14 @@ def login():
             flash("Incorrect Username")
             return redirect(url_for("login"))
 
-    return render_template("login.html")
+    return render_template("authentication/login.html")
 
 
 @app.route("/logout")
 def logout():
     # remove user from session cookie
     session.pop("user")
-    return redirect(url_for("login"))
+    return redirect(url_for("authentication/login"))
 
 
 @app.route("/reservations")
@@ -60,7 +60,7 @@ def reservations():
     find = {}
     total_groups = mongo.db.reservations.count_documents(find)
     reservations = mongo.db.reservations.find().sort("group_name", 1)
-    return render_template("reservations.html", reservations=reservations, total_groups=total_groups)
+    return render_template("reservations/reservations.html", reservations=reservations, total_groups=total_groups)
 
 
 @app.route("/add_reservation", methods=["GET", "POST"])
@@ -95,7 +95,7 @@ def add_reservation():
         return redirect(url_for("reservations"))
     
     profiles = mongo.db.profiles.find().sort("group_name", 1)
-    return render_template("add_reservation.html", profiles=profiles)
+    return render_template("reservations/add_reservation.html", profiles=profiles)
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -103,7 +103,7 @@ def search():
     query = request.form.get("query")
     reservations = list(mongo.db.reservations.find({"$text": {"$search": query}}))
     flash("Search filter applied")
-    return render_template("reservations.html", reservations=reservations)
+    return render_template("reservations/reservations.html", reservations=reservations)
 
 
 @app.route('/edit_reservation<reservation_id>', methods=["GET", "POST"])
@@ -140,7 +140,7 @@ def edit_reservation(reservation_id):
     
     profiles = mongo.db.profiles.find().sort("category_name", 1)
     reservation = mongo.db.reservations.find_one({"_id": ObjectId(reservation_id)})
-    return render_template("edit_reservation.html", reservation=reservation, profiles=profiles)
+    return render_template("reservations/edit_reservation.html", reservation=reservation, profiles=profiles)
 
 
 @app.route('/delete_reservation/<reservation_id>')
@@ -153,7 +153,7 @@ def delete_reservation(reservation_id):
 @app.route("/profiles")
 def profiles():
     profiles = list(mongo.db.profiles.find())
-    return render_template("profiles.html", profiles=profiles)
+    return render_template("profiles/profiles.html", profiles=profiles)
 
 
 @app.route("/add_profile", methods=["GET", "POST"])
@@ -175,7 +175,7 @@ def add_profile():
         return redirect(url_for("profiles"))
 
     profiles = mongo.db.profiles.find()
-    return render_template("add_profile.html", profiles=profiles)
+    return render_template("profiles/add_profile.html", profiles=profiles)
 
 
 @app.route("/edit_profile/<profile_id>", methods=["GET", "POST"])
@@ -198,7 +198,7 @@ def edit_profile(profile_id):
         return redirect(url_for("profiles"))
 
     profile = mongo.db.profiles.find_one({"_id": ObjectId(profile_id)})
-    return render_template("edit_profile.html", profile=profile)
+    return render_template("profiles/edit_profile.html", profile=profile)
 
 
 @app.route('/delete_profile/<profile_id>')
@@ -211,7 +211,7 @@ def delete_profile(profile_id):
 @app.route("/users")
 def users():
     users = list(mongo.db.users.find())
-    return render_template("users.html", users=users)
+    return render_template("users/users.html", users=users)
 
 
 @app.route("/add_user", methods=["GET", "POST"])
@@ -233,7 +233,7 @@ def add_user():
         return redirect(url_for("users"))
 
     users = mongo.db.users.find()
-    return render_template("add_user.html", users=users)
+    return render_template("users/add_user.html", users=users)
 
 
 @app.route("/edit_user/<user_id>", methods=["GET", "POST"])
@@ -256,7 +256,7 @@ def edit_user(user_id):
         return redirect(url_for("users"))
 
     user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
-    return render_template("edit_user.html", user=user)
+    return render_template("users/edit_user.html", user=user)
 
 
 @app.route('/delete_user/<user_id>')
@@ -268,11 +268,7 @@ def delete_user(user_id):
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
-    return render_template("contact.html")
-
-
-
-
+    return render_template("email/contact.html")
 
 
 if __name__ == "__main__":
