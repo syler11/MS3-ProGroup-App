@@ -57,8 +57,10 @@ def logout():
 
 @app.route("/reservations")
 def reservations():
-    reservations = mongo.db.users.find().sort("group_name", 1)
-    return render_template("reservations.html", reservations=reservations)
+    find = {}
+    total_groups = mongo.db.reservations.count_documents(find)
+    reservations = mongo.db.reservations.find().sort("group_name", 1)
+    return render_template("reservations.html", reservations=reservations, total_groups=total_groups)
 
 
 @app.route("/add_reservation", methods=["GET", "POST"])
@@ -267,6 +269,9 @@ def delete_user(user_id):
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     return render_template("contact.html")
+
+
+
 
 
 
