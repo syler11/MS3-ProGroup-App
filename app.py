@@ -1,6 +1,6 @@
 import os
 from flask import (
-    Flask, flash, render_template, redirect, request, session, url_for)
+    Flask, flash, render_template, redirect, request, session, url_for, Blueprint)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 import requests
@@ -52,7 +52,7 @@ def login():
 def logout():
     # remove user from session cookie
     session.pop("user")
-    return redirect(url_for("authentication/login"))
+    return redirect(url_for("login"))
 
 
 @app.route("/reservations")
