@@ -7,7 +7,7 @@
     <!-- Card panel to display the user form -->
     <div class="col offset-l3 l6 offset-l3 s12 card-panel center-align">
         <h4>Edit User</h4>
-        <form class="col s12" method="POST" action="{{ url_for('edit_user', user_id=user._id) }}">
+        <form class="col s12" method="POST" action="{{ url_for('users.edit_user', user_id=user._id) }}">
             <div class="row">
                 <!-- First Name -->
                 <div class="input-field col s12">
@@ -78,7 +78,7 @@
             <div class="row">
                 <!-- Cancel and Submit button -->
                 <div class="col s12 center-align">
-                    <a href="http:{{ url_for('users') }}" class="btn-large red darken-3 text-shadow">Cancel
+                    <a href="http:{{ url_for('users.get_users') }}" class="btn-large red darken-3 text-shadow">Cancel
                         <i class="fas fa-times-square left"></i>
                     </a>
                     <button class="btn-large light-blue darken-3 text-shadow" type="submit">

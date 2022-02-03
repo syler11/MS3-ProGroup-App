@@ -1,6 +1,7 @@
 from flask import (
     Flask, flash, render_template, redirect, request, session, url_for, Blueprint)
 from bson.objectid import ObjectId
+from progroup import mongo
 
 # Create a users object as a blueprint
 users = Blueprint('users', __name__)
@@ -28,7 +29,7 @@ def add_user():
 
         mongo.db.users.insert_one(users)
         flash("User Added")
-        return redirect(url_for("users/users"))
+        return redirect(url_for("users.get_users"))
 
     users = mongo.db.users.find()
     return render_template("users/add_user.html", users=users)
@@ -51,7 +52,7 @@ def edit_user(user_id):
 
         mongo.db.users.update_one({"_id": ObjectId(user_id)}, updated_user)
         flash("User Updated")
-        return redirect(url_for("users/users"))
+        return redirect(url_for("users.get_users"))
 
     user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
     return render_template("users/edit_user.html", user=user)
@@ -61,4 +62,4 @@ def edit_user(user_id):
 def delete_user(user_id):
     mongo.db.users.delete_one({"_id": ObjectId(user_id)})
     flash("User Deleted")
-    return redirect(url_for("users/users"))
+    return redirect(url_for("users.get_users"))
