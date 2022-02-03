@@ -1,5 +1,17 @@
 import os
-from flask import (
+from progroup import create_app
+
+# Create an app
+app = create_app()
+
+
+if __name__ == "__main__":
+    app.run(host=os.environ.get("IP"),
+            port=int(os.environ.get("PORT")),
+            debug=True)
+
+
+""" from flask import (
     Flask, flash, render_template, redirect, request, session, url_for, Blueprint)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -58,6 +70,7 @@ def logout():
 def reservations():
     find = {}
     total_groups = mongo.db.reservations.count_documents(find)
+    total_single = mongo.db.reservations.find
     reservations = mongo.db.reservations.find().sort("group_name", 1)
     return render_template("reservations/reservations.html", reservations=reservations, total_groups=total_groups)
 
@@ -267,10 +280,6 @@ def delete_user(user_id):
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
-    return render_template("email/contact.html")
+    return render_template("email/contact.html") """
 
 
-if __name__ == "__main__":
-    app.run(host=os.environ.get("IP"),
-            port=int(os.environ.get("PORT")),
-            debug=True)

@@ -1,13 +1,14 @@
 from flask import (
     Flask, flash, render_template, redirect, request, session, url_for, Blueprint)
 from bson.objectid import ObjectId
+from progroup import mongo
 
 # Create a users object as a blueprint
 reservations = Blueprint('reservations', __name__)
 
 
-@reservations.route("/reservations")
-def reservations():
+@reservations.route("/get_reservations")
+def get_reservations():
     find = {}
     total_groups = mongo.db.reservations.count_documents(find)
     reservations = mongo.db.reservations.find().sort("group_name", 1)
@@ -99,3 +100,8 @@ def delete_reservation(reservation_id):
     mongo.db.reservations.delete_one({"_id": ObjectId(reservation_id)})
     flash("Reservation Deleted")
     return redirect(url_for("reservations"))
+
+
+@reservations.route("/contact", methods=["GET", "POST"])
+def contact():
+    return render_template("email/contact.html")

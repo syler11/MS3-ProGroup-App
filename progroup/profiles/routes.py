@@ -1,13 +1,14 @@
 from flask import (
     Flask, flash, render_template, redirect, request, session, url_for, Blueprint)
 from bson.objectid import ObjectId
+from progroup import mongo
 
 # Create a profiles object as a blueprint
 profiles = Blueprint('profiles', __name__)
 
 
-@profiles.route("/profiles")
-def profiles():
+@profiles.route("/get_profiles")
+def get_profiles():
     profiles = list(mongo.db.profiles.find())
     return render_template("profiles/profiles.html", profiles=profiles)
 

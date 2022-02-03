@@ -21,23 +21,23 @@ def login():
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
-                return redirect(url_for('reservations/reservations'))
+                return redirect(url_for('reservations.get_reservations'))
 
             else:
                 # invalid password match
                 flash("Incorrect Password")
-                return redirect(url_for("authentication/login"))
+                return redirect(url_for("authentication.login"))
 
         else:
             # username doesn't exist
             flash("Incorrect Username")
-            return redirect(url_for("authentication/login"))
+            return redirect(url_for("authentication.login"))
 
     return render_template("authentication/login.html")
 
 
-@authentication.route("/logout")
+@authentication.route("/authentication.logout")
 def logout():
     # remove user from session cookie
     session.pop("user")
-    return redirect(url_for("authentication/login"))
+    return redirect(url_for("authentication.login"))

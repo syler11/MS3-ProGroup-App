@@ -6,8 +6,8 @@ from bson.objectid import ObjectId
 users = Blueprint('users', __name__)
 
 
-@users.route("/users")
-def users():
+@users.route("/get_users")
+def get_users():
     users = list(mongo.db.users.find())
     return render_template("users/users.html", users=users)
 

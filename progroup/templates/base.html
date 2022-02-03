@@ -22,7 +22,7 @@
             <div class="card blue-grey darken-3">
                 <!-- Logo -->
                 <div class="card-space">
-                    <a href="{{ url_for('reservations') }}">
+                    <a href="{{ url_for('reservations.get_reservations') }}">
                         <h3 class="logo white-text">ProGroup</h3>
                     </a>
                     <!-- Main left hand side navbar with user authentication -->
@@ -30,15 +30,15 @@
                         <hr>
                         <ul>
                             {% if session.user %}
-                            <li><a href="{{ url_for('reservations') }}">Reservations</a></li>
-                            <li><a href="{{ url_for('profiles') }}">Profiles</a></li>
+                            <li><a href="{{ url_for('reservations.get_reservations') }}">Reservations</a></li>
+                            <li><a href="{{ url_for('profiles.get_profiles') }}">Profiles</a></li>
                             {% if session.user|lower == "admin" %}
-                            <li><a href="{{ url_for('users') }}">Users</a></li>
+                            <li><a href="{{ url_for('users.get_users') }}">Users</a></li>
                             {% endif %}
                         </ul>
                         <ul class="bottom-nav">
-                            <li><a href="{{ url_for('contact') }}">Help</a></li>
-                            <li><a href="{{ url_for('logout') }}">Log out</a></li>
+                            <li><a href="{{ url_for('reservations.contact') }}">Help</a></li>
+                            <li><a href="{{ url_for('authentication.logout') }}">Log out</a></li>
                             {% endif %}
                         </ul>
                         <div class="copyright">
@@ -52,7 +52,7 @@
         <nav class="hide-on-large-only">
             <!-- Small screen sidenav logo and navbar -->
             <div class="blue-grey darken-3 valign-wrapper nav-wrapper">
-                <a href="{{ url_for('reservations') }}" class="brand-logo">
+                <a href="{{ url_for('reservations.get_reservations') }}" class="brand-logo">
                     <h3 class="logo">ProGroup</h3>
                 </a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
@@ -61,13 +61,13 @@
 
         <ul class="sidenav" id="mobile-demo">
             {% if session.user %}
-            <li><a href="{{ url_for('reservations') }}">Reservations</a></li>
-            <li><a href="{{ url_for('profiles') }}">Profiles</a></li>
+            <li><a href="{{ url_for('reservations.get_reservations') }}">Reservations</a></li>
+            <li><a href="{{ url_for('profiles.get_profiles') }}">Profiles</a></li>
             {% if session.user|lower == "admin" %}
-            <li><a href="{{ url_for('users') }}">Users</a></li>
+            <li><a href="{{ url_for('users.get_users') }}">Users</a></li>
             {% endif %}
-            <li><a href="{{ url_for('contact') }}">Help</a></li>
-            <li><a href="{{ url_for('logout') }}">Log out</a></li>
+            <li><a href="{{ url_for('reservations.contact') }}">Help</a></li>
+            <li><a href="{{ url_for('authentication.logout') }}">Log out</a></li>
             {% endif %}
             <div class="copyright">
                 <p>&copy; <span id="copyright"></span> ProGroup.</p>
