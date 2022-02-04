@@ -38,3 +38,12 @@ def error_405(error: object) -> object:
     :return render_template of 405.html
     """
     return render_template('errors/405.html', error=error), 405
+
+
+@app.errorhandler(500)
+def error_500(error: object) -> object:
+    """
+    Render the 500.html template in the case of a 500 error (internal server error)
+    :return render_template of 500.html
+    """
+    return render_template('errors/500.html', error=error), 500
