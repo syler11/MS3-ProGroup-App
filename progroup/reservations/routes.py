@@ -20,8 +20,9 @@ def get_reservations():
         return redirect(url_for("authentication.login"))
 
     total_groups = mongo.db.reservations.count_documents({})
+    top_group = mongo.db.reservations.count_documents({"status": "confirmed"})
     reservations = mongo.db.reservations.find().sort("group_name", 1)
-    return render_template("reservations/reservations.html", reservations=reservations, total_groups=total_groups)
+    return render_template("reservations/reservations.html", reservations=reservations, total_groups=total_groups, top_group=top_group)
 
 
 @reservations.route("/add_reservation", methods=["GET", "POST"])
@@ -107,7 +108,7 @@ def edit_reservation(reservation_id):
         }
         mongo.db.reservations.update_one({"_id": ObjectId(reservation_id)}, updated_reservation)
         flash("Reservation Updated")
-        return redirect(url_for("reservations"))
+        return redirect(url_for("reservations.get_reservations"))
     
     profiles = mongo.db.profiles.find().sort("category_name", 1)
     reservation = mongo.db.reservations.find_one({"_id": ObjectId(reservation_id)})
