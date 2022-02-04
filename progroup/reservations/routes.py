@@ -9,10 +9,10 @@ reservations = Blueprint('reservations', __name__)
 
 @reservations.route("/get_reservations")
 def get_reservations():
-    find = {}
-    total_groups = mongo.db.reservations.count_documents(find)
+    total_groups = mongo.db.reservations.count_documents({})
+    top_group = mongo.db.reservations.find({}, {"twin_room": 1, "_id":0})
     reservations = mongo.db.reservations.find().sort("group_name", 1)
-    return render_template("reservations/reservations.html", reservations=reservations, total_groups=total_groups)
+    return render_template("reservations/reservations.html", reservations=reservations, total_groups=total_groups, top_group=top_group)
 
 
 @reservations.route("/add_reservation", methods=["GET", "POST"])

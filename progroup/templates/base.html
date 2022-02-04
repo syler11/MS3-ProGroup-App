@@ -98,7 +98,7 @@
             <div class="widget-top white-text center-align blue-grey darken-3">
                 <img src="{{ url_for('static', filename='pictures/hotel_logo.png') }}" class="hotel-logo"
                     alt="Hotel Logo" width="100%">
-                <h5><span id="greeting"></span></h5>
+                <h5><span id="greeting"></span>{{ session["user"].capitalize() }}</h5>
                 <p id="txtTime"></p>
                 <p id="txtMonth"></p>
                 <h5 id="txtDate"></h5>
@@ -110,7 +110,7 @@
                     <h5>Group stats</h5>
                     <p>Total Number of Groups: <span>{{ total_groups }}</span>
                     </p>
-                    <p>Total Bed Nights: <spam>305</spam>
+                    <p>Total Bed Nights: <spam>{{ top_group }}</spam>
                     </p>
                     <p>Total Revenue: <spam>£15625.50</spam>
                     </p>
