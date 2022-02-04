@@ -1,5 +1,5 @@
 from flask import (
-    Flask, flash, render_template, redirect, request, session, url_for, Blueprint)
+    Flask, flash, render_template, redirect, request, url_for, Blueprint)
 from bson.objectid import ObjectId
 from progroup import mongo
 
@@ -9,10 +9,15 @@ reservations = Blueprint('reservations', __name__)
 
 @reservations.route("/get_reservations")
 def get_reservations():
+    """
+    Render the get_reservations.html template once the user has a succesful login 
+    and dispaly all the reservations available in the reservations collection 
+    and sort it by group name
+    :return render_template of get_reservations.html
+    """
     total_groups = mongo.db.reservations.count_documents({})
-    top_group = mongo.db.reservations.find({}, {"twin_room": 1, "_id":0})
     reservations = mongo.db.reservations.find().sort("group_name", 1)
-    return render_template("reservations/reservations.html", reservations=reservations, total_groups=total_groups, top_group=top_group)
+    return render_template("reservations/reservations.html", reservations=reservations, total_groups=total_groups)
 
 
 @reservations.route("/add_reservation", methods=["GET", "POST"])
