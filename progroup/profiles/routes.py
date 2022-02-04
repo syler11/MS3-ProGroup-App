@@ -9,12 +9,22 @@ profiles = Blueprint('profiles', __name__)
 
 @profiles.route("/get_profiles")
 def get_profiles():
+
+      # Check the user is logged in
+    if 'user' not in session:
+        return redirect(url_for("authentication.login"))
+
     profiles = list(mongo.db.profiles.find())
     return render_template("profiles/profiles.html", profiles=profiles)
 
 
 @profiles.route("/add_profile", methods=["GET", "POST"])
 def add_profile():
+
+  # Check the user is logged in
+    if 'user' not in session:
+        return redirect(url_for("authentication.login"))
+
     if request.method == "POST": 
         profiles = {
             "group_name": request.form.get('group_name'),
@@ -37,6 +47,11 @@ def add_profile():
 
 @profiles.route("/edit_profile/<profile_id>", methods=["GET", "POST"])
 def edit_profile(profile_id):
+
+  # Check the user is logged in
+    if 'user' not in session:
+        return redirect(url_for("authentication.login"))
+
     if request.method == "POST":
         updated_profile = {"$set": 
         {
@@ -60,6 +75,11 @@ def edit_profile(profile_id):
 
 @profiles.route('/delete_profile/<profile_id>')
 def delete_profile(profile_id):
+
+  # Check the user is logged in
+    if 'user' not in session:
+        return redirect(url_for("authentication.login"))
+
     mongo.db.profiles.delete_one({"_id": ObjectId(profile_id)})
     flash("Profile Deleted")
     return redirect(url_for("profiles/profiles"))

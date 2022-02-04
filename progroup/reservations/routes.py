@@ -1,5 +1,5 @@
 from flask import (
-    Flask, flash, render_template, redirect, request, url_for, Blueprint)
+    Flask, flash, render_template, redirect, session, request, url_for, Blueprint)
 from bson.objectid import ObjectId
 from progroup import mongo
 
@@ -15,6 +15,10 @@ def get_reservations():
     and sort it by group name
     :return render_template of get_reservations.html
     """
+      # Check the user is logged in
+    if 'user' not in session:
+        return redirect(url_for("authentication.login"))
+
     total_groups = mongo.db.reservations.count_documents({})
     reservations = mongo.db.reservations.find().sort("group_name", 1)
     return render_template("reservations/reservations.html", reservations=reservations, total_groups=total_groups)
@@ -22,6 +26,11 @@ def get_reservations():
 
 @reservations.route("/add_reservation", methods=["GET", "POST"])
 def add_reservation():
+
+      # Check the user is logged in
+    if 'user' not in session:
+        return redirect(url_for("authentication.login"))
+
     if request.method == "POST": 
         reservations = {
             "group_name": request.form.get('group_name'),
@@ -65,6 +74,11 @@ def search():
 
 @reservations.route('/edit_reservation<reservation_id>', methods=["GET", "POST"])
 def edit_reservation(reservation_id):
+
+  # Check the user is logged in
+    if 'user' not in session:
+        return redirect(url_for("authentication.login"))
+
     if request.method == "POST":
         updated_reservation = {"$set": 
         {
@@ -102,11 +116,29 @@ def edit_reservation(reservation_id):
 
 @reservations.route('/delete_reservation/<reservation_id>')
 def delete_reservation(reservation_id):
+    """
+    delete the selected object from the reservations collection and returns to list of remaining reservations
+    :return render_template of get_reservation.html
+    """
+  # Check the user is logged in
+    if 'user' not in session:
+        return redirect(url_for("authentication.login"))
+
     mongo.db.reservations.delete_one({"_id": ObjectId(reservation_id)})
     flash("Reservation Deleted")
-    return redirect(url_for("reservations"))
+    return redirect(url_for("reservations.get_reservations"))
 
 
 @reservations.route("/contact", methods=["GET", "POST"])
 def contact():
+    """
+    Render the contact.html template where the user can send email to the site owner
+    the email function is powered with email.js see static/js/email.js
+    :return render_template of contact.html
+    """
+
+  # Check the user is logged in
+    if 'user' not in session:
+        return redirect(url_for("authentication.login"))
+
     return render_template("email/contact.html")
