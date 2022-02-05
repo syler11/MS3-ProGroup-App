@@ -1,6 +1,7 @@
 from flask import (
     Flask, flash, render_template, redirect, request, session, url_for, Blueprint)
 from bson.objectid import ObjectId
+from werkzeug.security import generate_password_hash, check_password_hash
 from progroup import mongo
 
 # Create a users object as a blueprint

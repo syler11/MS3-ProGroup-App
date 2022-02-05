@@ -77,6 +77,20 @@
   margin-top: 10px;
 }
 
+/* modal pop design */
+.modal {
+  min-width: 300px;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.modal-trigger {
+  border: none;
+  background-color: transparent;
+  color: #039be5;
+  cursor: pointer;
+}
+
 /* Right hand side widget designs */
   .widget-top {
     min-height: 40vh;
