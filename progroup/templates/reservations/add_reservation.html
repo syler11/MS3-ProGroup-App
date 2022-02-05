@@ -55,6 +55,16 @@
                           </select>
                           <label for="status"></label>
                     </div>
+                    <!-- Porterage -->
+                    <div class="input-field grey lighten-3 s12">
+                        <select id="porterage" name="porterage" class="validate" required>
+                            <option value="" selected>Select Porterage</option>
+                            <option value="no">NO</option>
+                            <option value="one-way">ONE WAY</option>
+                            <option value="return">RETURN</option>
+                          </select>
+                          <label for="status"></label>
+                    </div>
                 </div>
                         <div class="col l3 m6">
                     <p>Room Configuration</p>
@@ -81,6 +91,12 @@
                         <input id="triple_room" name="triple_room" type="text" class="validate"
                             required>
                         <label for="triple_room">Triple Rooms</label>
+                    </div>
+                    <!-- Total Rooms-->
+                    <div class="input-field s12">
+                        <input id="rooms" name="rooms" type="text" class="validate center-align" value=""
+                            disabled>
+                        <label for="rooms">Total Rooms</label>
                     </div>
                 </div>
                 <div class="col l3 m6">
