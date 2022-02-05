@@ -37,3 +37,23 @@ $(function()
  {
     $(".validate").on("change keyup",calculateTotalPax)
 })
+
+function calculateTotalRooms() {
+
+  let room = {}
+
+  room.single = $("#single_room").val()*1
+  room.double = $("#double_room").val()*1
+  room.twin = $("#twin_room").val()*1
+  room.triple = $("#triple_room").val()*1
+  
+  let totals = room.single + room.double + room.twin + room.triple;
+
+  $("#rooms").val(totals);
+
+}
+
+$(function()
+ {
+    $(".room").on("change keyup",calculateTotalRooms)
+})
