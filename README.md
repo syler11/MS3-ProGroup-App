@@ -6,6 +6,7 @@ I kept getting an error message "failed to push some refs to git@heroku.com" whi
 3. Login page inputfield label and prefill text were overlapping. Issue solved with placeholder=" " within the input tags. 
 4. Populate fileds from exisiting collection into another collection
 5. Search by dates
+6. Database wasn't registering the PAX and Rooms field value as the field was disabled.
 
 Technologies used:
 JQuery
