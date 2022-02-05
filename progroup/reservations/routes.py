@@ -58,6 +58,7 @@ def add_reservation():
             "triple_rate": request.form.get('triple_rate'),
             "pax": request.form.get('pax'),
             "notes": request.form.get('notes'),
+            "created_by": session["user"],
         }
 
         mongo.db.reservations.insert_one(reservations)

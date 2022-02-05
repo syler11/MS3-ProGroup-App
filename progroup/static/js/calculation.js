@@ -1,16 +1,3 @@
-const inputSingleRoom = document.querySelector('input[name="single_room"]');
-const inputTwinRoom = document.querySelector('input[name="double_room"]');
-const inputDoubleRoom = document.querySelector('input[name="twin_room"]');
-const inputTripleRoom = document.querySelector('input[name="triple_room"]');
-const pax = document.querySelector('input[name="pax"]');
-
-const single = 1;
-const double = 2;
-const twin = 2;
-const triple = 3;
-
-
-
 function calculateTotalPax()
 {
   let room_occupancy={
@@ -55,5 +42,5 @@ function calculateTotalRooms() {
 
 $(function()
  {
-    $(".room").on("change keyup",calculateTotalRooms)
+    $(".validate").on("change keyup",calculateTotalRooms)
 })
