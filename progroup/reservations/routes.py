@@ -19,10 +19,15 @@ def get_reservations():
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
 
+    total_revenue = list(mongo.db.reservations.aggregate([{"$group": {
+        "_id": '',
+        "rooms": {"$sum": "rooms"}
+    }
+    }]))
     total_groups = mongo.db.reservations.count_documents({})
     top_group = mongo.db.reservations.count_documents({"status": "confirmed"})
     reservations = mongo.db.reservations.find().sort("group_name", 1)
-    return render_template("reservations/reservations.html", reservations=reservations, total_groups=total_groups, top_group=top_group)
+    return render_template("reservations/reservations.html", reservations=reservations, total_groups=total_groups, top_group=top_group, total_revenue=total_revenue)
 
 
 @reservations.route("/add_reservation", methods=["GET", "POST"])

@@ -1,46 +1,68 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="row">
+<div class="row card-panel">
     <!-- seach function with reset and submit buttons -->
-    <form class="col s12 card-panel" method="POST" action="{{ url_for('reservations.search') }}">
-      <div class="row valign-wrapper center-align">
-        <div class="input-field col l9 s6">
-          <i class="fas fa-search prefix light-grey-text text-darken-4"></i>
-          <input type="text" name="query" id="query" placeholder=" " class="validate" required>
-          <label for="query">Search status or group name</label>
+    <form method="POST" action="{{ url_for('reservations.search') }}">
+        <div class="input-field valign-wrapper col l6 s12">
+            <i class="fas fa-search prefix light-grey-text text-darken-4"></i>
+            <input type="text" name="query" id="query" placeholder=" " class="validate" required>
+            <label for="query">Search status or group name</label>
         </div>
-        <div class="col l3 s6">
+        <div class="col l6 s12">
             <!-- Search and Reset button -->
-          <a href="{{url_for('reservations.get_reservations') }}" class="btn red text-shadow"><i class="fas fa-times-square left"></i>Reset</a>
+            <a href="{{url_for('reservations.get_reservations') }}" class="btn red text-shadow"><i
+                    class="fas fa-times-square left"></i>Reset</a>
             <button type="submit" class="light-blue darken-1 btn text-shadow">
-            <i class="fas fa-search left"></i> Search
-          </button>
+                <i class="fas fa-search left"></i> Search
+            </button>
         </div>
-      </div>
     </form>
-  </div>
+</div>
 
 <div class="row">
-    <div class="col s12">
-        <ul class="collapsible">
-            <li>
-                <div class="collapsible-header">
-                    <div class="col s6">
-                        <h4>Reservations</h4>
-                    </div>
-                    <!-- Add New Reservation button -->
-                    <div class="col s6 right">
-                        <a href="{{ url_for('reservations.add_reservation') }}"><button class="right btn-large light-blue darken-4 text-shadow">
-                            <i class="fas fa-plus-square right"></i>Add New Reservation</button></a>
-                    </div>
-                </div>
-            </li>
-            <!-- Iterates through the reservations collection and displays -->
-            {% for reservation in reservations %}
-            <li>
-            <div class="s12 collapsible-header">
-                    <span>Group Name: {{ reservation.group_name }}</span>
+    <div class="col m6 s12">
+        <h4>Reservations</h4>
+    </div>
+    <!-- Add New Reservation button -->
+    <div class="col m6 s12">
+        <a href="{{ url_for('reservations.add_reservation') }}"><button
+                class="right btn-large light-blue darken-4 text-shadow">
+                <i class="fas fa-plus-square left"></i>Add New Reservation</button></a>
+    </div>
+</div>
+<!-- Iterates through the reservations collection and displays -->
+<ul class="collapsible">
+    {% for reservation in reservations %}
+    <li>
+        <div class="s12 collapsible-header">
+            <table class="table">
+                <tr>
+                    <th>Group Name</th>
+                    <th>Arrival Date</th>
+                    <th>LOS</th>
+                    <th>Rooms</th>
+                    <th>PAX</th>
+                    <th>Board</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>{{ reservation.group_name }}</td>
+                    <td>{{ reservation.arrival_date }}</td>
+                    <td>{{ reservation.los }}</td>
+                    <td>{{ reservation.rooms }}</td>
+                    <td>{{ reservation.pax }}</td>
+                    <td>{{ reservation.board }}</td>
+                    <td>{{ reservation.status.capitalize() }}</td>
+                    <td><a href="{{ url_for('reservations.edit_reservation', reservation_id=reservation._id) }}"><i
+                                class="far fa-edit"></i></a>
+                        <a href="{{ url_for('reservations.delete_reservation', reservation_id=reservation._id) }}"><i
+                                class="far fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+            </table>
+            <!--  <span>Group Name: {{ reservation.group_name }}</span>
                     <span>Arrival Date: {{ reservation.arrival_date }}</span>
                     <span>LOS: {{ reservation.los }}</span>
                     <span>Rooms: {{ reservation.rooms }}</span>
@@ -49,93 +71,91 @@
                     <span>Status: {{ reservation.status.capitalize() }}</span>
                     <span>Porterage: {{ reservation.porterage.capitalize() }}</span>
                         <a href="{{ url_for('reservations.edit_reservation', reservation_id=reservation._id) }}"><i class="far fa-edit"></i></a>
-                        <a href="{{ url_for('reservations.delete_reservation', reservation_id=reservation._id) }}"><i class="far fa-trash-alt"></i></a>
+                        <a href="{{ url_for('reservations.delete_reservation', reservation_id=reservation._id) }}"><i class="far fa-trash-alt"></i></a> -->
+        </div>
+        <div class="collapsible-body row">
+            <div class="col s4">
+                <p>
+                    <span>Contact name: </span>
+                    <span>{{ reservation.contact_name }}</span>
+                </p>
+                <p>
+                    <span>Contact Email: </span>
+                    <span>{{ reservation.contact_email }}</span>
+                </p>
+                <p>
+                    <span>Contact phone: </span>
+                    <span>{{ reservation.contact_phone }}</span>
+                </p>
+                <p>
+                    <span><strong>Company address:</strong></span>
+                </p>
+                <p>
+                    <span>{{ reservation.line_address }}</span>
+                </p>
+                <p>
+                    <span>{{ reservation.city }}</span>
+                </p>
+                <p>
+                    <span>{{ reservation.postcode }}</span>
+                </p>
+                <p>
+                    <span>{{ reservation.coutry }}</span>
+                </p>
+            </div>
+            <div class="col s8">
+                <div class="col s4">
+                    <p><span><strong>Room Confguration:</strong></span></p>
+                    <p>
+                        <span>Single room: </span>
+                        <span class="right">{{ reservation.single_room }}</span>
+                    </p>
+                    <p>
+                        <span>Double room: </span>
+                        <span class="right">{{ reservation.double_room }}</span>
+                    </p>
+                    <p>
+                        <span>Twin room: </span>
+                        <span class="right">{{ reservation.twin_room }}</span>
+                    </p>
+                    <p>
+                        <span>Triple room: </span>
+                        <span class="right">{{ reservation.triple_room }}</span>
+                    </p>
                 </div>
-                <div class="collapsible-body row">
-                    <div class="col s4">
-                        <p>
-                            <span>Contact name: </span>
-                            <span>{{ reservation.contact_name }}</span>
-                        </p>
-                        <p>
-                            <span>Contact Email: </span>
-                            <span>{{ reservation.contact_email }}</span>
-                        </p>
-                        <p>
-                            <span>Contact phone: </span>
-                            <span>{{ reservation.contact_phone }}</span>
-                        </p>
-                        <p>
-                            <span><strong>Company address:</strong></span>
-                        </p>
-                        <p>
-                            <span>{{ reservation.line_address }}</span>
-                        </p>
-                        <p>
-                            <span>{{ reservation.city }}</span>
-                        </p>
-                        <p>
-                            <span>{{ reservation.postcode }}</span>
-                        </p>
-                        <p>
-                            <span>{{ reservation.coutry }}</span>
-                        </p>
-                    </div>
-                    <div class="col s8">
-                        <div class="col s4">
-                            <p><span><strong>Room Confguration:</strong></span></p>
-                            <p>
-                                <span>Single room: </span>
-                                <span class="right">{{ reservation.single_room }}</span>
-                            </p>
-                            <p>
-                                <span>Double room: </span>
-                                <span class="right">{{ reservation.double_room }}</span>
-                            </p>
-                            <p>
-                                <span>Twin room: </span>
-                                <span class="right">{{ reservation.twin_room }}</span>
-                            </p>
-                            <p>
-                                <span>Triple room: </span>
-                                <span class="right">{{ reservation.triple_room }}</span>
-                            </p>
-                        </div>
-                        <div class="col s2">
-                            <p class="left"><span><strong>Room Rate:</strong></span></p>
-                            <p>
-                                <span class="center-align">£{{ reservation.single_rate }}</span><br>
-                            </p>
-                            <p>
-                                <span class="center-align">£{{ reservation.double_rate }}</span><br>
-                            </p>
-                            <p>
-                                <span class="center-align">£{{ reservation.twin_rate }}</span><br>
-                            </p>
-                            <p>
-                                <span class="center-align">£{{ reservation.triple_rate }}</span><br>
-                            </p>
-                        </div>
-                        <div class="col s6">
-                            <fieldset>
-                                <legend>Notes</legend>
-                                <textarea id="textarea" rows="10">{{ reservation.notes }}</textarea>
-                            </fieldset>
-                            <p>
-                                Created by: <span class="center-align">{{ reservation.created_by }}</span><br>
-                            </p>
-                        </div>
-                        <div class="row">
-                            <div class="col summary s12">
-                                Revenue: <span id="totalRevenue"></span>
-                            </div>
-                        </div>
+                <div class="col s2">
+                    <p class="left"><span><strong>Room Rate:</strong></span></p>
+                    <p>
+                        <span class="center-align">£{{ reservation.single_rate }}</span><br>
+                    </p>
+                    <p>
+                        <span class="center-align">£{{ reservation.double_rate }}</span><br>
+                    </p>
+                    <p>
+                        <span class="center-align">£{{ reservation.twin_rate }}</span><br>
+                    </p>
+                    <p>
+                        <span class="center-align">£{{ reservation.triple_rate }}</span><br>
+                    </p>
+                </div>
+                <div class="col s6">
+                    <fieldset>
+                        <legend>Notes</legend>
+                        <textarea id="textarea" rows="10">{{ reservation.notes }}</textarea>
+                    </fieldset>
+                    <p>
+                        Created by: <span class="center-align">{{ reservation.created_by }}</span><br>
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col summary s12">
+                        Revenue: <span id="totalRevenue"></span>
                     </div>
                 </div>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-</div>
+            </div>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
 
 {% endblock %}

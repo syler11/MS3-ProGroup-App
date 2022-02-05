@@ -74,7 +74,7 @@
                 <p>All rights reserved.</p>
             </div>
         </ul>
-        <div class="col l8 m9 s12 main-container">
+        <div class="col l8 m12 main-container">
 
             <section>
                 <!-- flash messages -->
@@ -94,7 +94,7 @@
             {% endblock %}
         </div>
         <!-- Top right widget with comp logo, personalized greeting and live date and time -->
-        <div class="col l2 m3 widget">
+        <div class="col l2 m12 widget">
             <div class="widget-top white-text center-align blue-grey darken-3">
                 <img src="{{ url_for('static', filename='pictures/hotel_logo.png') }}" class="hotel-logo"
                     alt="Hotel Logo" width="100%">
@@ -110,7 +110,7 @@
                     <h5>Group stats</h5>
                     <p>Number of Groups: <span>{{ total_groups }}</span>
                     </p>
-                    <p>Confirmed Groups: <spam>{{ top_group }}</spam>
+                    <p>Confirmed Groups: <spam>{{ total_revenue }}</spam>
                     </p>
                     <p>Total Revenue: <spam>£15625.50</spam>
                     </p>
