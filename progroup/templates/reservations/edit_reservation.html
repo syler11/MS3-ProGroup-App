@@ -39,7 +39,7 @@
                     <!-- Status -->
                     <div class="input-field grey lighten-3 s12">
                         <select id="status" name="status" class="validate" required>
-                            <option value="{{ reservation.status }}">{{ reservation.status }}</option>
+                            <option value="{{ reservation.status }}">{{ reservation.status.capitalize() }}</option>
                             <option value="confirmed">Confirmed</option>
                             <option value="cancelled">Cancelled</option>
                             <option value="provisional">Provisional</option>
@@ -58,7 +58,7 @@
                     <!-- Porterage -->
                     <div class="input-field grey lighten-3 s12">
                         <select id="porterage" name="porterage" class="validate" required>
-                            <option value="" selected>Select Porterage</option>
+                            <option value="{{ reservation.porterage }}" selected>{{ reservation.porterage.capitalize() }}</option>
                             <option value="no">NO</option>
                             <option value="one-way">ONE WAY</option>
                             <option value="return">RETURN</option>
@@ -71,32 +71,31 @@
                     <!-- Single Room-->
                     <div class="input-field">
                         <input id="single_room" name="single_room" type="text"
-                            value="{{ reservation.single_room }}" class="validate" required>
+                            value="{{ reservation.single_room }}" class="validate room" required>
                         <label for="single_room">Single Rooms</label>
                     </div>
                     <!-- Double Room-->
                     <div class="input-field">
                         <input id="double_room" name="double_room" type="text"
-                            value="{{ reservation.double_room }}" class="s6 validate" required>
+                            value="{{ reservation.double_room }}" class="validate room" required>
                         <label for="double_room">Double Rooms</label>
                     </div>
                     <!-- Twin Room-->
                     <div class="input-field s12">
                         <input id="twin_room" name="twin_room" type="text" value="{{ reservation.twin_room }}"
-                             class="validate"
+                             class="validate room"
                             required>
                         <label for="twin_room">Twin Rooms</label>
                     </div>
                     <!-- Triple Room-->
                     <div class="input-field s12">
-                        <input id="triple_room" name="triple_room" type="text" value="{{ reservation.triple_room }}" class="validate"
+                        <input id="triple_room" name="triple_room" type="text" value="{{ reservation.triple_room }}" class="validate room"
                             required>
                         <label for="triple_room">Triple Rooms</label>
                     </div>
                     <!-- Total Rooms-->
                     <div class="input-field s12">
-                        <input id="rooms" name="rooms" type="text" class="validate center-align" value=""
-                            disabled>
+                        <input id="rooms" name="rooms" type="text" class="validate center-align" value="{{ reservation.rooms }}">
                         <label for="rooms">Total Rooms</label>
                     </div>
                 </div>
@@ -128,8 +127,7 @@
                     </div>
                      <!-- PAX -->
                      <div class="input-field s12">
-                        <input id="pax" name="pax" type="text" class="validate center-align" value=""
-                        disabled>
+                        <input id="pax" name="pax" type="text" class="validate center-align" value="{{ reservation.pax }}">
                         <label for="pax">PAX</label>
                     </div>
                 </div>

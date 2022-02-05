@@ -62,7 +62,7 @@ def add_reservation():
 
         mongo.db.reservations.insert_one(reservations)
         flash("Reservation Added")
-        return redirect(url_for("reservations"))
+        return redirect(url_for("reservations.get_reservations"))
     
     profiles = mongo.db.profiles.find().sort("group_name", 1)
     return render_template("reservations/add_reservation.html", profiles=profiles)
