@@ -8,10 +8,10 @@ reservations = Blueprint('reservations', __name__)
 
 
 @reservations.route("/get_reservations")
-def get_reservations():
+def get_reservations() -> object:
     """
-    render the get_reservations.html template once the user has a succesful 
-    login and dispaly all the reservations available in the reservations 
+    render the get_reservations.html template once the user has a succesful
+    login and dispaly all the reservations available in the reservations
     collection and sort it by group name
     :return render_template of get_reservations.html
     """
@@ -25,21 +25,21 @@ def get_reservations():
     }
     }])
     top_reservations = mongo.db.reservations.aggregate([{"$sort":
-                                                        {"group_name":-1}}, 
+                                                        {"group_name":-1}},
                                                                 {"$limit":1}])
     total_groups = mongo.db.reservations.count_documents({})
     top_group = mongo.db.reservations.count_documents({"status": "confirmed"})
     reservations = mongo.db.reservations.find().sort("group_name", 1)
-    return render_template("reservations/reservations.html", 
-                            reservations=reservations, 
-                            total_groups=total_groups, 
-                            top_group=top_group, 
-                            total_revenue=total_revenue, 
+    return render_template("reservations/reservations.html",
+                            reservations=reservations,
+                            total_groups=total_groups,
+                            top_group=top_group,
+                            total_revenue=total_revenue,
                             top_reservations=top_reservations)
 
 
 @reservations.route("/add_reservation", methods=["GET", "POST"])
-def add_reservation():
+def add_reservation() -> object:
     """
     render add_reservation html page after teh user clicked on the
     Add New Reservation button and add to the database 
@@ -51,19 +51,19 @@ def add_reservation():
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
 
-    if request.method == "POST": 
+    if request.method == "POST":
         reservations = {
             "group_name": request.form.get('group_name'),
-            "arrival_date": request.form.get('arrival_date'), 
-            "contact_name": request.form.get('contact_name'), 
-            "contact_email": request.form.get('contact_email'), 
-            "contact_phone": request.form.get('contact_phone'), 
-            "line_address": request.form.get('line_address'), 
+            "arrival_date": request.form.get('arrival_date'),
+            "contact_name": request.form.get('contact_name'),
+            "contact_email": request.form.get('contact_email'),
+            "contact_phone": request.form.get('contact_phone'),
+            "line_address": request.form.get('line_address'),
             "city": request.form.get('city'),
             "postcode": request.form.get('postcode'),
             "country": request.form.get('country'),
             "los": request.form.get('los'), 
-            "status": request.form.get('status'), 
+            "status": request.form.get('status'),
             "board": request.form.get('board'), 
             "porterage": request.form.get('porterage'), 
             "single_room": request.form.get('single_room'),
@@ -83,16 +83,16 @@ def add_reservation():
         mongo.db.reservations.insert_one(reservations)
         flash("Reservation Added")
         return redirect(url_for("reservations.get_reservations"))
-    
+  
     profiles = mongo.db.profiles.find().sort("group_name", 1)
     return render_template("reservations/add_reservation.html", profiles=profiles)
 
 
 @reservations.route("/search", methods=["GET", "POST"])
-def search():
+def search() -> object:
     """
-    search function for reservation what can search/filter for group name 
-    and status 
+    search function for reservation what can search/filter for group name
+    and status
     """
     query = request.form.get("query")
     reservations = list(mongo.db.reservations.find({"$text": {"$search": query}}))
@@ -101,12 +101,14 @@ def search():
 
 
 @reservations.route('/edit_reservation<reservation_id>', methods=["GET", "POST"])
-def edit_reservation(reservation_id):
+def edit_reservation(reservation_id) -> object:
     """
-    render edit_reservation.html page after the user clicked on the edit button
-    once all changes are entered in the input fields the database collect value will be updated 
-    accordingly by clicking on the Save Changes button or Abort the process with the Cancel button 
-    and return to get_reservation.html page
+    render edit_reservation.html page with the reservation values as per the id
+    after the user clicked on the edit button
+    once all changes are entered in the input fields the database collect
+    value will be updated accordingly by clicking on the Save Changes button or
+    Abort the process with the Cancel button and return to 
+    get_reservation.html page
     :return render_template of get_reservations.html page
     """
 
@@ -115,21 +117,21 @@ def edit_reservation(reservation_id):
         return redirect(url_for("authentication.login"))
 
     if request.method == "POST":
-        updated_reservation = {"$set": 
+        updated_reservation = {"$set":
         {
             "group_name": request.form.get('group_name'),
-            "arrival_date": request.form.get('arrival_date'), 
-            "contact_name": request.form.get('contact_name'), 
-            "contact_email": request.form.get('contact_email'), 
-            "contact_phone": request.form.get('contact_phone'), 
-            "line_address": request.form.get('line_address'), 
+            "arrival_date": request.form.get('arrival_date'),
+            "contact_name": request.form.get('contact_name'),
+            "contact_email": request.form.get('contact_email'),
+            "contact_phone": request.form.get('contact_phone'),
+            "line_address": request.form.get('line_address'),
             "city": request.form.get('city'),
             "postcode": request.form.get('postcode'),
             "country": request.form.get('country'),
             "los": request.form.get('los'), 
             "status": request.form.get('status'), 
-            "board": request.form.get('board'), 
-            "porterage": request.form.get('porterage'), 
+            "board": request.form.get('board'),
+            "porterage": request.form.get('porterage'),
             "single_room": request.form.get('single_room'),
             "double_room": request.form.get('double_room'),
             "twin_room": request.form.get('twin_room'),
@@ -143,19 +145,23 @@ def edit_reservation(reservation_id):
             "notes": request.form.get('notes'),
         }
         }
-        mongo.db.reservations.update_one({"_id": ObjectId(reservation_id)}, updated_reservation)
+        mongo.db.reservations.update_one({"_id": ObjectId(reservation_id)},
+                                            updated_reservation)
         flash("Reservation Updated")
         return redirect(url_for("reservations.get_reservations"))
-    
+ 
     profiles = mongo.db.profiles.find().sort("category_name", 1)
     reservation = mongo.db.reservations.find_one({"_id": ObjectId(reservation_id)})
-    return render_template("reservations/edit_reservation.html", reservation=reservation, profiles=profiles)
+    return render_template("reservations/edit_reservation.html",
+                            reservation=reservation,
+                            profiles=profiles)
 
 
 @reservations.route('/delete_reservation/<reservation_id>')
-def delete_reservation(reservation_id):
+def delete_reservation(reservation_id) -> object:
     """
-    delete the selected object from the reservations collection and returns to list of remaining reservations
+    delete the selected document as per user id from the reservations
+    collection and returns to list of remaining reservations
     :return render_template of get_reservation.html
     """
     # Check the user is logged in
@@ -168,10 +174,10 @@ def delete_reservation(reservation_id):
 
 
 @reservations.route("/contact", methods=["GET", "POST"])
-def contact():
+def contact() -> object:
     """
-    Render the contact.html template where the user can send email to the site owner
-    the email function is powered with email.js see static/js/email.js
+    Render the contact.html template where the user can send email to the site
+    owner the email function is powered with email.js see static/js/email.js
     :return render_template of contact.html
     """
 

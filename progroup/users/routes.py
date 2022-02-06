@@ -10,8 +10,16 @@ users = Blueprint('users', __name__)
 
 @users.route("/get_users")
 def get_users():
+    """
+    Render get_users.html page after user click on the Users button
+    in the navigation.
+    Displays all current users and their details a gives and an option
+    to create new user or edit and delete exisitng user.
+    Only visible to users with admin role.
+    :return render_template of get_users.html
+    """
 
-      # Check the user is logged in
+    # Check the user is logged in
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
 
@@ -21,21 +29,28 @@ def get_users():
 
 @users.route("/add_user", methods=["GET", "POST"])
 def add_user():
+    """
+    Render add_user.html page after the user selected the
+    Add New button.
+    The new document will be added to the users collection
+    once all input fields are filled
+    :return render_template of add_user.html
+    """
 
-  # Check the user is logged in
+    # Check the user is logged in
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
 
     if request.method == "POST":
-        is_admin = "admin" if request.form.get("is_admin") else "user" 
+        is_admin = "admin" if request.form.get("is_admin") else "user"
         users = {
             "username": request.form.get('username'),
-            "first_name": request.form.get('first_name'), 
-            "last_name": request.form.get('last_name'), 
-            "email": request.form.get('email'), 
+            "first_name": request.form.get('first_name'),
+            "last_name": request.form.get('last_name'),
+            "email": request.form.get('email'),
             "password": generate_password_hash(request.form.get('password')),
             "position": request.form.get('position'),
-            "is_admin": is_admin 
+            "is_admin": is_admin
         }
 
         mongo.db.users.insert_one(users)
@@ -48,21 +63,28 @@ def add_user():
 
 @users.route("/edit_user/<user_id>", methods=["GET", "POST"])
 def edit_user(user_id):
+    """
+    Render edit_reservation.html page after the user clicked on the edit button
+    once all changes are entered in the input fields the selected documents
+    values will be updated by clicking on the Save Changes button or Abort the
+    process with the Cancel button and return to get_users.html page
+    :return render_template of get_users.html page
+    """
 
-  # Check the user is logged in
+    # Check the user is logged in
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
 
     if request.method == "POST":
-        is_admin = "admin" if request.form.get("is_admin") else "user" 
-        updated_user = {"$set": 
+        is_admin = "admin" if request.form.get("is_admin") else "user"
+        updated_user = {"$set":
         {
-             "username": request.form.get('username'),
-            "first_name": request.form.get('first_name'), 
-            "last_name": request.form.get('last_name'), 
-            "email": request.form.get('email'), 
+            "username": request.form.get('username'),
+            "first_name": request.form.get('first_name'),
+            "last_name": request.form.get('last_name'),
+            "email": request.form.get('email'),
             "position": request.form.get('position'),
-            "is_admin": is_admin 
+            "is_admin": is_admin
         }
         }
 
@@ -76,7 +98,11 @@ def edit_user(user_id):
 
 @users.route('/delete_user/<user_id>')
 def delete_user(user_id):
-
+    """
+    delete the selected document from the users collection and returns to
+    list of remaining reservations
+    :return render_template of get_users.html
+    """
   # Check the user is logged in
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
