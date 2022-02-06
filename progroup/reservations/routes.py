@@ -42,7 +42,7 @@ def get_reservations() -> object:
 def add_reservation() -> object:
     """
     render add_reservation html page after teh user clicked on the
-    Add New Reservation button and add to the database 
+    Add New Reservation button and add to the database
     the new reservation once all input fields are filled
     :return render_template of get_reservations.html
     """
@@ -62,10 +62,10 @@ def add_reservation() -> object:
             "city": request.form.get('city'),
             "postcode": request.form.get('postcode'),
             "country": request.form.get('country'),
-            "los": request.form.get('los'), 
+            "los": request.form.get('los'),
             "status": request.form.get('status'),
-            "board": request.form.get('board'), 
-            "porterage": request.form.get('porterage'), 
+            "board": request.form.get('board'),
+            "porterage": request.form.get('porterage'),
             "single_room": request.form.get('single_room'),
             "double_room": request.form.get('double_room'),
             "twin_room": request.form.get('twin_room'),
@@ -83,7 +83,7 @@ def add_reservation() -> object:
         mongo.db.reservations.insert_one(reservations)
         flash("Reservation Added")
         return redirect(url_for("reservations.get_reservations"))
-  
+
     profiles = mongo.db.profiles.find().sort("group_name", 1)
     return render_template("reservations/add_reservation.html", profiles=profiles)
 
@@ -107,7 +107,7 @@ def edit_reservation(reservation_id) -> object:
     after the user clicked on the edit button
     once all changes are entered in the input fields the database collect
     value will be updated accordingly by clicking on the Save Changes button or
-    Abort the process with the Cancel button and return to 
+    Abort the process with the Cancel button and return to
     get_reservation.html page
     :return render_template of get_reservations.html page
     """
@@ -128,8 +128,8 @@ def edit_reservation(reservation_id) -> object:
             "city": request.form.get('city'),
             "postcode": request.form.get('postcode'),
             "country": request.form.get('country'),
-            "los": request.form.get('los'), 
-            "status": request.form.get('status'), 
+            "los": request.form.get('los'),
+            "status": request.form.get('status'),
             "board": request.form.get('board'),
             "porterage": request.form.get('porterage'),
             "single_room": request.form.get('single_room'),
@@ -149,7 +149,7 @@ def edit_reservation(reservation_id) -> object:
                                             updated_reservation)
         flash("Reservation Updated")
         return redirect(url_for("reservations.get_reservations"))
- 
+
     profiles = mongo.db.profiles.find().sort("category_name", 1)
     reservation = mongo.db.reservations.find_one({"_id": ObjectId(reservation_id)})
     return render_template("reservations/edit_reservation.html",

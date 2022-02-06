@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    {% for profile in profiles %}
+    {% for profile in profiles_list %}
     <!-- Iterate through all the users and displays on the page  -->
     <div class="card-panel col  xl4 l6 s12">
         <ul class="users">
@@ -28,7 +28,7 @@
             <hr>
             <!-- Contact details -->
             <li><strong>Contact Details</strong></li>
-            <li>Contact Name: {{ profiles.contact_name }}</li>
+            <li>Contact Name: {{ profile.contact_name }}</li>
             <li>Contact Email: {{ profile.contact_email }}</li>
             <li>Contact Phone: {{ profile.contact_phone }}</li>
             <li><strong>Contact Address</strong></li>

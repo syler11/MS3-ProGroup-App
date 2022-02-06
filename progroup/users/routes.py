@@ -1,7 +1,7 @@
 from flask import (
-    Flask, flash, render_template, redirect, request, session, url_for, Blueprint)
+    flash, render_template, redirect, request, session, url_for, Blueprint)
 from bson.objectid import ObjectId
-from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.security import generate_password_hash
 from progroup import mongo
 
 # Create a users object as a blueprint
@@ -23,8 +23,8 @@ def get_users():
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
 
-    users = list(mongo.db.users.find())
-    return render_template("users/users.html", users=users)
+    users_list = list(mongo.db.users.find())
+    return render_template("users/users.html", users_list=users_list)
 
 
 @users.route("/add_user", methods=["GET", "POST"])
@@ -43,7 +43,7 @@ def add_user():
 
     if request.method == "POST":
         is_admin = "admin" if request.form.get("is_admin") else "user"
-        users = {
+        add_users = {
             "username": request.form.get('username'),
             "first_name": request.form.get('first_name'),
             "last_name": request.form.get('last_name'),
@@ -53,12 +53,12 @@ def add_user():
             "is_admin": is_admin
         }
 
-        mongo.db.users.insert_one(users)
+        mongo.db.users.insert_one(add_users)
         flash("User Added")
         return redirect(url_for("users.get_users"))
 
-    users = mongo.db.users.find()
-    return render_template("users/add_user.html", users=users)
+    users_list = mongo.db.users.find()
+    return render_template("users/add_user.html", users_list=users_list)
 
 
 @users.route("/edit_user/<user_id>", methods=["GET", "POST"])
@@ -103,7 +103,7 @@ def delete_user(user_id):
     list of remaining reservations
     :return render_template of get_users.html
     """
-  # Check the user is logged in
+    # Check the user is logged in
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
 

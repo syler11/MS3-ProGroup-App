@@ -1,6 +1,6 @@
 from flask import (
-    Flask, flash, render_template, redirect, request, session, url_for, Blueprint)
-from werkzeug.security import generate_password_hash, check_password_hash
+    flash, render_template, redirect, request, session, url_for, Blueprint)
+from werkzeug.security import check_password_hash
 from progroup import mongo
 
 
@@ -10,7 +10,15 @@ authentication = Blueprint('authentication', __name__)
 
 @authentication.route("/")
 @authentication.route("/login", methods=["GET", "POST"])
-def login():
+def login() -> object:
+    """
+    Render login.html when user navigate to the webadress.
+    Page will display the login form with username and
+    password and login button. System will check whether user exist
+    and if the password entered matching the database data it will
+    put the username in session and login the user.
+    :return render_template of get_reservation.html
+    """
     if request.method == "POST":
         # check if username exists in db
         existing_user = mongo.db.users.find_one(
@@ -37,7 +45,11 @@ def login():
 
 
 @authentication.route("/authentication.logout")
-def logout():
+def logout() -> object:
+    """
+    Render login.html page and popping user from session.
+    :retrun render_template of login.html
+    """
     # remove user from session cookie
     session.pop("user")
     return redirect(url_for("authentication.login"))
