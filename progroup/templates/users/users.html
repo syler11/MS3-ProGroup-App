@@ -11,13 +11,13 @@
         <div class="col s8 right">
             <!-- Add New User button navigate to add_user.html page -->
             <a href="{{ url_for('users.add_user') }}"><button class="right btn-large light-blue darken-3 text-shadow">
-                    <i class="fas fa-plus-square right"></i>Add New User</button></a>
+                    <i class="fas fa-plus-square right"></i>Add New</button></a>
         </div>
     </div>
 
     {% for user in users %}
     <!-- Iterate through all the users and displays on the page  -->
-    <div class="card-panel col xl4 l6 m12">
+    <div class="card-panel col xl4 l6 s12">
         <ul class="users">
             <!-- User details -->
             <strong>{{ user.first_name }} {{ user.last_name }}</strong>
