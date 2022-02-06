@@ -208,13 +208,20 @@
   }
 
   @media only screen and (max-width: 800px) {
-    .table th td {
+    table th, td {
       font-size: 12px;
       padding: 2px 2px;
-  
     }
 
     h4 {
       font-size: 26px;
+    }
+
+    .btn-large {
+      font-size: 14px;
+      padding: 5px;
+      height: 40px;
+      line-height: 40px;
+      vertical-align: middle;
     }
   }
