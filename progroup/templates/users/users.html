@@ -21,8 +21,8 @@
         <ul class="users">
             <!-- User details -->
             <strong>{{ user.first_name }} {{ user.last_name }}</strong>
-            <a href="{{ url_for('users.edit_user', user_id=user._id) }}"><i class="far fa-edit right"></i></a>
-            <button data-target="deleteUser{{ user._id }}" class="right modal-trigger"><i class="far fa-trash-alt right"></i></button>
+            <a href="{{ url_for('users.edit_user', user_id=user._id) }}"><i class="far fa-edit right tooltipped" data-position="top" data-tooltip="Edit"></i></a>
+            <button data-target="deleteUser{{ user._id }}" class="right modal-trigger"><i class="far fa-trash-alt right tooltipped" data-position="top" data-tooltip="Delete"></i></button>
             <hr>
             <li>Position: {{ user.position }}</li>
             <li>Email: {{ user.email }}</li>

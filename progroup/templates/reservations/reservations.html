@@ -55,8 +55,10 @@
                     <td>{{ reservation.rooms }}</td>
                     <td>{{ reservation.status.capitalize() }}</td>
                     <td><a href="{{ url_for('reservations.edit_reservation', reservation_id=reservation._id) }}"><i
-                                class="far right fa-edit"></i></a>
-                                <a class="right modal-trigger" href="#deleteReservation"><i class="far fa-trash-alt right"></i></a>
+                                class="far right fa-edit tooltipped" data-position="top" data-tooltip="Edit"></i></a>
+                                <a class="right modal-trigger" href="#deleteReservation">
+                                    <i class="far fa-trash-alt right tooltipped" data-position="top" data-tooltip="Delete"></i></a>
+                                
                     </td>
                 </tr>
             </table>

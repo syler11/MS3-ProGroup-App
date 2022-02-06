@@ -5,6 +5,7 @@ $(document).ready(function() {
     $('.collapsible').collapsible();
     $('.sidenav').sidenav();
     $('select').formSelect();
+    $('.tooltipped').tooltip();
     $('.modal').modal();
     $('.datepicker').datepicker({
         format: "dd/mm/yyyy",
