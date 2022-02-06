@@ -39,7 +39,7 @@ def add_profile():
 
         mongo.db.profiles.insert_one(profiles)
         flash("Profile Added")
-        return redirect(url_for("profiles/profiles"))
+        return redirect(url_for("profiles.get_profiles"))
 
     profiles = mongo.db.profiles.find()
     return render_template("profiles/add_profile.html", profiles=profiles)
@@ -82,4 +82,4 @@ def delete_profile(profile_id):
 
     mongo.db.profiles.delete_one({"_id": ObjectId(profile_id)})
     flash("Profile Deleted")
-    return redirect(url_for("profiles/profiles"))
+    return redirect(url_for("profiles.get_profiles"))

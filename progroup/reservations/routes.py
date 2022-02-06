@@ -10,7 +10,7 @@ reservations = Blueprint('reservations', __name__)
 @reservations.route("/get_reservations")
 def get_reservations():
     """
-    Render the get_reservations.html template once the user has a succesful login 
+    render the get_reservations.html template once the user has a succesful login 
     and dispaly all the reservations available in the reservations collection 
     and sort it by group name
     :return render_template of get_reservations.html
@@ -19,21 +19,28 @@ def get_reservations():
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
 
-    total_revenue = list(mongo.db.reservations.aggregate([{"$group": {
+    total_revenue = mongo.db.reservations.aggregate([{"$group": {
         "_id": '',
         "rooms": {"$sum": "rooms"}
     }
-    }]))
+    }])
+    top_reservations = mongo.db.reservations.aggregate([{"$sort":{"group_name":-1}}, {"$limit":1}])
     total_groups = mongo.db.reservations.count_documents({})
     top_group = mongo.db.reservations.count_documents({"status": "confirmed"})
     reservations = mongo.db.reservations.find().sort("group_name", 1)
-    return render_template("reservations/reservations.html", reservations=reservations, total_groups=total_groups, top_group=top_group, total_revenue=total_revenue)
+    return render_template("reservations/reservations.html", reservations=reservations, total_groups=total_groups, top_group=top_group, total_revenue=total_revenue, top_reservations=top_reservations)
 
 
 @reservations.route("/add_reservation", methods=["GET", "POST"])
 def add_reservation():
+    """
+    render add_reservation html page after teh user clicked on the
+    Add New Reservation button and add to the database 
+    the new reservation once all input fields are filled
+    :return render_template of get_reservations.html
+    """
 
-      # Check the user is logged in
+    # Check the user is logged in
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
 
@@ -76,6 +83,10 @@ def add_reservation():
 
 @reservations.route("/search", methods=["GET", "POST"])
 def search():
+    """
+    search function for reservation what can search/filter for group name 
+    and status 
+    """
     query = request.form.get("query")
     reservations = list(mongo.db.reservations.find({"$text": {"$search": query}}))
     flash("Search filter applied")
@@ -84,8 +95,15 @@ def search():
 
 @reservations.route('/edit_reservation<reservation_id>', methods=["GET", "POST"])
 def edit_reservation(reservation_id):
+    """
+    render edit_reservation.html page after the user clicked on the edit button
+    once all changes are entered in the input fields the database collect value will be updated 
+    accordingly by clicking on the Save Changes button or Abort the process with the Cancel button 
+    and return to get_reservation.html page
+    :return render_template of get_reservations.html page
+    """
 
-  # Check the user is logged in
+    # Check the user is logged in
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
 
@@ -133,7 +151,7 @@ def delete_reservation(reservation_id):
     delete the selected object from the reservations collection and returns to list of remaining reservations
     :return render_template of get_reservation.html
     """
-  # Check the user is logged in
+    # Check the user is logged in
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
 
@@ -150,7 +168,7 @@ def contact():
     :return render_template of contact.html
     """
 
-  # Check the user is logged in
+    # Check the user is logged in
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
 
