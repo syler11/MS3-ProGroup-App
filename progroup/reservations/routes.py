@@ -1,5 +1,5 @@
 from flask import (
-    Flask, flash, render_template, redirect, session, request, url_for, Blueprint)
+    flash, render_template, redirect, session, request, url_for, Blueprint)
 from bson.objectid import ObjectId
 from progroup import mongo
 
@@ -10,12 +10,12 @@ reservations = Blueprint('reservations', __name__)
 @reservations.route("/get_reservations")
 def get_reservations():
     """
-    render the get_reservations.html template once the user has a succesful login 
-    and dispaly all the reservations available in the reservations collection 
-    and sort it by group name
+    render the get_reservations.html template once the user has a succesful 
+    login and dispaly all the reservations available in the reservations 
+    collection and sort it by group name
     :return render_template of get_reservations.html
     """
-      # Check the user is logged in
+    # Check the user is logged in
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
 
@@ -24,11 +24,18 @@ def get_reservations():
         "rooms": {"$sum": "rooms"}
     }
     }])
-    top_reservations = mongo.db.reservations.aggregate([{"$sort":{"group_name":-1}}, {"$limit":1}])
+    top_reservations = mongo.db.reservations.aggregate([{"$sort":
+                                                        {"group_name":-1}}, 
+                                                                {"$limit":1}])
     total_groups = mongo.db.reservations.count_documents({})
     top_group = mongo.db.reservations.count_documents({"status": "confirmed"})
     reservations = mongo.db.reservations.find().sort("group_name", 1)
-    return render_template("reservations/reservations.html", reservations=reservations, total_groups=total_groups, top_group=top_group, total_revenue=total_revenue, top_reservations=top_reservations)
+    return render_template("reservations/reservations.html", 
+                            reservations=reservations, 
+                            total_groups=total_groups, 
+                            top_group=top_group, 
+                            total_revenue=total_revenue, 
+                            top_reservations=top_reservations)
 
 
 @reservations.route("/add_reservation", methods=["GET", "POST"])
