@@ -1,6 +1,7 @@
 from flask import (
     flash, render_template, redirect, session, request, url_for, Blueprint)
 from bson.objectid import ObjectId
+from datetime import datetime
 from progroup import mongo
 
 # Create a users object as a blueprint
@@ -47,6 +48,9 @@ def add_reservation() -> object:
     :return render_template of get_reservations.html
     """
 
+    now = datetime.now()
+    timestamp = now.strftime("%Y/%m/%d, %H:%M:%S")
+
     # Check the user is logged in
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
@@ -78,6 +82,7 @@ def add_reservation() -> object:
             "pax": request.form.get('pax'),
             "notes": request.form.get('notes'),
             "created_by": session["user"],
+            "created_on": timestamp,
         }
 
         mongo.db.reservations.insert_one(reservations)
@@ -112,6 +117,9 @@ def edit_reservation(reservation_id) -> object:
     :return render_template of get_reservations.html page
     """
 
+    now = datetime.now()
+    timestamp = now.strftime("%Y/%m/%d, %H:%M:%S")
+
     # Check the user is logged in
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
@@ -143,6 +151,8 @@ def edit_reservation(reservation_id) -> object:
             "triple_rate": request.form.get('triple_rate'),
             "pax": request.form.get('pax'),
             "notes": request.form.get('notes'),
+            "last_updated_by": session["user"],
+            "last_updated_on": timestamp,
         }
         }
         mongo.db.reservations.update_one({"_id": ObjectId(reservation_id)},

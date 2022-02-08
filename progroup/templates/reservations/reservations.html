@@ -98,19 +98,19 @@
                     <p><span><strong>Room Confguration:</strong></span></p>
                     <p>
                         <span>Single room: </span>
-                        <span class="left">{{ reservation.single_room }}</span>
+                        <span class="right">{{ reservation.single_room }}</span>
                     </p>
                     <p>
                         <span>Double room: </span>
-                        <span class="left">{{ reservation.double_room }}</span>
+                        <span class="right">{{ reservation.double_room }}</span>
                     </p>
                     <p>
                         <span>Twin room: </span>
-                        <span class="left">{{ reservation.twin_room }}</span>
+                        <span class="right">{{ reservation.twin_room }}</span>
                     </p>
                     <p>
                         <span>Triple room: </span>
-                        <span class="left">{{ reservation.triple_room }}</span>
+                        <span class="right">{{ reservation.triple_room }}</span>
                     </p>
                 </div>
                 <div class="col s3">
@@ -135,6 +135,15 @@
                     </fieldset>
                     <p>
                         Created by: <span class="center-align">{{ reservation.created_by }}</span><br>
+                    </p>
+                    <p>
+                        Created on: <span class="center-align">{{ reservation.created_on }}</span><br>
+                    </p>
+                    <p>
+                        Last updated by: <span class="center-align">{{ reservation.last_updated_by }}</span><br>
+                    </p>
+                    <p>
+                        Last updated on: <span class="center-align">{{ reservation.last_updated_on }}</span><br>
                     </p>
                 </div>
                 <div class="row">
