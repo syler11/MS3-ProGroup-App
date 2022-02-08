@@ -1,7 +1,7 @@
+from datetime import datetime
 from flask import (
     flash, render_template, redirect, session, request, url_for, Blueprint)
 from bson.objectid import ObjectId
-from datetime import datetime
 from progroup import mongo
 
 # Create a users object as a blueprint
@@ -26,8 +26,8 @@ def get_reservations() -> object:
     }
     }])
     top_reservations = mongo.db.reservations.aggregate([{"$sort":
-                                                        {"group_name":-1}},
-                                                                {"$limit":1}])
+                                                        {"group_name": -1}},
+                                                                {"$limit": 1}])
     total_groups = mongo.db.reservations.count_documents({})
     top_group = mongo.db.reservations.count_documents({"status": "confirmed"})
     reservations = mongo.db.reservations.find().sort("group_name", 1)
@@ -56,41 +56,46 @@ def add_reservation() -> object:
         return redirect(url_for("authentication.login"))
 
     if request.method == "POST":
-        reservations = {
-            "group_name": request.form.get('group_name'),
-            "arrival_date": request.form.get('arrival_date'),
-            "contact_name": request.form.get('contact_name'),
-            "contact_email": request.form.get('contact_email'),
-            "contact_phone": request.form.get('contact_phone'),
-            "line_address": request.form.get('line_address'),
-            "city": request.form.get('city'),
-            "postcode": request.form.get('postcode'),
-            "country": request.form.get('country'),
-            "los": request.form.get('los'),
-            "status": request.form.get('status'),
-            "board": request.form.get('board'),
-            "porterage": request.form.get('porterage'),
-            "single_room": request.form.get('single_room'),
-            "double_room": request.form.get('double_room'),
-            "twin_room": request.form.get('twin_room'),
-            "triple_room": request.form.get('triple_room'),
-            "rooms": request.form.get('rooms'),
-            "single_rate": request.form.get('single_rate'),
-            "double_rate": request.form.get('double_rate'),
-            "twin_rate": request.form.get('twin_rate'),
-            "triple_rate": request.form.get('triple_rate'),
-            "pax": request.form.get('pax'),
-            "notes": request.form.get('notes'),
-            "created_by": session["user"],
-            "created_on": timestamp,
-        }
+        try:
+            reservations = {
+                "group_name": request.form.get('group_name'),
+                "arrival_date": request.form.get('arrival_date'),
+                "contact_name": request.form.get('contact_name'),
+                "contact_email": request.form.get('contact_email'),
+                "contact_phone": request.form.get('contact_phone'),
+                "line_address": request.form.get('line_address'),
+                "city": request.form.get('city'),
+                "postcode": request.form.get('postcode'),
+                "country": request.form.get('country'),
+                "los": request.form.get('los'),
+                "status": request.form.get('status'),
+                "board": request.form.get('board'),
+                "porterage": request.form.get('porterage'),
+                "single_room": request.form.get('single_room'),
+                "double_room": request.form.get('double_room'),
+                "twin_room": request.form.get('twin_room'),
+                "triple_room": request.form.get('triple_room'),
+                "rooms": request.form.get('rooms'),
+                "single_rate": request.form.get('single_rate'),
+                "double_rate": request.form.get('double_rate'),
+                "twin_rate": request.form.get('twin_rate'),
+                "triple_rate": request.form.get('triple_rate'),
+                "pax": request.form.get('pax'),
+                "notes": request.form.get('notes'),
+                "created_by": session["user"],
+                "created_on": timestamp,
+            }
 
-        mongo.db.reservations.insert_one(reservations)
-        flash("Reservation Added")
-        return redirect(url_for("reservations.get_reservations"))
+            mongo.db.reservations.insert_one(reservations)
+            flash("Reservation Added")
+        except Exception as e:
+            flash("An exception occurred when adding the reservation: " +
+                  getattr(e, 'message', repr(e)))
+            return redirect(url_for("reservations.get_reservations"))
 
     profiles = mongo.db.profiles.find().sort("group_name", 1)
-    return render_template("reservations/add_reservation.html", profiles=profiles)
+    return render_template("reservations/add_reservation.html",
+                            profiles=profiles)
 
 
 @reservations.route("/search", methods=["GET", "POST"])
@@ -100,7 +105,8 @@ def search() -> object:
     and status
     """
     query = request.form.get("query")
-    reservations = list(mongo.db.reservations.find({"$text": {"$search": query}}))
+    reservations = list(mongo.db.reservations.find({"$text":
+                                                    {"$search": query}}))
     flash("Search filter applied")
     return render_template("reservations/reservations.html", reservations=reservations)
 
