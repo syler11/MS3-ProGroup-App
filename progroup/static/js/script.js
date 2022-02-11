@@ -9,6 +9,8 @@ $(document).ready(function() {
     $('.modal').modal();
     $('.datepicker').datepicker({
         format: "dd/mm/yyyy",
+        autoClose: true,
+        minDate: new Date(),
     });
 });
 
