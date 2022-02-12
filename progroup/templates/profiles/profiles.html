@@ -29,8 +29,8 @@
             <!-- Contact details -->
             <li><strong>Contact Details</strong></li>
             <li>Contact Name: {{ profile.contact_name }}</li>
-            <li>Contact Email: {{ profile.contact_email }}</li>
-            <li>Contact Phone: {{ profile.contact_phone }}</li>
+            <li>Contact Email: <a href="mailto:{{ profile.contact_email }}">{{ profile.contact_email }}</a></li>
+            <li>Contact Phone: <a href="tel:{{ profile.contact_phone }}">{{ profile.contact_phone }}</a></li>
             <li><strong>Contact Address</strong></li>
             <li>{{ profile.line_address }}
                 <br>{{ profile.city }}
