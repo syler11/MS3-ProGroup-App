@@ -144,6 +144,11 @@
   .users li {
     padding: 6px;
   }
+
+.group-name {
+  width: 160px;
+}
+
 /* add user and edit user pages Role selector */
   .is-admin i {
     font-size: 2rem;
@@ -248,6 +253,10 @@
       height: 40px;
       line-height: 40px;
       vertical-align: middle;
+    }
+
+    .group-name {
+      width: 120px;
     }
 
   }

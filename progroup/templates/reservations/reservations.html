@@ -39,8 +39,8 @@
         <div class="s12 collapsible-header">
             <table class="table">
                 <tr>
-                    <th>Group Name</th>
-                    <th>Arrival Date</th>
+                    <th class="group-name">Group Name <i class="fas fa-user prefix"></i></th>
+                    <th class="group-name">Arrival Date</th>
                     <th>LOS</th>
                     <th>Rooms</th>
                     <th>Board</th>
@@ -48,13 +48,13 @@
                     <th></th>
                 </tr>
                 <tr>
-                    <td>{{ reservation.group_name }}</td>
-                    <td>{{ reservation.arrival_date }}</td>
+                    <td class="group-name">{{ reservation.group_name }}</td>
+                    <td class="group-name">{{ reservation.arrival_date }}</td>
                     <td>{{ reservation.los }}</td>
                     <td>{{ reservation.board }}</td>
                     <td>{{ reservation.rooms }}</td>
                     <td>{{ reservation.status.capitalize() }}</td>
-                    <td><a href="{{ url_for('reservations.edit_reservation', reservation_id=reservation._id) }}"><i
+                    <td class="no-collapse"><a href="{{ url_for('reservations.edit_reservation', reservation_id=reservation._id) }}"><i
                                 class="far right fa-edit tooltipped" data-position="top" data-tooltip="Edit"></i></a>
                                 <a class="right modal-trigger" href="#deleteReservation">
                                     <i class="far fa-trash-alt right tooltipped" data-position="top" data-tooltip="Delete"></i></a>

@@ -1,6 +1,10 @@
 #Table of Contents
 - [Project overview](#project-overview)
 - [UX](#ux)
+  * [Strategy](#strategy)
+    + [Primary Goal](#primary-goal)
+  * [Structure](#structure)
+    + [Website pages](#website-pages)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
@@ -15,8 +19,17 @@
 
 
 # Project Overview
+- ProGroup project is a website that allows users to add/edit/delete Group reservation for submission as milestone project 3 as part of the Code Institute - Diploma in Software Development (Full stack) course. The project based on a real world use when the hotel reservation is able to keep track the various groups arriving in the 2022 seasn. 
+- The website is deployed using Heroku pages at the following url: [ProGroup](http://progroup-app.herokuapp.com/)
+- The repository on GitHub that contains the website source code and assets is available at the following url: [Code Repository](https://github.com/syler11/MS3-ProGroup-App)
+- The website was built with a responsive look and feel for desktop, tablet and mobile devices
 
 # UX
+## Strategy
+### Primary Goal
+
+## Structure
+### Website pages
 
 # Features
 
