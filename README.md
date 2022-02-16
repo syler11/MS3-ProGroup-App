@@ -27,9 +27,43 @@
 # UX
 ## Strategy
 ### Primary Goal
+The primary goal of the website from the site 
+owners perspective is as follows:
+- To create/edit/delete profiles so users can add a reservation
+- To allow users reservations to a selected profile
+- To allow users modify their reservations and / or profiles
+- To allow users delete profiles and / or profiles
+- To allow users to send messages to the owners
+- To view statistics on the usage of the site
+
+The primary goal of the website from a site users perspective is as follows:
+- To allow users reservations to a selected profile
+- To allow users modify their reservations and / or profiles
+- To allow users delete profiles and / or profiles
+- To send messages to the owners
+- To view statistics on the usage of the site
 
 ## Structure
 ### Website pages
+1. Home / Landing Page: The first page the user would see when they access the website before they can login to the site.
+2. Login: This page allows the user to login to the website. There was no register page added to the landing page to ensure that only authorised personnel could access the website when given access by one of the admin.
+3. Reservations: The first page when user would arrive after successful login. It display all the reservation / navigations and some basic statistics of the exsiting reservations. 
+4. Add Reservations: 
+5. Edit Reservations:
+6. Delete Reservations:
+7. Profiles:
+8. Add Profiles:
+9. Edit Profiles:
+10. Delete Profiles:
+11. Users:
+12. Add Users:
+13. Edit Users:
+14. Delete Users:
+15. Help:
+16. Logout:
+17. 404:
+18. 400, 401, 405 and 500:
+
 
 # Features
 
