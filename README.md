@@ -5,6 +5,7 @@
     + [Primary Goal](#primary-goal)
   * [Structure](#structure)
     + [Website pages](#website-pages)
+    + [Code structure](#code-structure)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
@@ -45,24 +46,27 @@ The primary goal of the website from a site users perspective is as follows:
 
 ## Structure
 ### Website pages
+The website contains 18 pages in a logical structure, information and purpose.
 1. Home / Landing Page: The first page the user would see when they access the website before they can login to the site.
 2. Login: This page allows the user to login to the website. There was no register page added to the landing page to ensure that only authorised personnel could access the website when given access by one of the admin.
 3. Reservations: The first page when user would arrive after successful login. It display all the reservation / navigations and some basic statistics of the exsiting reservations. 
-4. Add Reservations: 
-5. Edit Reservations:
-6. Delete Reservations:
-7. Profiles:
-8. Add Profiles:
-9. Edit Profiles:
-10. Delete Profiles:
-11. Users:
-12. Add Users:
-13. Edit Users:
-14. Delete Users:
-15. Help:
-16. Logout:
-17. 404:
-18. 400, 401, 405 and 500:
+4. Add Reservations: This page allows user add new reservation.
+5. Edit Reservations: This page allows user to edit existing reservation.
+6. Delete Reservations: This page allows user to delete reservation. 
+7. Profiles: This contains all the exisitng group profiles in aplhabetical order.
+8. Add Profiles: This page allows user add new profiles.
+9. Edit Profiles: This page allows user to edit existing profiles.
+10. Delete Profiles: This page allows user to delete profiles. 
+11. Users: / admin only / This page lists all existing users but visible only for people with admin role. 
+12. Add users: This page allows admin users add new users.
+13. Edit users: This page allows admin users to edit existing users.
+14. Delete users: This page allows admin users to delete users. 
+15. Help: This page allows users to send message to the website owner. 
+16. Logout: This link allows the user to logout of the site.
+17. 404: The 404 error page is displayed if the user enters an incorrect url when accessing the site.
+18. 400, 401, 405 and 500: The error page is displayed if the user encounters an error on the site
+
+### Code structure
 
 
 # Features
