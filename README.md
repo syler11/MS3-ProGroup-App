@@ -1,11 +1,17 @@
 # ProGroup Group Reservation Manager
-ProGroup is a website that allows hotels to keep track and organize their group reservations. 
-Users will be able to create/update/delete new Group Profiles and New Reservations based on the Profiles. 
-Users also able to see basic statistics and send email to the owner of the website. 
-There are two type of users: user and admin. Admin will be able to add new users. Users are able to create/update and delete profiles and reservations but not able to add new users. 
-Login for admin: username: admin password: 
-Login for user: username: nikolett password: 
+ProGroup is a website that allows hotels to keep track and organize their group reservations.   
+Users will be able to create/update/delete new Group Profiles and New Reservations based on the Profiles.   
+Users also able to see basic statistics and send email to the owner of the website.  
+There are two type of users: user and admin.  
+Users are able to create/update and delete profiles and reservations but not able to add new users.   
+Admin will be able to add new users.   
+Login for admin: username: admin password:   
+Login for user: username: nikolett password:   
+<br>
 
+**View the live site [here](https://progroup-app.herokuapp.com/)**
+
+![Website Mockup Photos](progroup/static/pictures/website-mockup.png)
 
 # Table of Contents
 - [Project overview](#project-overview)
