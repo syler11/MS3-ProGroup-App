@@ -122,7 +122,7 @@ Materialize
 Fontawesome
 Heroku
 Flask framework
-Htnl
+Html
 Css
 Javascript
 Python
@@ -153,6 +153,20 @@ Mongodb is the database used in the application
 7. Note the MONGO_URI, MONGO_DBNAME and user, these parameters are used when deploying locally(env.py file) and deploying on the likes of heroku(config vars)
 
 ## Heroku
+To deploy this application to Heroku, run the following steps.
+1. In the app.py file, ensure that debug is not enabled, i.e. set to True
+2. Create a file called ProcFile in the root directory, and add the line <code>web: python app.py</code> if the file does not already exist
+3. Create a requirements.txt file by running the command <code>pip freeze > requirements.txt</code> in your terminal if the file doesn't already exist
+5. Both the ProcFile and requirements.txt files should be added to your git repo in the root directory
+6. Create an account on heroku.com
+7. Create a new application and give it a unique name
+8. In the application dashboard, navigate to the deploy section and connect your application to your git repo, by selecting your repo
+9. Select the branch for example master and enable automatic deploys if desired. Otherwise, a deployment will be manual
+10. The next step is to set the config variables in the Settings section
+11. Set key/value pairs for the following keys: IP, MONGO_DBNAME, MONGO_URI, PORT, SECRET_KEY
+12. Go to the dashboard and trigger a deployment
+13. This will trigger a deployment, once the deployment has been successful click on the "Open App" link to open the app
+14. If you encounter any issues accessing the build logs is a good way to troubleshoot the issue
 
 ## Local Deployment
 To run this project locally, you will need to clone the repository
@@ -188,13 +202,32 @@ I kept getting an error message "failed to push some refs to git@heroku.com" whi
 
 # Credits
 
+Credit to https://codeinstitute.net/ for the lesson on email.js  
+Credit to https://favicon.io/favicon-converter/ for the Favicon    
+Credit to https://websitemockupgenerator.com/ for the Website mockup picture    
+Credit to https://fontawesome.com/ for the Icona displayed on the website    
+Credit to https://validator.w3.org/ for the html and css validation  
+Credit to https://wave.webaim.org/ for accessibility check for the website  
+Credit to https://www.emailjs.com/ for email sending functionality for the website   
+Credit to https://www.google.com/ for the Lighthouse report  
+Credit to https://stackoverflow.com/ for being a valuabe source for various functions
+Credit to https://www.youtube.com/watch?v=Zcw1cgXwKCg & https://prettyprinted.com/ for Flask Blueprint structure
+
+
 # Content
+
+- Font Awesome (http://fontawesome.com)    
+    - The icons used on the site from font awesome
 
 # Media
 
 Photos:
 
 1. hotel_room from Pexels via Pixabay
+2. hotel_logo from bridgeoforchy.co.uk website 
+3. website-mockup.png from https://websitemockupgenerator.com/
 
 # Acknowledgment
 
+I would like to thank my wife who is also my co-worker who helped me to test the functionalities and gave me ideas how to include certain features. 
+I would like to thank my mentor Mo Shami for the guidance and support.
