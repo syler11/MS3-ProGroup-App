@@ -21,11 +21,16 @@ Login for user: username: nikolett password:
   * [Structure](#structure)
     + [Website pages](#website-pages)
     + [Code structure](#code-structure)
+    + [Database](#database)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
 - [APIs](#apis)
+  * [Email JS](#email-js)
 - [Deployment](#deployment)
+  * [Mongo Database](#mongo-database)
+  * [Heroku](#heroku)
+  * [Local Deployment](#local-deployment)
 - [Bugs](#bugs)
 - [Credits](#credits)
 - [Content](#content)
@@ -82,7 +87,30 @@ The website contains 18 pages in a logical structure, information and purpose.
 18. 400, 401, 405 and 500: The error page is displayed if the user encounters an error on the site
 
 ### Code structure
+- My project is built using a Blueprints structure
+- Flask blueprint is a way to organize a flask application into smaller and re-usable application. 
+- Just like a normal flask application, a blueprint defines a collection of views, templates and static assets.
+- I found the following videos and website to help my project. 
+    - https://www.youtube.com/watch?v=Zcw1cgXwKCg
+    - https://prettyprinted.com/
+- The project is structured as follows
+    - authentication: Contains a flask route for authentication for example login, logout
+    - errors: Contains a flask route for error pages for example 404
+    - reservation: Contains a flask route for Group reservations, adding, editing etc
+    - static
+      - css (Project style css)
+      - pictures (Project and readme images)
+      - js (Project javascript structured into individual files)
+    - templates: Html templates to match the routes for Authentication, Email, Errors, Profiles, Reservations,  Users and a base.html file
+    - profiles: Contains a flask route for profiles code, adding, editing etc 
+    - users: Contains a flask route for users code, adding, editing etc 
+    - An app.py that setups, creates and runs the application
+    - A local env.py(that is not committed to source control) - This ensures passwords and security-sensitive information are stored in environment variables or in files that
+    are in .gitignore, and are never committed to the repository
 
+### Database
+- The website is a data-centric one with html, javascript, css used with the materialize framework as a frontend
+- The backend consists of Python, flask and jinja templates with a database of a mongodb open-source document-oriented database
 
 # Features
 
@@ -103,8 +131,48 @@ MongoDB
 # Testing
 
 # APIs
+## Email JS
+1. Create an account at emailjs.com 
+2. In the integration screen in the emailjs dashboard, note your userid
+3. Create an 
+ email service in the Email Services section and note the id
+4. Create an email template in the Email templates section and note the id
+5. Update the script sendEmail.js, method sendMail with your user id, email service id and email template id
 
 # Deployment
+There are several applications that need to be configured to run this application locally or on a cloud based service.
+
+## Mongo Database
+Mongodb is the database used in the application
+1. Create an account at mongodb
+2. Create a database cluster
+3. Select the cluster, and in the collections section create a database and create 3 collections under the database: reservations, profiles and users
+4. In the database access, create a user and allow the user read/write access. Note the username
+5. In the network access tab, allow network access from the ip-address of the application connecting to the database
+6. In the Databases section click Connect, and select connect your application
+7. Note the MONGO_URI, MONGO_DBNAME and user, these parameters are used when deploying locally(env.py file) and deploying on the likes of heroku(config vars)
+
+## Heroku
+
+## Local Deployment
+To run this project locally, you will need to clone the repository
+1. Login to GitHub (https://wwww.github.com)
+2. Select the repository syler/MS3-ProGroup-App
+3. Click the Code button and copy the HTTPS url, for example: https://github.com/syler11/MS3-ProGroup-App.git
+4. In your IDE, open a terminal and run the git clone command, for example 
+
+    ```git clone https://github.com/syler11/MS3-ProGroup-App.git```
+
+5. The repository will now be cloned in your workspace
+6. Create an env.py file in the root folder in your project, and add in the following code with the relevant key, value pairs, and ensure you enter the correct key values<br>
+<code>import os</code><br>
+<code>os.environ.setdefault("IP", TO BE ADDED BY USER)</code><br>
+<code>os.environ.setdefault("PORT", TO BE ADDED BY USER)</code><br>
+<code>os.environ.setdefault("SECRET_KEY", TO BE ADDED BY USER)</code><br>
+<code>os.environ.setdefault("MONGO_URI", TO BE ADDED BY USER)</code><br>
+<code>os.environ.setdefault("MONGO_DBNAME", TO BE ADDED BY USER)</code><br>
+7. Install the relevant packages as per the requirements.txt file
+8. Start the application by running <code>python3 app.py</code>
 
 # Bugs
 
