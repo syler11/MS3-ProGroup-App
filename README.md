@@ -141,7 +141,10 @@ The website contains 18 pages in a logical structure, information and purpose.
 
 ### Color palette
 
-- ececec - Light grey colour
+- ECECEC - Light grey colour
+- 039be5 - Button colour
+- cf9109 - Navbar background colour
+
 ### Typography
 
 # Features

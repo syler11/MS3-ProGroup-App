@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
 /* Login page textbox on hero image */
 .textbox {
     width: 350px;
