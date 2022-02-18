@@ -22,8 +22,20 @@ Login for user: username: nikolett password:
     + [Website pages](#website-pages)
     + [Code structure](#code-structure)
     + [Database](#database)
+    + [Conceptual Database](#conceptual-database)
+    + [MongoDB Database Information](#mongodb-database-information)
+  * [Scope](#scope)
+    + [User Stories](#user-stories)
+    + [User Stories Website Owner](#user-stories-website-owner)
+  * [Skeleton](#skeleton)
+    + [Wireframes](#wireframes)
+  * [Surface](#surface)
+    + [Color Palette](#color-palette)
+    + [Typography](#typography)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
+  * [Languages](#languages)
+  * [Libraries and other resources](#libraries-and-other-resources)
 - [Testing](#testing)
 - [APIs](#apis)
   * [Email JS](#email-js)
@@ -112,21 +124,50 @@ The website contains 18 pages in a logical structure, information and purpose.
 - The website is a data-centric one with html, javascript, css used with the materialize framework as a frontend
 - The backend consists of Python, flask and jinja templates with a database of a mongodb open-source document-oriented database
 
+#### Conceptual Database
+
+#### MongoDB Database Information
+
+## Scope
+
+### User Stories
+### User Stories Website Owner
+
+## Skeleton
+
+### Wireframes
+
+## Surface
+
+### Color palette
+
+- ececec - Light grey colour
+### Typography
+
 # Features
 
 # Technologies Used
 
-Technologies used:
-JQuery
-Materialize
-Fontawesome
-Heroku
-Flask framework
-Html
-Css
-Javascript
-Python
-MongoDB
+## Languages
+
+- Html
+- Css
+- Javascript
+- Python
+- Jinja
+
+## Libraries and other resources
+
+- JQuery
+- Materialize
+- Fontawesome
+- Heroku
+- Flask framework
+- Balsamiq
+- Google Font
+- GitHub
+- GitPod
+- MongoDB
 
 # Testing
 
