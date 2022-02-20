@@ -136,6 +136,21 @@ The website contains 18 pages in a logical structure, information and purpose.
 ## Skeleton
 
 ### Wireframes
+Each wireframe image below contains three sub images, one for desktop, tablet and mobile
+
+Page | Wireframe | 
+------------ | ------------- 
+Login | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframe_login.png)
+Reservations | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframe_reservations.png)
+Add Reservations | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframe_addReservations.png)
+Edit Reservations | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframe_editReservations.png)
+Profiles | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframe_profiles.png)
+Add Profiles | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframe_addProfiles.png)
+Edit Profiles | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframe_editProfiles.png)
+Users | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframe_users.png)
+Add Users | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframe_addUsers.png)
+Edit Users | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframe_editUsers.png)
+Help | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframe_help.png)
 
 ## Surface
 
