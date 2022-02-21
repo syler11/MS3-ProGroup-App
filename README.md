@@ -127,6 +127,10 @@ The website contains 18 pages in a logical structure, information and purpose.
 #### Conceptual Database
 
 #### MongoDB Database Information
+- One production database(group_manager) was created to store site information, it contains three collections described below
+1. profiles - contains contact information for a group operator
+2. reservations - contatins the group operator names and reservation details such
+3. users - to store registered user information
 
 ## Scope
 
@@ -136,7 +140,7 @@ The website contains 18 pages in a logical structure, information and purpose.
 ## Skeleton
 
 ### Wireframes
-Each wireframe image below contains three sub images, one for desktop, tablet and mobile
+Each wireframe contains three sub images, one for desktop, tablet and mobile
 
 Page | Wireframe | 
 ------------ | ------------- 
