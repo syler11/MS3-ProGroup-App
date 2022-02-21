@@ -155,10 +155,16 @@ Help | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframe_help.png)
 ## Surface
 
 ### Color palette
+There are six main colors what I used throughout of this project.
+- #ECECEC - Light grey colour for background
+- #37474F - main background clor for the navigation theme
+- #CF9109 - Font color for the navigation
+- #039be5 - Add Button colour
+- #01579B - Save / Search button color
+- #F44336 - Delete button color
 
-- ECECEC - Light grey colour
-- 039be5 - Button colour
-- cf9109 - Navbar background colour
+I choose those colours after testing a number of palettes while making sure the colour palette met accessibility standards.
+![Color Palette](progroup/static/pictures/color_palette.PNG)
 
 ### Typography
 
