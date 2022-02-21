@@ -164,9 +164,10 @@ There are six main colors what I used throughout of this project.
 - #F44336 - Delete button color
 
 I choose those colours after testing a number of palettes while making sure the colour palette met accessibility standards.
-![Color Palette](progroup/static/pictures/color_palette.PNG)
+![Color Palette](progroup/static/pictures/color_palette.png)
 
 ### Typography
+The Roboto font is the main font used throughout the whole website with Sans Serif as the fallback font. This font is from the Google fonts library.
 
 # Features
 
@@ -192,8 +193,10 @@ I choose those colours after testing a number of palettes while making sure the 
 - GitHub
 - GitPod
 - MongoDB
+- Coolors - Color palette generator 
 
 # Testing
+The testing information and results for this project are documented in [TESTING.md](TESTING.md)
 
 # APIs
 ## Email JS
