@@ -117,10 +117,22 @@ def search() -> object:
     and status
     """
     query = request.form.get("query")
+    total = "Number of Groups: " + str(mongo.db.reservations.count_documents({}))
+    stat1 = "Confirmed Groups: " + str(mongo.db.reservations.count_documents({"status": "confirmed"}))
+    stat2 = "Provisional Groups: " + str(mongo.db.reservations.count_documents({"status": "provisional"}))
+    stat3 = "Cancelled Groups: " + str(mongo.db.reservations.count_documents({"status": "cancelled"}))
     reservations = list(mongo.db.reservations.find({"$text":
                                                     {"$search": query}}))
-    flash("Search filter applied")
-    return render_template("reservations/reservations.html", reservations=reservations)
+    pagination = ""
+    
+    flash("Search filter applied '" + query.upper() + "'")
+    return render_template("reservations/reservations.html",                       
+                            reservations=reservations,
+                            pagination=pagination,
+                            total=total,
+                            stat1=stat1,
+                            stat2=stat2,
+                            stat3=stat3)
 
 
 @reservations.route('/edit_reservation<reservation_id>', methods=["GET", "POST"])
