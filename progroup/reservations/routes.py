@@ -2,6 +2,7 @@ from datetime import datetime
 from flask import (
     flash, render_template, redirect, session, request, url_for, Blueprint)
 from bson.objectid import ObjectId
+from flask_paginate import Pagination, get_page_args
 from progroup import mongo
 
 # Create a users object as a blueprint
