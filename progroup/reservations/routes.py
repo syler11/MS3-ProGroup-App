@@ -20,13 +20,17 @@ def get_reservations() -> object:
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
 
-    total_groups = mongo.db.reservations.count_documents({})
-    confirmed_group = mongo.db.reservations.count_documents({"status": "confirmed"})
+    total = "Number of Groups: " + str(mongo.db.reservations.count_documents({}))
+    stat1 = "Confirmed Groups: " + str(mongo.db.reservations.count_documents({"status": "confirmed"}))
+    stat2 = "Provisional Groups: " + str(mongo.db.reservations.count_documents({"status": "provisional"}))
+    stat3 = "Cancelled Groups: " + str(mongo.db.reservations.count_documents({"status": "cancelled"}))
     reservations = mongo.db.reservations.find().sort("group_name", 1)
     return render_template("reservations/reservations.html",
                             reservations=reservations,
-                            total_groups=total_groups,
-                            confirmed_group=confirmed_group)
+                            total=total,
+                            stat1=stat1,
+                            stat2=stat2,
+                            stat3=stat3)
 
 
 @reservations.route("/add_reservation", methods=["GET", "POST"])
@@ -83,9 +87,17 @@ def add_reservation() -> object:
                   getattr(e, 'message', repr(e)))
             return redirect(url_for("reservations.get_reservations"))
 
+    total = "Number of Groups: " + str(mongo.db.reservations.count_documents({}))
+    stat1 = "Confirmed Groups: " + str(mongo.db.reservations.count_documents({"status": "confirmed"}))
+    stat2 = "Provisional Groups: " + str(mongo.db.reservations.count_documents({"status": "provisional"}))
+    stat3 = "Cancelled Groups: " + str(mongo.db.reservations.count_documents({"status": "cancelled"}))
     profiles = mongo.db.profiles.find().sort("group_name", 1)
     return render_template("reservations/add_reservation.html",
-                            profiles=profiles)
+                            profiles=profiles,
+                            total=total,
+                            stat1=stat1,
+                            stat2=stat2,
+                            stat3=stat3)
 
 
 @reservations.route("/search", methods=["GET", "POST"])
@@ -156,11 +168,19 @@ def edit_reservation(reservation_id) -> object:
         flash("Reservation Updated")
         return redirect(url_for("reservations.get_reservations"))
 
+    total = "Number of Groups: " + str(mongo.db.reservations.count_documents({}))
+    stat1 = "Confirmed Groups: " + str(mongo.db.reservations.count_documents({"status": "confirmed"}))
+    stat2 = "Provisional Groups: " + str(mongo.db.reservations.count_documents({"status": "provisional"}))
+    stat3 = "Cancelled Groups: " + str(mongo.db.reservations.count_documents({"status": "cancelled"}))
     profiles = mongo.db.profiles.find().sort("category_name", 1)
     reservation = mongo.db.reservations.find_one({"_id": ObjectId(reservation_id)})
     return render_template("reservations/edit_reservation.html",
                             reservation=reservation,
-                            profiles=profiles)
+                            profiles=profiles,
+                            total=total,
+                            stat1=stat1,
+                            stat2=stat2,
+                            stat3=stat3)
 
 
 @reservations.route('/delete_reservation/<reservation_id>')
@@ -191,4 +211,12 @@ def contact() -> object:
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
 
-    return render_template("email/contact.html")
+    total = "Number of Groups: " + str(mongo.db.reservations.count_documents({}))
+    stat1 = "Confirmed Groups: " + str(mongo.db.reservations.count_documents({"status": "confirmed"}))
+    stat2 = "Provisional Groups: " + str(mongo.db.reservations.count_documents({"status": "provisional"}))
+    stat3 = "Cancelled Groups: " + str(mongo.db.reservations.count_documents({"status": "cancelled"}))
+    return render_template("email/contact.html",
+                            total=total,
+                            stat1=stat1,
+                            stat2=stat2,
+                            stat3=stat3)

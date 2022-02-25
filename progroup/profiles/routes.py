@@ -20,8 +20,16 @@ def get_profiles() -> object:
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
 
+    total = "Number of Profiles: " + str(mongo.db.profiles.count_documents({}))
+    stat1 = "UK Operators: " + str(mongo.db.profiles.count_documents({"country": "UK"}))
+    stat2 = "International Operators: " + str(mongo.db.profiles.count_documents({})-mongo.db.profiles.count_documents({"country": "UK"}))
+
     profiles_list = list(mongo.db.profiles.find())
-    return render_template("profiles/profiles.html", profiles_list=profiles_list)
+    return render_template("profiles/profiles.html", 
+                            total=total,
+                            stat1=stat1,
+                            stat2=stat2,
+                            profiles_list=profiles_list)
 
 
 @profiles.route("/add_profile", methods=["GET", "POST"])
@@ -51,8 +59,16 @@ def add_profile() -> object:
         flash("Profile Added")
         return redirect(url_for("profiles.get_profiles"))
 
+    total = "Number of Profiles: " + str(mongo.db.profiles.count_documents({}))
+    stat1 = "UK Operators: " + str(mongo.db.profiles.count_documents({"country": "UK"}))
+    stat2 = "International Operators: " + str(mongo.db.profiles.count_documents({})-mongo.db.profiles.count_documents({"country": "UK"}))
+
     profiles_list = mongo.db.profiles.find()
-    return render_template("profiles/add_profile.html", profiles_list=profiles_list)
+    return render_template("profiles/add_profile.html", 
+                            total=total,
+                            stat1=stat1,
+                            stat2=stat2,
+                            profiles_list=profiles_list)
 
 
 @profiles.route("/edit_profile/<profile_id>", methods=["GET", "POST"])
@@ -84,10 +100,18 @@ def edit_profile(profile_id) -> object:
         }
         mongo.db.profiles.update_one({"_id": ObjectId(profile_id)}, updated_profile)
         flash("Profile Updated")
-        return redirect(url_for("profiles/profiles"))
+        return redirect(url_for("profiles.get_profiles"))
+
+    total = "Number of Profiles: " + str(mongo.db.profiles.count_documents({}))
+    stat1 = "UK Operators: " + str(mongo.db.profiles.count_documents({"country": "UK"}))
+    stat2 = "International Operators: " + str(mongo.db.profiles.count_documents({})-mongo.db.profiles.count_documents({"country": "UK"}))
 
     profile = mongo.db.profiles.find_one({"_id": ObjectId(profile_id)})
-    return render_template("profiles/edit_profile.html", profile=profile)
+    return render_template("profiles/edit_profile.html", 
+                            total=total,
+                            stat1=stat1,
+                            stat2=stat2,
+                            profile=profile)
 
 
 @profiles.route('/delete_profile/<profile_id>')

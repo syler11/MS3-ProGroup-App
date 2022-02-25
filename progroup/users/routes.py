@@ -22,9 +22,17 @@ def get_users():
     # Check the user is logged in
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
+    
+    total = "Total Users: " + str(mongo.db.users.count_documents({}))
+    stat1 = "Admins: " + str(mongo.db.users.count_documents({"is_admin": "admin"}))
+    stat2 = "Users: " + str(mongo.db.users.count_documents({"is_admin": "user"}))
 
     users_list = list(mongo.db.users.find())
-    return render_template("users/users.html", users_list=users_list)
+    return render_template("users/users.html", 
+                            total=total,
+                            stat1=stat1,
+                            stat2=stat2,
+                            users_list=users_list)
 
 
 @users.route("/add_user", methods=["GET", "POST"])
@@ -57,8 +65,15 @@ def add_user():
         flash("User Added")
         return redirect(url_for("users.get_users"))
 
+    total = "Total Users: " + str(mongo.db.users.count_documents({}))
+    stat1 = "Admins: " + str(mongo.db.users.count_documents({"is_admin": "admin"}))
+    stat2 = "Users: " + str(mongo.db.users.count_documents({"is_admin": "user"}))
     users_list = mongo.db.users.find()
-    return render_template("users/add_user.html", users_list=users_list)
+    return render_template("users/add_user.html", 
+                            total=total,
+                            stat1=stat1,
+                            stat2=stat2,
+                            users_list=users_list)
 
 
 @users.route("/edit_user/<user_id>", methods=["GET", "POST"])
@@ -92,8 +107,15 @@ def edit_user(user_id):
         flash("User Updated")
         return redirect(url_for("users.get_users"))
 
+    total = "Total Users: " + str(mongo.db.users.count_documents({}))
+    stat1 = "Admins: " + str(mongo.db.users.count_documents({"is_admin": "admin"}))
+    stat2 = "Users: " + str(mongo.db.users.count_documents({"is_admin": "user"}))
     user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
-    return render_template("users/edit_user.html", user=user)
+    return render_template("users/edit_user.html", 
+                            total=total,
+                            stat1=stat1,
+                            stat2=stat2,
+                            user=user)
 
 
 @users.route('/delete_user/<user_id>')

@@ -121,8 +121,13 @@ body {
   .widget h5 {
     margin-top: 1rem;
     font-size: 20px;
-
   }
+
+  .widget-bottom p {
+    padding: 1rem;
+  }
+
+
 
   .hotel-logo {
     border-radius: 5px;
