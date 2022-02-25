@@ -2,8 +2,9 @@ from datetime import datetime
 from flask import (
     flash, render_template, redirect, session, request, url_for, Blueprint)
 from bson.objectid import ObjectId
-from flask_paginate import Pagination, get_page_args
+from flask_paginate import Pagination
 from progroup import mongo
+from progroup.util import util
 
 # Create a users object as a blueprint
 reservations = Blueprint('reservations', __name__)
@@ -20,14 +21,21 @@ def get_reservations() -> object:
     # Check the user is logged in
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
+    offset, per_page, page = util.setup_pagination()
 
     total = "Number of Groups: " + str(mongo.db.reservations.count_documents({}))
     stat1 = "Confirmed Groups: " + str(mongo.db.reservations.count_documents({"status": "confirmed"}))
     stat2 = "Provisional Groups: " + str(mongo.db.reservations.count_documents({"status": "provisional"}))
     stat3 = "Cancelled Groups: " + str(mongo.db.reservations.count_documents({"status": "cancelled"}))
+    total_reservations = mongo.db.reservations.count_documents({})
     reservations = mongo.db.reservations.find().sort("group_name", 1)
+    reservations_paginated = reservations[offset: offset + per_page]
+    pagination = Pagination(page=page, per_page=per_page,
+                            total=total_reservations, css_framework='bootstrap')
     return render_template("reservations/reservations.html",
-                            reservations=reservations,
+                            reservations=reservations_paginated,
+                            page=page,
+                            per_page=per_page,
                             total=total,
                             stat1=stat1,
                             stat2=stat2,
