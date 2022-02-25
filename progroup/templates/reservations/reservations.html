@@ -165,5 +165,17 @@
     {% endfor %}
 </ul>
 </div>
+<!-- Pagination -->
+<div class="pagination-container">
+    <div class="row pagination m2">
+        <div class="col m6 s12">
+            {{ pagination.links }} 
+        </div>
+        <div class="col pagination-info m6 s12">
+            {{ pagination.info }} 
+        </div>
+    </div>
+
+</div>
 
 {% endblock %}

@@ -36,6 +36,7 @@ def get_reservations() -> object:
                             reservations=reservations_paginated,
                             page=page,
                             per_page=per_page,
+                            pagination=pagination,
                             total=total,
                             stat1=stat1,
                             stat2=stat2,

@@ -160,6 +160,33 @@ body {
   width: 160px;
 }
 
+/* Pagination */ 
+
+.pagination {
+  font-size: 16px;background-color: #37474F;
+  color: white;
+  border-radius: 10px;
+  margin: 0;
+}
+
+.pagination nav {
+  background-color: #37474F;
+  color: white;
+  box-shadow: none;
+}
+
+.pagination li.active {
+  background-color: #37474F;
+}
+
+.pagination li a {
+  color: white;
+}
+
+.pagination-info {
+  margin-top: 15px;
+}
+
 /* add user and edit user pages Role selector */
   .is-admin i {
     font-size: 2rem;
