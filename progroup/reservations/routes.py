@@ -116,18 +116,25 @@ def search() -> object:
     search function for reservation what can search/filter for group name
     and status
     """
+    offset, per_page, page = util.setup_pagination()
     query = request.form.get("query")
+    total_reservations = mongo.db.reservations.count_documents({"$text":
+                                                    {"$search": query}})
+    reservations = list(mongo.db.reservations.find({"$text":
+                                                    {"$search": query}}))
+    reservations_paginated = reservations[offset: offset + per_page]
+    pagination = Pagination(page=page, per_page=per_page,
+                            total=total_reservations, css_framework='bootstrap')
     total = "Number of Groups: " + str(mongo.db.reservations.count_documents({}))
     stat1 = "Confirmed Groups: " + str(mongo.db.reservations.count_documents({"status": "confirmed"}))
     stat2 = "Provisional Groups: " + str(mongo.db.reservations.count_documents({"status": "provisional"}))
     stat3 = "Cancelled Groups: " + str(mongo.db.reservations.count_documents({"status": "cancelled"}))
-    reservations = list(mongo.db.reservations.find({"$text":
-                                                    {"$search": query}}))
-    pagination = ""
     
     flash("Search filter applied '" + query.upper() + "'")
     return render_template("reservations/reservations.html",                       
-                            reservations=reservations,
+                            reservations=reservations_paginated,
+                            page=page,
+                            per_page=per_page,
                             pagination=pagination,
                             total=total,
                             stat1=stat1,

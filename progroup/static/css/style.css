@@ -160,6 +160,10 @@ body {
   width: 160px;
 }
 
+.collapsible {
+  margin-bottom: 0;
+}
+
 /* Pagination */ 
 
 .pagination {
@@ -167,12 +171,14 @@ body {
   color: white;
   border-radius: 10px;
   margin: 0;
+  height: 50px;
 }
 
 .pagination nav {
   background-color: #37474F;
   color: white;
   box-shadow: none;
+  height: 50px;
 }
 
 .pagination li.active {
@@ -185,6 +191,10 @@ body {
 
 .pagination-info {
   margin-top: 15px;
+}
+
+.pagination-info::first-letter {
+  text-transform: capitalize;
 }
 
 /* add user and edit user pages Role selector */
