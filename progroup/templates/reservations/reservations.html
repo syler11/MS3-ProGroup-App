@@ -39,10 +39,10 @@
         <div class="s12 collapsible-header">
             <table class="table">
                 <tr>
-                    <th class="group-name">Group Name <i class="fas fa-user prefix"></i></th>
+                    <th class="group-name">Group Name</th>
                     <th class="group-name">Arrival Date</th>
                     <th>LOS</th>
-                    <th>Rooms</th>
+                    <th>Rooms / PAX</th>
                     <th>Board</th>
                     <th>Status</th>
                     <th></th>
@@ -51,8 +51,8 @@
                     <td class="group-name">{{ reservation.group_name }}</td>
                     <td class="group-name">{{ reservation.arrival_date }}</td>
                     <td>{{ reservation.los }}</td>
+                    <td>{{ reservation.rooms }} / {{ reservation.pax }}</td>
                     <td>{{ reservation.board }}</td>
-                    <td>{{ reservation.rooms }}</td>
                     <td>{{ reservation.status.capitalize() }}</td>
                     <td class="no-collapse"><a href="{{ url_for('reservations.edit_reservation', reservation_id=reservation._id) }}"><i
                                 class="far right fa-edit tooltipped" data-position="top" data-tooltip="Edit"></i></a>
@@ -65,7 +65,7 @@
         </div>
         <div class="collapsible-body row">
             <div class="col s12">
-                <div class="col card s4">
+                <div class="col card-panel s4">
                     <p class="center-align"><span><strong>Room Confguration:</strong></span></p>
                     <p>
                         <span>Single room: </span>
@@ -90,7 +90,7 @@
                         Created on: <span class="center-align">{{ reservation.created_on }}</span><br>
                     </p>
                 </div>
-                <div class="col  card s4">
+                <div class="col  card-panel s4">
                     <p class="center-align"><span><strong>Room Rate:</strong></span></p>
                     <p>
                         <span>Single room: </span>
