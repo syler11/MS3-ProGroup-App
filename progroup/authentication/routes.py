@@ -53,3 +53,22 @@ def logout() -> object:
     # remove user from session cookie
     session.pop("user")
     return redirect(url_for("authentication.login"))
+
+
+@authentication.route("/account", methods=["GET"])
+def account():
+    """
+    This function renders the profile page and displays
+    the users profile information once the user is logged in
+    and exists in the users collection
+    :param username: username of user
+    :return render_template of account.html
+    """
+    # If the user is not logged in, redirect them to home/landing page
+    if 'user' not in session:
+        return redirect(url_for("authentication.login"))
+    # Find the user in the users collection
+    username = session['user']
+    user = mongo.db.users.find_one({"username": username})
+    return render_template("users/account.html",
+                            user=user)

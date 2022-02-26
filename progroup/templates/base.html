@@ -38,6 +38,7 @@
                         </ul>
                         <ul class="bottom-nav">
                             <li><a href="{{ url_for('reservations.contact') }}">Help</a></li>
+                            <li><a href="{{ url_for('authentication.account', user=user) }}">Account</a></li>
                             <li><a href="{{ url_for('authentication.logout') }}">Log out</a></li>
                             {% endif %}
                         </ul>
