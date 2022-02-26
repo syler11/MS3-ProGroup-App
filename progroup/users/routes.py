@@ -24,15 +24,18 @@ def get_users():
         return redirect(url_for("authentication.login"))
     
     total = "Total Users: " + str(mongo.db.users.count_documents({}))
-    stat1 = "Admins: " + str(mongo.db.users.count_documents({"is_admin": "admin"}))
-    stat2 = "Users: " + str(mongo.db.users.count_documents({"is_admin": "user"}))
+    stat1 = "Admins: " + str(mongo.db.users.count_documents(
+        {"is_admin": "admin"}))
+    stat2 = "Users: " + str(mongo.db.users.count_documents(
+        {"is_admin": "user"}))
 
     users_list = list(mongo.db.users.find())
-    return render_template("users/users.html", 
-                            total=total,
-                            stat1=stat1,
-                            stat2=stat2,
-                            users_list=users_list)
+    return render_template(
+        "users/users.html",
+        total=total,
+        stat1=stat1,
+        stat2=stat2,
+        users_list=users_list)
 
 
 @users.route("/add_user", methods=["GET", "POST"])
@@ -69,11 +72,12 @@ def add_user():
     stat1 = "Admins: " + str(mongo.db.users.count_documents({"is_admin": "admin"}))
     stat2 = "Users: " + str(mongo.db.users.count_documents({"is_admin": "user"}))
     users_list = mongo.db.users.find()
-    return render_template("users/add_user.html", 
-                            total=total,
-                            stat1=stat1,
-                            stat2=stat2,
-                            users_list=users_list)
+    return render_template(
+        "users/add_user.html",
+        total=total,
+        stat1=stat1,
+        stat2=stat2,
+        users_list=users_list)
 
 
 @users.route("/edit_user/<user_id>", methods=["GET", "POST"])

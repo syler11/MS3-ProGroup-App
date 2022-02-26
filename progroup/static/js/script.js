@@ -54,4 +54,3 @@ function displayClock(){
 }
 
 dateGreeting();
-

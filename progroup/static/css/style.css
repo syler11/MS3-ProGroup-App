@@ -176,9 +176,6 @@ body {
   margin-bottom: 0;
 }
 
-.collapsible a.no-collapse .collapsible-body{
-  display: none !important; 
-}
 /* Pagination */ 
 
 .pagination-row {
