@@ -99,6 +99,14 @@ body {
   padding: 1rem;
 }
 
+.modal-profile {
+  width: 320px;
+}
+
+.modal-profile li {
+  padding-bottom: 1rem;
+}
+
 .modal-trigger {
   border: none;
   background-color: transparent;
@@ -168,6 +176,9 @@ body {
   margin-bottom: 0;
 }
 
+.collapsible a.no-collapse .collapsible-body{
+  display: none !important; 
+}
 /* Pagination */ 
 
 .pagination-row {

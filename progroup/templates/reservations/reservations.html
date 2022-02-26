@@ -39,7 +39,7 @@
         <div class="s12 collapsible-header">
             <table class="table">
                 <tr>
-                    <th class="group-name">Group Name</th>
+                    <th class="group-name no-collapse">Group Name</th>
                     <th class="group-name">Arrival Date</th>
                     <th>LOS</th>
                     <th>Rooms / PAX</th>
@@ -48,7 +48,7 @@
                     <th></th>
                 </tr>
                 <tr>
-                    <td class="group-name">{{ reservation.group_name }}</td>
+                    <td class="group-name"><a class="left showProfile modal-trigger" href="#showProfile">{{ reservation.group_name }}</a></td>
                     <td class="group-name">{{ reservation.arrival_date }}</td>
                     <td>{{ reservation.los }}</td>
                     <td>{{ reservation.rooms }} / {{ reservation.pax }}</td>
@@ -134,6 +134,26 @@
     <div class="modal-footer">
         <button class="modal-close btn-large red">Cancel</button>
       <a href="{{ url_for('reservations.delete_reservation', reservation_id=reservation._id) }}" class="modal-close waves-effect light-blue btn-large">Delete</a>
+    </div>
+  </div>
+  <div id="showProfile" class="modal modal-profile">
+    <div class="modal-content">
+      <h4>Group Profile</h4>
+      <ul>
+            <li><strong>Contact Details</strong></li>
+            <li>Contact Name: {{ profile.contact_name }}</li>
+            <li>Contact Email: <a href="mailto:{{ profile.contact_email }}">{{ profile.contact_email }}</a></li>
+            <li>Contact Phone: <a href="tel:{{ profile.contact_phone }}">{{ profile.contact_phone }}</a></li>
+            <li><strong>Contact Address</strong>
+                <br>{{ profile.line_address }}
+                <br>{{ profile.city }}
+                <br>{{ profile.postcode.upper() }}
+                <br>{{ profile.country }}
+            </li>
+        </ul>
+    </div>
+    <div class="modal-footer">
+        <button class="modal-close btn-large red">Close</button>
     </div>
   </div>
     </li>

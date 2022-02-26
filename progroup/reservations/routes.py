@@ -32,6 +32,8 @@ def get_reservations() -> object:
     reservations_paginated = reservations[offset: offset + per_page]
     pagination = Pagination(page=page, per_page=per_page,
                             total=total_reservations, css_framework='bootstrap')
+    group_selected = "CIE Tours"
+    profile = mongo.db.profiles.find_one({"group_name": group_selected})
     return render_template("reservations/reservations.html",
                             reservations=reservations_paginated,
                             page=page,
@@ -40,7 +42,8 @@ def get_reservations() -> object:
                             total=total,
                             stat1=stat1,
                             stat2=stat2,
-                            stat3=stat3)
+                            stat3=stat3,
+                            profile=profile)
 
 
 @reservations.route("/add_reservation", methods=["GET", "POST"])
@@ -129,6 +132,7 @@ def search() -> object:
     stat1 = "Confirmed Groups: " + str(mongo.db.reservations.count_documents({"status": "confirmed"}))
     stat2 = "Provisional Groups: " + str(mongo.db.reservations.count_documents({"status": "provisional"}))
     stat3 = "Cancelled Groups: " + str(mongo.db.reservations.count_documents({"status": "cancelled"}))
+    
     
     flash("Search filter applied '" + query.upper() + "'")
     return render_template("reservations/reservations.html",                       
