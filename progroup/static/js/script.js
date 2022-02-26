@@ -7,10 +7,6 @@ $(document).ready(function() {
     $('select').formSelect();
     $('.tooltipped').tooltip();
     $('.modal').modal();
-    $(".showProfile").click(function() {
-        var showProfile = $(this).val();
-        alert(showProfile);
-    });
     $('.datepicker').datepicker({
         format: "dd/mm/yyyy",
         autoClose: true,
