@@ -64,38 +64,9 @@
             </table>
         </div>
         <div class="collapsible-body row">
-            <div class="col m4 s12">
-                <p>
-                    <span>Contact name: </span>
-                    <span>{{ reservation.contact_name }}</span>
-                </p>
-                <p>
-                    <span>Contact Email: </span>
-                    <span>{{ reservation.contact_email }}</span>
-                </p>
-                <p>
-                    <span>Contact phone: </span>
-                    <span>{{ reservation.contact_phone }}</span>
-                </p>
-                <p>
-                    <span><strong>Company address:</strong></span>
-                </p>
-                <p>
-                    <span>{{ reservation.line_address }}</span>
-                </p>
-                <p>
-                    <span>{{ reservation.city }}</span>
-                </p>
-                <p>
-                    <span>{{ reservation.postcode }}</span>
-                </p>
-                <p>
-                    <span>{{ reservation.coutry }}</span>
-                </p>
-            </div>
-            <div class="col m8 s12">
-                <div class="col s4">
-                    <p><span><strong>Room Confguration:</strong></span></p>
+            <div class="col s12">
+                <div class="col card s4">
+                    <p class="center-align"><span><strong>Room Confguration:</strong></span></p>
                     <p>
                         <span>Single room: </span>
                         <span class="right">{{ reservation.single_room }}</span>
@@ -112,32 +83,30 @@
                         <span>Triple room: </span>
                         <span class="right">{{ reservation.triple_room }}</span>
                     </p>
-                </div>
-                <div class="col s3">
-                    <p class="left"><span><strong>Room Rate:</strong></span></p>
-                    <p>
-                        <span class="center-align">£{{ reservation.single_rate }}</span><br>
-                    </p>
-                    <p>
-                        <span class="center-align">£{{ reservation.double_rate }}</span><br>
-                    </p>
-                    <p>
-                        <span class="center-align">£{{ reservation.twin_rate }}</span><br>
-                    </p>
-                    <p>
-                        <span class="center-align">£{{ reservation.triple_rate }}</span><br>
-                    </p>
-                </div>
-                <div class="col s5">
-                    <fieldset>
-                        <legend>Notes</legend>
-                        <textarea id="textarea" rows="10">{{ reservation.notes }}</textarea>
-                    </fieldset>
                     <p>
                         Created by: <span class="center-align">{{ reservation.created_by }}</span><br>
                     </p>
                     <p>
                         Created on: <span class="center-align">{{ reservation.created_on }}</span><br>
+                    </p>
+                </div>
+                <div class="col  card s4">
+                    <p class="center-align"><span><strong>Room Rate:</strong></span></p>
+                    <p>
+                        <span>Single room: </span>
+                        <span class="right">£{{ reservation.single_rate }}</span><br>
+                    </p>
+                    <p>
+                        <span>Double room: </span>
+                        <span class="right">£{{ reservation.double_rate }}</span><br>
+                    </p>
+                    <p>
+                        <span>Twin room: </span>
+                        <span class="right">£{{ reservation.twin_rate }}</span><br>
+                    </p>
+                    <p>
+                        <span>Triple room: </span>
+                        <span class="right">£{{ reservation.triple_rate }}</span><br>
                     </p>
                     <p>
                         Last updated by: <span class="center-align">{{ reservation.last_updated_by }}</span><br>
@@ -145,6 +114,12 @@
                     <p>
                         Last updated on: <span class="center-align">{{ reservation.last_updated_on }}</span><br>
                     </p>
+                </div>
+                <div class="col s4">
+                    <fieldset>
+                        <legend>Notes</legend>
+                        <textarea id="textarea" rows="10">{{ reservation.notes }}</textarea>
+                    </fieldset>
                 </div>
             </div>
         </div>
@@ -167,7 +142,7 @@
 </div>
 <!-- Pagination -->
 <div class="pagination-container">
-    <div class="row pagination m2">
+    <div class="row pagination-row">
         <div class="col m6 s12">
             {{ pagination.links }} 
         </div>

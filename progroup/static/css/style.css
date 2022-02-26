@@ -166,7 +166,7 @@ body {
 
 /* Pagination */ 
 
-.pagination {
+.pagination-row {
   font-size: 16px;background-color: #37474F;
   color: white;
   border-radius: 10px;
@@ -174,18 +174,18 @@ body {
   height: 50px;
 }
 
-.pagination nav {
+.pagination-row nav {
   background-color: #37474F;
   color: white;
   box-shadow: none;
   height: 50px;
 }
 
-.pagination li.active {
+.pagination-row li.active {
   background-color: #37474F;
 }
 
-.pagination li a {
+.pagination-row li a {
   color: white;
 }
 
