@@ -68,9 +68,10 @@
             <li><a href="{{ url_for('users.get_users') }}">Users</a></li>
             {% endif %}
             <li><a href="{{ url_for('reservations.contact') }}">Help</a></li>
+            <li><a href="{{ url_for('authentication.account', user=user) }}">Account</a></li>
             <li><a href="{{ url_for('authentication.logout') }}">Log out</a></li>
             {% endif %}
-            <div class="copyright">
+            <div class="nav-copyright">
                 <p>&copy; <span id="copyright"></span> ProGroup.</p>
                 <p>All rights reserved.</p>
             </div>
