@@ -23,27 +23,33 @@ def get_reservations() -> object:
         return redirect(url_for("authentication.login"))
     offset, per_page, page = util.setup_pagination()
 
-    total = "Number of Groups: " + str(mongo.db.reservations.count_documents({}))
-    stat1 = "Confirmed Groups: " + str(mongo.db.reservations.count_documents({"status": "confirmed"}))
-    stat2 = "Provisional Groups: " + str(mongo.db.reservations.count_documents({"status": "provisional"}))
-    stat3 = "Cancelled Groups: " + str(mongo.db.reservations.count_documents({"status": "cancelled"}))
+    total = "Number of Groups: " + str(mongo.db.reservations.
+                                       count_documents({}))
+    stat1 = "Confirmed Groups: " + str(mongo.db.reservations.count_documents(
+        {"status": "confirmed"}))
+    stat2 = "Provisional Groups: " + str(mongo.db.reservations.count_documents(
+        {"status": "provisional"}))
+    stat3 = "Cancelled Groups: " + str(mongo.db.reservations.count_documents(
+        {"status": "cancelled"}))
     total_reservations = mongo.db.reservations.count_documents({})
-    reservations = mongo.db.reservations.find().sort("group_name", 1)
-    reservations_paginated = reservations[offset: offset + per_page]
+    reservation = mongo.db.reservations.find().sort("group_name", 1)
+    reservations_paginated = reservation[offset: offset + per_page]
     pagination = Pagination(page=page, per_page=per_page,
-                            total=total_reservations, css_framework='bootstrap')
+                            total=total_reservations,
+                            css_framework='bootstrap')
     group_selected = "CIE Tours"
     profile = mongo.db.profiles.find_one({"group_name": group_selected})
-    return render_template("reservations/reservations.html",
-                            reservations=reservations_paginated,
-                            page=page,
-                            per_page=per_page,
-                            pagination=pagination,
-                            total=total,
-                            stat1=stat1,
-                            stat2=stat2,
-                            stat3=stat3,
-                            profile=profile)
+    return render_template(
+        "reservations/reservations.html",
+        reservation=reservations_paginated,
+        page=page,
+        per_page=per_page,
+        pagination=pagination,
+        total=total,
+        stat1=stat1,
+        stat2=stat2,
+        stat3=stat3,
+        profile=profile)
 
 
 @reservations.route("/add_reservation", methods=["GET", "POST"])
@@ -64,16 +70,8 @@ def add_reservation() -> object:
 
     if request.method == "POST":
         try:
-            reservations = {
+            reservation = {
                 "group_name": request.form.get('group_name'),
-                "arrival_date": request.form.get('arrival_date'),
-                "contact_name": request.form.get('contact_name'),
-                "contact_email": request.form.get('contact_email'),
-                "contact_phone": request.form.get('contact_phone'),
-                "line_address": request.form.get('line_address'),
-                "city": request.form.get('city'),
-                "postcode": request.form.get('postcode'),
-                "country": request.form.get('country'),
                 "los": request.form.get('los'),
                 "status": request.form.get('status'),
                 "board": request.form.get('board'),
@@ -93,24 +91,29 @@ def add_reservation() -> object:
                 "created_on": timestamp,
             }
 
-            mongo.db.reservations.insert_one(reservations)
+            mongo.db.reservations.insert_one(reservation)
             flash("Reservation Added")
         except Exception as e:
             flash("An exception occurred when adding the reservation: " +
                   getattr(e, 'message', repr(e)))
             return redirect(url_for("reservations.get_reservations"))
 
-    total = "Number of Groups: " + str(mongo.db.reservations.count_documents({}))
-    stat1 = "Confirmed Groups: " + str(mongo.db.reservations.count_documents({"status": "confirmed"}))
-    stat2 = "Provisional Groups: " + str(mongo.db.reservations.count_documents({"status": "provisional"}))
-    stat3 = "Cancelled Groups: " + str(mongo.db.reservations.count_documents({"status": "cancelled"}))
+    total = "Number of Groups: " + str(mongo.db.reservations.
+                                       count_documents({}))
+    stat1 = "Confirmed Groups: " + str(mongo.db.reservations.count_documents(
+        {"status": "confirmed"}))
+    stat2 = "Provisional Groups: " + str(mongo.db.reservations.count_documents(
+        {"status": "provisional"}))
+    stat3 = "Cancelled Groups: " + str(mongo.db.reservations.count_documents(
+        {"status": "cancelled"}))
     profiles = mongo.db.profiles.find().sort("group_name", 1)
-    return render_template("reservations/add_reservation.html",
-                            profiles=profiles,
-                            total=total,
-                            stat1=stat1,
-                            stat2=stat2,
-                            stat3=stat3)
+    return render_template(
+        "reservations/add_reservation.html",
+        profiles=profiles,
+        total=total,
+        stat1=stat1,
+        stat2=stat2,
+        stat3=stat3)
 
 
 @reservations.route("/search", methods=["GET", "POST"])
@@ -121,32 +124,37 @@ def search() -> object:
     """
     offset, per_page, page = util.setup_pagination()
     query = request.form.get("query")
-    total_reservations = mongo.db.reservations.count_documents({"$text":
-                                                    {"$search": query}})
-    reservations = list(mongo.db.reservations.find({"$text":
-                                                    {"$search": query}}))
-    reservations_paginated = reservations[offset: offset + per_page]
+    total_reservations = mongo.db.reservations.count_documents(
+        {"$text": {"$search": query}})
+    reservation = list(mongo.db.reservations.find(
+        {"$text": {"$search": query}}))
+    reservations_paginated = reservation[offset: offset + per_page]
     pagination = Pagination(page=page, per_page=per_page,
-                            total=total_reservations, css_framework='bootstrap')
-    total = "Number of Groups: " + str(mongo.db.reservations.count_documents({}))
-    stat1 = "Confirmed Groups: " + str(mongo.db.reservations.count_documents({"status": "confirmed"}))
-    stat2 = "Provisional Groups: " + str(mongo.db.reservations.count_documents({"status": "provisional"}))
-    stat3 = "Cancelled Groups: " + str(mongo.db.reservations.count_documents({"status": "cancelled"}))
-    
-    
+                            total=total_reservations,
+                            css_framework='bootstrap')
+    total = "Number of Groups: " + str(mongo.db.reservations.
+                                       count_documents({}))
+    stat1 = "Confirmed Groups: " + str(mongo.db.reservations.count_documents(
+        {"status": "confirmed"}))
+    stat2 = "Provisional Groups: " + str(mongo.db.reservations.count_documents(
+        {"status": "provisional"}))
+    stat3 = "Cancelled Groups: " + str(mongo.db.reservations.count_documents(
+        {"status": "cancelled"}))
     flash("Search filter applied '" + query.upper() + "'")
-    return render_template("reservations/reservations.html",                       
-                            reservations=reservations_paginated,
-                            page=page,
-                            per_page=per_page,
-                            pagination=pagination,
-                            total=total,
-                            stat1=stat1,
-                            stat2=stat2,
-                            stat3=stat3)
+    return render_template(
+        "reservations/reservations.html",
+        reservation=reservations_paginated,
+        page=page,
+        per_page=per_page,
+        pagination=pagination,
+        total=total,
+        stat1=stat1,
+        stat2=stat2,
+        stat3=stat3)
 
 
-@reservations.route('/edit_reservation<reservation_id>', methods=["GET", "POST"])
+@reservations.route('/edit_reservation<reservation_id>', 
+                    methods=["GET", "POST"])
 def edit_reservation(reservation_id) -> object:
     """
     render edit_reservation.html page with the reservation values as per the id
@@ -170,13 +178,6 @@ def edit_reservation(reservation_id) -> object:
         {
             "group_name": request.form.get('group_name'),
             "arrival_date": request.form.get('arrival_date'),
-            "contact_name": request.form.get('contact_name'),
-            "contact_email": request.form.get('contact_email'),
-            "contact_phone": request.form.get('contact_phone'),
-            "line_address": request.form.get('line_address'),
-            "city": request.form.get('city'),
-            "postcode": request.form.get('postcode'),
-            "country": request.form.get('country'),
             "los": request.form.get('los'),
             "status": request.form.get('status'),
             "board": request.form.get('board'),
@@ -197,23 +198,29 @@ def edit_reservation(reservation_id) -> object:
         }
         }
         mongo.db.reservations.update_one({"_id": ObjectId(reservation_id)},
-                                            updated_reservation)
+                                         updated_reservation)
         flash("Reservation Updated")
         return redirect(url_for("reservations.get_reservations"))
 
-    total = "Number of Groups: " + str(mongo.db.reservations.count_documents({}))
-    stat1 = "Confirmed Groups: " + str(mongo.db.reservations.count_documents({"status": "confirmed"}))
-    stat2 = "Provisional Groups: " + str(mongo.db.reservations.count_documents({"status": "provisional"}))
-    stat3 = "Cancelled Groups: " + str(mongo.db.reservations.count_documents({"status": "cancelled"}))
+    total = "Number of Groups: " + str(mongo.db.reservations.
+                                       count_documents({}))
+    stat1 = "Confirmed Groups: " + str(mongo.db.reservations.count_documents(
+        {"status": "confirmed"}))
+    stat2 = "Provisional Groups: " + str(mongo.db.reservations.count_documents(
+        {"status": "provisional"}))
+    stat3 = "Cancelled Groups: " + str(mongo.db.reservations.count_documents(
+        {"status": "cancelled"}))
     profiles = mongo.db.profiles.find().sort("category_name", 1)
-    reservation = mongo.db.reservations.find_one({"_id": ObjectId(reservation_id)})
-    return render_template("reservations/edit_reservation.html",
-                            reservation=reservation,
-                            profiles=profiles,
-                            total=total,
-                            stat1=stat1,
-                            stat2=stat2,
-                            stat3=stat3)
+    reservation = mongo.db.reservations.find_one({"_id": ObjectId(
+        reservation_id)})
+    return render_template(
+        "reservations/edit_reservation.html",
+        reservation=reservation,
+        profiles=profiles,
+        total=total,
+        stat1=stat1,
+        stat2=stat2,
+        stat3=stat3)
 
 
 @reservations.route('/delete_reservation/<reservation_id>')
@@ -244,12 +251,17 @@ def contact() -> object:
     if 'user' not in session:
         return redirect(url_for("authentication.login"))
 
-    total = "Number of Groups: " + str(mongo.db.reservations.count_documents({}))
-    stat1 = "Confirmed Groups: " + str(mongo.db.reservations.count_documents({"status": "confirmed"}))
-    stat2 = "Provisional Groups: " + str(mongo.db.reservations.count_documents({"status": "provisional"}))
-    stat3 = "Cancelled Groups: " + str(mongo.db.reservations.count_documents({"status": "cancelled"}))
-    return render_template("email/contact.html",
-                            total=total,
-                            stat1=stat1,
-                            stat2=stat2,
-                            stat3=stat3)
+    total = "Number of Groups: " + str(mongo.db.reservations.
+                                       count_documents({}))
+    stat1 = "Confirmed Groups: " + str(mongo.db.reservations.count_documents(
+        {"status": "confirmed"}))
+    stat2 = "Provisional Groups: " + str(mongo.db.reservations.count_documents(
+        {"status": "provisional"}))
+    stat3 = "Cancelled Groups: " + str(mongo.db.reservations.count_documents(
+        {"status": "cancelled"}))
+    return render_template(
+        "email/contact.html",
+        total=total,
+        stat1=stat1,
+        stat2=stat2,
+        stat3=stat3)
