@@ -17,7 +17,8 @@ mongo.init_app(app)
 
 def create_app():
     """
-    Create an app with the authentication, errors, profiles, reservations, users blueprint routes
+    Create an app with the authentication, errors, profiles, reservations,
+    users blueprint routes
     """
     # Import the routes
     from progroup.authentication.routes import authentication

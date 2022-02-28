@@ -21,7 +21,6 @@ body {
     padding: 6rem 2rem;
 }
 
-/* Login page her image */
 .hero-image {
     background-image: url("/static/pictures/hotel_room.jpg");
     background-color: #cccccc;
@@ -31,6 +30,10 @@ body {
     background-size: cover;
     position: relative;
   }
+
+.input-field label {
+  color: black;
+}
 
   /* Base.html main right hand side logo, navbar and copyright elements design */ 
   .card {
@@ -227,6 +230,10 @@ body {
  /* contact page message area */
  .message-box {
   height: 100px;
+}
+
+.input-field.col label {
+  left: 1rem;
 }
 
 /* error handling html pages design */ 

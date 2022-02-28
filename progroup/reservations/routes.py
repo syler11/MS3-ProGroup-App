@@ -180,8 +180,7 @@ def edit_reservation(reservation_id) -> object:
         return redirect(url_for("authentication.login"))
 
     if request.method == "POST":
-        updated_reservation = {"$set":
-        {
+        updated_reservation = {"$set": {
             "group_name": request.form.get('group_name'),
             "arrival_date": request.form.get('arrival_date'),
             "los": request.form.get('los'),
