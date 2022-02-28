@@ -34,27 +34,30 @@ Login for user: username: nikolett password:
     + [Typography](#typography)
 - [Features](#features)
   * [Existing features](#existing-features)
-    + [Feature One](feature-one)
+    + [Feature One Navigation](feature-one-navigation)
       - [Description feature one](#description-feature-one)
       - [User stories feature one](#user-stories-feature-one)
-    + [Feature Two](feature-two)
+    + [Feature Two Main page](feature-two-main-page)
       - [Description feature two](#description-feature-two)
       - [User stories feature two](#user-stories-feature-two)
-    + [Feature Two](feature-three)
+    + [Feature Three Login](feature-three-login)
       - [Description feature three](#description-feature-three)
       - [User stories feature three](#user-stories-feature-three)
-    + [Feature Two](feature-four)
+    + [Feature Four Reservations](feature-four-reservations)
       - [Description feature four](#description-feature-four)
       - [User stories feature four](#user-stories-feature-four)
-    + [Feature Two](feature-five)
+    + [Feature Five Profiles](feature-five-profiles)
       - [Description feature five](#description-feature-five)
       - [User stories feature five](#user-stories-feature-five)
-    + [Feature Two](feature-six)
+    + [Feature Six Users](feature-six-users)
       - [Description feature six](#description-feature-six)
       - [User stories feature six](#user-stories-feature-six)
-    + [Feature Two](feature-seven)
+    + [Feature Seven Help](feature-seven-help)
       - [Description feature seven](#description-feature-seven)
       - [User stories feature seven](#user-stories-feature-seven)
+    + [Feature Eight Acount](feature-eight-account)
+      - [Description feature eight](#description-feature-eight)
+      - [User stories feature eight](#user-stories-feature-eight)
   * [Features left to implement](#features-left-to-implement)
 - [Technologies Used](#technologies-used)
   * [Languages](#languages)
@@ -255,7 +258,7 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 # Features
 
 ## Existing Features
-### Feature One
+### Feature One Navigation
 #### Description Feature One
 #### User Stories Feature One
 -	User Story 1.1: As an admin user the navigation bar is displayed with a logo on all pages for easy navigation, with a burger menu on mobile devices when user logged in  
@@ -264,7 +267,7 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 -	User Story 1.4: As an admin user, when logged in, the reservation page is the default page and there are five options with a logo: Profiles, Account, Help, Logout  
 -	User Story 1.5: As an admin user if I encounter a route that does not exist, I am navigated to a 404 error page 
 
-### Feature Two
+### Feature Two Main Page
 #### Description Feature Two
 #### User Stories Feature Two
 -	User Story 2.1: As an admin user I can view a hero image with login on the home/landing page  
@@ -272,7 +275,7 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 -	User Story 2.3: As an admin user if I encounter a route that does not exist I am navigated to a 404 error page  
 -	User Story 2.4: As an admin user if I encounter an error with the application starting up I am navigated to a 500 error page  
 
-### Feature Three
+### Feature Three Login
 #### Description Feature Three
 #### User Stories Feature Three
 -	User Story 3.1: As an admin user my username must be a minimum of 6 characters, and contain at least one lowercase letter, with no special characters  
@@ -280,7 +283,7 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 -	User Story 3.3: As an admin user I can log in to my account by providing my username and password and clicking Login and I will be navigated to the reservation page. A username and password must be provided. If the username and/or password entered is incorrectly a relevant message will be displayed  
 -	User Story 3.4: As an admin user, when I am logged into the site, and I click Logout I am successfully logged out of the site, and brought to the home/landing page, with the Login option  
 
-### Feature Four
+### Feature Four Reservations
 #### Description Feature Four
 #### User Stories Feature Four
 -	User Story 4.1: Add Reservation - As an admin user I can add a new reservation by selecting a Group name selection, reservation details, room details, room rates and notes, when clicking on the add reservation the page would redirect to reservations and the new reservation would be added  
@@ -288,26 +291,26 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 -	User Story 4.3: Delete Reservation - As an admin user I can delete a reservation by confirming I want to delete  
 -	User Story 4.4: View Reservation - As an admin user I can view a memory by clicking on a Reservation when additional info would be revealed 
 
-### Feature Five
+### Feature Five Profiles
 #### Description Feature Five
 #### User Stories Feature Five
 -	User Story 5.1: Add Profile - As an admin user I can add a new profile by typing a Group name, Contact name, Contact Email, Contact Phone, Line Address, City, Post Code, Country, when clicking on the add profile the page would redirect to Profiles and the new reservation would be added  
 -	User Story 5.2: Edit Profile - As an admin user I can edit an existing profile by updating any Group name, Contact name, Contact Email, Contact Phone, Line Address, City, Post Code, Country, when clicking on the edit profile the page would redirect to profiles and the profiles would be updated  
 -	User Story 5.3: Delete Profile - As an admin user I can delete a profile by confirming I want to delete  
 
-### Feature Six
+### Feature Six Users
 #### Description Feature Six
 #### User Stories Feature Six
 -	User Story 6.1: Add User - As an admin user I can add a new user by typing a First name, Last name, Email, Password, Position, and select either user or admin for the Role, when clicking on the add user the page would redirect to Users and the new reservation would be added  
 -	User Story 6.2: Edit User - As an admin user I can edit an existing user by updating any First name, Last name, Email, Password, Position, and select either user or admin for the Role, when clicking on the edit profile the page would redirect to profiles and the user would be updated  
 -	User Story 6.3: Delete Profile - As an admin user I can delete a user by confirming I want to delete  
 
-### Feature Seven
+### Feature Seven Help
 #### Description Feature Seven
 #### User Stories Feature Seven
 -	User Story 7.1: Help – As an admin user I can send an email to the admin by clicking on the Help button in the navbar and filling up the Name, Email address and Message and click on Send Message  
 
-### Feature Eight
+### Feature Eight Account
 #### Description Feature Eight
 #### User Stories Feature Eight
 -	User Story 8.1: Account – As an admin user I can see my account information such as Full Name, Position, Email, Username and Role   
