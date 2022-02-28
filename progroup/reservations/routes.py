@@ -37,10 +37,9 @@ def get_reservations() -> object:
     pagination = Pagination(page=page, per_page=per_page,
                             total=total_reservations,
                             css_framework='bootstrap')
-    
     group_selected = "CIE Tours"
     profile = mongo.db.profiles.find_one({"group_name": group_selected})
-        
+
     return render_template(
         "reservations/reservations.html",
         reservation=reservations_paginated,
@@ -160,7 +159,7 @@ def search() -> object:
         profile=profile)
 
 
-@reservations.route('/edit_reservation<reservation_id>', 
+@reservations.route('/edit_reservation<reservation_id>',
                     methods=["GET", "POST"])
 def edit_reservation(reservation_id) -> object:
     """
