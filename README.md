@@ -155,8 +155,11 @@ The website contains 18 pages in a logical structure, information and purpose.
 #### MongoDB Database Information
 - One production database(group_manager) was created to store site information, it contains three collections described below
 1. profiles - contains contact information for a group operator
+![Profiles](progroup/static/pictures/databases/profiles_collection.png)
 2. reservations - contatins the group operator names and reservation details such
+![Reservations](progroup/static/pictures/databases/reservations_collection.png)
 3. users - to store registered user information
+![Users](progroup/static/pictures/databases/users_collection.png)
 
 ## Scope
 
