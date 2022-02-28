@@ -135,7 +135,63 @@ The website contains 18 pages in a logical structure, information and purpose.
 ## Scope
 
 ### User Stories
+
+#### User Stories Existing Users  
+The user stories for the website user "regular user" (users with "user" role) are described as follows:
+-	User Story 1.1: As a regular user the navigation bar is displayed with a logo on all pages for easy navigation, with a burger menu on mobile devices when user logged in  
+-	User Story 1.2: As a regular user the navigation item selected is highlighted  
+-	User Story 1.3: As a regular user, when logged out, the home/landing page is the default page and there is an option for Login  
+-	User Story 1.4: As a regular user, when logged in, the reservation page is the default page and there are five options with a logo: Profiles, Account, Help, Logout  
+-	User Story 1.5: As a regular user if I encounter a route that does not exist, I am navigated to a 404 error page  
+-	User Story 2.1: As a regular user I can view a hero image with login on the home/landing page  
+-	User Story 2.2: As a regular user I can view four reservations added on the website, with group name, arrival date, los, rooms / pax, board and status  
+-	User Story 2.3: As a regular user if I encounter a route that does not exist I am navigated to a 404 error page  
+-	User Story 2.4: As a regular user if I encounter an error with the application starting up I am navigated to a 500 error page  
+-	User Story 3.1: As a regular user my username must be a minimum of 6 characters, and contain at least one lowercase letter, with no special characters  
+-	User Story 3.2: As a regular user my username and / or password must match my confirm username and / or password  
+-	User Story 3.3: As a regular user I can log in to my account by providing my username and password and clicking Login and I will be navigated to the reservation page. A username and password must be provided. If the username and/or password entered is incorrectly a relevant message will be displayed  
+-	User Story 3.4: As a regular user, when I am logged into the site, and I click Logout I am successfully logged out of the site, and brought to the home/landing page, with the Login option  
+-	User Story 4.1: Add Reservation - As a regular user I can add a new reservation by selecting a Group name selection, reservation details, room details, room rates and notes, when clicking on the add reservation the page would redirect to reservations and the new reservation would be added  
+-	User Story 4.2: Edit Reservation - As a regular user I can edit an existing reservation by updating any Group name selection, reservation details, room details, room rates and notes, when clicking on the edit reservation the page would redirect to reservations and the new reservation would be updated  
+-	User Story 4.3: Delete Reservation - As a regular user I can delete a reservation by confirming I want to delete  
+-	User Story 4.4: View Reservation - As a regular user I can view a memory by clicking on a Reservation when additional info would be revealed  
+-	User Story 5.1: Add Profile - As a regular user I can add a new profile by typing a Group name, Contact name, Contact Email, Contact Phone, Line Address, City, Post Code, Country, when clicking on the add profile the page would redirect to Profiles and the new reservation would be added  
+-	User Story 5.2: Edit Profile - As a regular user I can edit an existing profile by updating any Group name, Contact name, Contact Email, Contact Phone, Line Address, City, Post Code, Country, when clicking on the edit profile the page would redirect to profiles and the profiles would be updated  
+-	User Story 5.3: Delete Profile - As a regular user I can delete a profile by confirming I want to delete  
+-	User Story 6.1: Help – As a regular user I can send an email to the admin by clicking on the Help button in the navbar and filling up the Name, Email address and Message and click on Send Message  
+-	User Story 7.1: Account – As a regular user I can see my account information such as Full Name, Position, Email, Username and Role   
+-	User Story 7.2: Edit Account – As a regular user I can edit my account information such as Full Name, Position, Email, Username when clicking on the Save Changes   
+
+
 ### User Stories Website Owner
+User Stories Website Owner
+The user stories for the website owner(admin user) are described as follows: There is a lot of overlap between the two user types, the admin user however has more administrative rights throughout
+-	User Story 1.1: As an admin user the navigation bar is displayed with a logo on all pages for easy navigation, with a burger menu on mobile devices when user logged in  
+-	User Story 1.2: As an admin user the navigation item selected is highlighted  
+-	User Story 1.3: As an admin user, when logged out, the home/landing page is the default page and there is an option for Login  
+-	User Story 1.4: As an admin user, when logged in, the reservation page is the default page and there are five options with a logo: Profiles, Account, Help, Logout  
+-	User Story 1.5: As an admin user if I encounter a route that does not exist, I am navigated to a 404 error page  
+-	User Story 2.1: As an admin user I can view a hero image with login on the home/landing page  
+-	User Story 2.2: As an admin user I can view four reservations added on the website, with group name, arrival date, los, rooms / pax, board and status  
+-	User Story 2.3: As an admin user if I encounter a route that does not exist I am navigated to a 404 error page  
+-	User Story 2.4: As an admin user if I encounter an error with the application starting up I am navigated to a 500 error page  
+-	User Story 3.1: As an admin user my username must be a minimum of 6 characters, and contain at least one lowercase letter, with no special characters  
+-	User Story 3.2: As an admin user my username and / or password must match my confirm username and / or password  
+-	User Story 3.3: As an admin user I can log in to my account by providing my username and password and clicking Login and I will be navigated to the reservation page. A username and password must be provided. If the username and/or password entered is incorrectly a relevant message will be displayed  
+-	User Story 3.4: As an admin user, when I am logged into the site, and I click Logout I am successfully logged out of the site, and brought to the home/landing page, with the Login option  
+-	User Story 4.1: Add Reservation - As an admin user I can add a new reservation by selecting a Group name selection, reservation details, room details, room rates and notes, when clicking on the add reservation the page would redirect to reservations and the new reservation would be added  
+-	User Story 4.2: Edit Reservation - As an admin user I can edit an existing reservation by updating any Group name selection, reservation details, room details, room rates and notes, when clicking on the edit reservation the page would redirect to reservations and the new reservation would be updated  
+-	User Story 4.3: Delete Reservation - As an admin user I can delete a reservation by confirming I want to delete  
+-	User Story 4.4: View Reservation - As an admin user I can view a memory by clicking on a Reservation when additional info would be revealed  
+-	User Story 5.1: Add Profile - As an admin user I can add a new profile by typing a Group name, Contact name, Contact Email, Contact Phone, Line Address, City, Post Code, Country, when clicking on the add profile the page would redirect to Profiles and the new reservation would be added  
+-	User Story 5.2: Edit Profile - As an admin user I can edit an existing profile by updating any Group name, Contact name, Contact Email, Contact Phone, Line Address, City, Post Code, Country, when clicking on the edit profile the page would redirect to profiles and the profiles would be updated  
+-	User Story 5.3: Delete Profile - As an admin user I can delete a profile by confirming I want to delete  
+-	User Story 6.1: Add User - As an admin user I can add a new user by typing a First name, Last name, Email, Password, Position, and select either user or admin for the Role, when clicking on the add user the page would redirect to Users and the new reservation would be added  
+-	User Story 6.2: Edit User - As an admin user I can edit an existing user by updating any First name, Last name, Email, Password, Position, and select either user or admin for the Role, when clicking on the edit profile the page would redirect to profiles and the user would be updated  
+-	User Story 6.3: Delete Profile - As an admin user I can delete a user by confirming I want to delete  
+-	User Story 7.1: Help – As an admin user I can send an email to the admin by clicking on the Help button in the navbar and filling up the Name, Email address and Message and click on Send Message  
+-	User Story 8.1: Account – As an admin user I can see my account information such as Full Name, Position, Email, Username and Role   
+-	User Story 8.2: Edit Account – As an admin user I can edit my account information such as Full Name, Position, Email, Username when clicking on the Save Changes   
 
 ## Skeleton
 
@@ -174,6 +230,33 @@ I choose those colours after testing a number of palettes while making sure the 
 The Roboto font is the main font used throughout the whole website with Sans Serif as the fallback font. This font is from the Google fonts library.
 
 # Features
+
+-	User Story 1.1: As an admin user the navigation bar is displayed with a logo on all pages for easy navigation, with a burger menu on mobile devices when user logged in  
+-	User Story 1.2: As an admin user the navigation item selected is highlighted  
+-	User Story 1.3: As an admin user, when logged out, the home/landing page is the default page and there is an option for Login  
+-	User Story 1.4: As an admin user, when logged in, the reservation page is the default page and there are five options with a logo: Profiles, Account, Help, Logout  
+-	User Story 1.5: As an admin user if I encounter a route that does not exist, I am navigated to a 404 error page  
+-	User Story 2.1: As an admin user I can view a hero image with login on the home/landing page  
+-	User Story 2.2: As an admin user I can view four reservations added on the website, with group name, arrival date, los, rooms / pax, board and status  
+-	User Story 2.3: As an admin user if I encounter a route that does not exist I am navigated to a 404 error page  
+-	User Story 2.4: As an admin user if I encounter an error with the application starting up I am navigated to a 500 error page  
+-	User Story 3.1: As an admin user my username must be a minimum of 6 characters, and contain at least one lowercase letter, with no special characters  
+-	User Story 3.2: As an admin user my username and / or password must match my confirm username and / or password  
+-	User Story 3.3: As an admin user I can log in to my account by providing my username and password and clicking Login and I will be navigated to the reservation page. A username and password must be provided. If the username and/or password entered is incorrectly a relevant message will be displayed  
+-	User Story 3.4: As an admin user, when I am logged into the site, and I click Logout I am successfully logged out of the site, and brought to the home/landing page, with the Login option  
+-	User Story 4.1: Add Reservation - As an admin user I can add a new reservation by selecting a Group name selection, reservation details, room details, room rates and notes, when clicking on the add reservation the page would redirect to reservations and the new reservation would be added  
+-	User Story 4.2: Edit Reservation - As an admin user I can edit an existing reservation by updating any Group name selection, reservation details, room details, room rates and notes, when clicking on the edit reservation the page would redirect to reservations and the new reservation would be updated  
+-	User Story 4.3: Delete Reservation - As an admin user I can delete a reservation by confirming I want to delete  
+-	User Story 4.4: View Reservation - As an admin user I can view a memory by clicking on a Reservation when additional info would be revealed  
+-	User Story 5.1: Add Profile - As an admin user I can add a new profile by typing a Group name, Contact name, Contact Email, Contact Phone, Line Address, City, Post Code, Country, when clicking on the add profile the page would redirect to Profiles and the new reservation would be added  
+-	User Story 5.2: Edit Profile - As an admin user I can edit an existing profile by updating any Group name, Contact name, Contact Email, Contact Phone, Line Address, City, Post Code, Country, when clicking on the edit profile the page would redirect to profiles and the profiles would be updated  
+-	User Story 5.3: Delete Profile - As an admin user I can delete a profile by confirming I want to delete  
+-	User Story 6.1: Add User - As an admin user I can add a new user by typing a First name, Last name, Email, Password, Position, and select either user or admin for the Role, when clicking on the add user the page would redirect to Users and the new reservation would be added  
+-	User Story 6.2: Edit User - As an admin user I can edit an existing user by updating any First name, Last name, Email, Password, Position, and select either user or admin for the Role, when clicking on the edit profile the page would redirect to profiles and the user would be updated  
+-	User Story 6.3: Delete Profile - As an admin user I can delete a user by confirming I want to delete  
+-	User Story 7.1: Help – As an admin user I can send an email to the admin by clicking on the Help button in the navbar and filling up the Name, Email address and Message and click on Send Message  
+-	User Story 8.1: Account – As an admin user I can see my account information such as Full Name, Position, Email, Username and Role   
+-	User Story 8.2: Edit Account – As an admin user I can edit my account information such as Full Name, Position, Email, Username when clicking on the Save Changes  
 
 # Technologies Used
 
