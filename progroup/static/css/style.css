@@ -33,6 +33,7 @@ body {
 
 .input-field label {
   color: black;
+  font-weight: bold;
 }
 
   /* Base.html main right hand side logo, navbar and copyright elements design */ 
