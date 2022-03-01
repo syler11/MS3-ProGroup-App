@@ -12,6 +12,11 @@
 
 # Testing
 
+## Bugs during the testing
+1. Aria labelledby buttons were missing
+2. div and from tags in the wrong order
+3. hotel logo wasn't resized to minimum 
+
 # Code Validators and Website Analysis
 
 ## HTML Markup Validation Service

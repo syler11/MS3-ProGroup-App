@@ -23,7 +23,7 @@
             <!-- Group name -->
             <h6><strong>{{ profile.group_name }}</strong>
             <a href="{{ url_for('profiles.edit_profile', profile_id=profile._id) }}"><i class="far fa-edit right tooltipped" data-position="top" data-tooltip="Edit" aria-labelledby="edit"></i></a>
-            <button data-target="deleteProfile{{ profile._id }}" class="right modal-trigger"><i class="far fa-trash-alt right tooltipped" data-position="top" data-tooltip="Delete" aria-labelledby="delete"></i></button>
+            <button data-target="deleteProfile{{ profile._id }}" class="right modal-trigger" aria-labelledby="delete"><i class="far fa-trash-alt right tooltipped" data-position="top" data-tooltip="Delete"></i></button>
             </h6>
     
             <hr>
