@@ -39,3 +39,44 @@ I used https://jigsaw.w3.org/css-validator/ to validate the css(style.css)
 Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
 style.css | Passed, No errors found | [Results](progroup/static/pictures/css_validation/style_css_validation.png)
+
+## Chrome Dev tools Lighthouse 
+
+- I used Lighthouse (https://developers.google.com/web/tools/lighthouse) to test the performance, seo, best practices and accessibility of the site
+
+### Desktop
+Page | Result 
+------------ | ------------- 
+authentication/login.html | [Results](progroup/static/pictures/lighthouse_validation/login_desktop_validation.png)  
+authentication/account.html | [Results](progroup/static/pictures/lighthouse_validation/account_desktop_validation.png)  
+email/contact.html | [Results](progroup/static/pictures/lighthouse_validation/contact_desktop_validation.png)  
+errors/404.html | [Results](progroup/static/pictures/lighthouse_validation/404_desktop_validation.png)  
+profiles/add_profile.html | [Results](progroup/static/pictures/lighthouse_validation/add_profile_desktop_validation.png)  
+profiles/edit_profile.html | [Results](progroup/static/pictures/lighthouse_validation/edit_profile_desktop_validation.png)  
+profiles/profiles.html | [Results](progroup/static/pictures/lighthouse_validation/profiles_desktop_validation.png)  
+reservations/add_reservation.html | [Results](progroup/static/pictures/lighthouse_validation/add_reservation_desktop_validation.png)  
+reservations/edit_reservation.html | [Results](progroup/static/pictures/lighthouse_validation/edit_reservation_desktop_validation.png)  
+reservations/reservations.html | [Results](progroup/static/pictures/lighthouse_validation/reservations_desktop_validation.png) 
+users/add_user.html | [Results](progroup/static/pictures/lighthouse_validation/add_user_desktop_validation.png)  
+users/edit_user.html | [Results](progroup/static/pictures/lighthouse_validation/edit_user_desktop_validation.png)  
+users/users.html | [Results](progroup/static/pictures/lighthouse_validation/users_desktop_validation.png)  
+<br>
+
+
+### Mobile
+Page | Result 
+------------ | ------------- 
+authentication/login.html | [Results](progroup/static/pictures/lighthouse_validation/login_mobile_validation.png)  
+authentication/account.html | [Results](progroup/static/pictures/lighthouse_validation/account_mobile_validation.png)  
+email/contact.html | [Results](progroup/static/pictures/lighthouse_validation/contact_mobile_validation.png)  
+errors/404.html | [Results](progroup/static/pictures/lighthouse_validation/404_mobile_validation.png)  
+profiles/add_profile.html | [Results](progroup/static/pictures/lighthouse_validation/add_profile_mobile_validation.png)  
+profiles/edit_profile.html | [Results](progroup/static/pictures/lighthouse_validation/edit_profile_mobile_validation.png)  
+profiles/profiles.html | [Results](progroup/static/pictures/lighthouse_validation/profiles_mobile_validation.png)  
+reservations/add_reservation.html | [Results](progroup/static/pictures/lighthouse_validation/add_reservation_mobile_validation.png)  
+reservations/edit_reservation.html | [Results](progroup/static/pictures/lighthouse_validation/edit_reservation_mobile_validation.png)  
+reservations/reservations.html | [Results](progroup/static/pictures/lighthouse_validation/reservations_mobile_validation.png) 
+users/add_user.html | [Results](progroup/static/pictures/lighthouse_validation/add_user_mobile_validation.png)  
+users/edit_user.html | [Results](progroup/static/pictures/lighthouse_validation/edit_user_mobile_validation.png)  
+users/users.html | [Results](progroup/static/pictures/lighthouse_validation/users_mobile_validation.png)  
+<br>
