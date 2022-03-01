@@ -17,13 +17,13 @@
     </div>
 
     {% for profile in profiles_list %}
-    <!-- Iterate through all the users and displays on the page  -->
+    <!-- Iterate through all the profiles and displays on the page  -->
     <div class="card-panel col  xl4 l6 s12">
         <ul class="users">
             <!-- Group name -->
             <h6><strong>{{ profile.group_name }}</strong>
-            <a href="{{ url_for('profiles.edit_profile', profile_id=profile._id) }}"><i class="far fa-edit right tooltipped" data-position="top" data-tooltip="Edit" aria-describedby="edit"></i></a>
-            <button data-target="deleteProfile{{ profile._id }}" class="right modal-trigger"><i class="far fa-trash-alt right tooltipped" data-position="top" data-tooltip="Delete" aria-describedby="delete"></i></button>
+            <a href="{{ url_for('profiles.edit_profile', profile_id=profile._id) }}"><i class="far fa-edit right tooltipped" data-position="top" data-tooltip="Edit" aria-labelledby="edit"></i></a>
+            <button data-target="deleteProfile{{ profile._id }}" class="right modal-trigger"><i class="far fa-trash-alt right tooltipped" data-position="top" data-tooltip="Delete" aria-labelledby="delete"></i></button>
             </h6>
     
             <hr>
