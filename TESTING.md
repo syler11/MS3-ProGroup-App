@@ -20,6 +20,7 @@ I used https://validator.w3.org/ to validate the html files
 Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
 authentication/login.html | Passed, No errors found | [Results](progroup/static/pictures/html_validation/login_html_validation.png)  
+authentication/account.html | Passed, No errors found | [Results](progroup/static/pictures/html_validation/account_html_validation.png)  
 email/contact.html | Passed, No errors found | [Results](progroup/static/pictures/html_validation/contact_html_validation.png)  
 errors/404.html | Passed, No errors found | [Results](progroup/static/pictures/html_validation/404_html_validation.png)  
 profiles/add_profile.html | Passed, No errors found | [Results](progroup/static/pictures/html_validation/add_profile_html_validation.png)  
@@ -31,3 +32,10 @@ reservations/reservations.html | Passed, No errors found | [Results](progroup/st
 users/add_user.html | Passed, No errors found | [Results](progroup/static/pictures/html_validation/add_user_html_validation.png)  
 users/edit_user.html | Passed, No errors found | [Results](progroup/static/pictures/html_validation/edit_user_html_validation.png)  
 users/users.html | Passed, No errors found | [Results](progroup/static/pictures/html_validation/users_html_validation.png)  
+
+## CSS Validation Service
+I used https://jigsaw.w3.org/css-validator/ to validate the css(style.css)
+
+Page | Result | Test Detail/Screenshot
+------------ | ------------- | -------------
+style.css | Passed, No errors found | [Results](progroup/static/pictures/css_validation/style_css_validation.png)
