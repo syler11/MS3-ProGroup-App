@@ -46,7 +46,7 @@
                     <th>Rooms / PAX</th>
                     <th>Board</th>
                     <th>Status</th>
-                    <th></th>
+                    <th><span class="no-show">Buttons</span></th>
                 </tr>
                 <tr>
                     <td class="group-name"><a class="left showProfile modal-trigger" id="getGroupName" href="#showProfile">{{ reservation.group_name }}</a></td>
@@ -56,10 +56,10 @@
                     <td>{{ reservation.board }}</td>
                     <td>{{ reservation.status.capitalize() }}</td>
                     <td class="no-collapse"><a href="{{ url_for('reservations.edit_reservation', reservation_id=reservation._id) }}"><i
-                                class="far right fa-edit tooltipped" data-position="top" data-tooltip="Edit" aria-labelledby="edit"><span class="no-show">Edit</span></i></a>
-                                <a class="right modal-trigger" href="#deleteReservation"  aria-labelledby="delete">
+                                class="far right fa-edit tooltipped" data-position="top" data-tooltip="Edit" aria-label="edit"><span class="no-show">Edit</span></i></a>
+                                <a class="right modal-trigger" href="#deleteReservation"  aria-label="delete">
                                     <i class="far fa-trash-alt right tooltipped" data-position="top" data-tooltip="Delete"><span class="no-show">Delete</span></i></a>
-            
+                                    
                     </td>
                 </tr>
             </table>
@@ -118,7 +118,7 @@
                 <div class="col l4 s12">
                     <fieldset>
                         <legend>Notes</legend>
-                        <textarea id="textarea" rows="10">{{ reservation.notes }}</textarea>
+                        <textarea id="textarea" rows="10" aria-label="notes">{{ reservation.notes }}</textarea>
                     </fieldset>
                 </div>
         </div>
