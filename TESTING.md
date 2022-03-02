@@ -16,6 +16,8 @@
 1. Aria labelledby buttons were missing
 2. div and from tags in the wrong order
 3. hotel logo wasn't resized to minimum 
+4. let were cahnged var to pass js hint validation without warnings
+5. ```var $ = window.$;``` was added to script to avoid linting errorsby js hint validation
 
 # Code Validators and Website Analysis
 
@@ -85,3 +87,13 @@ users/add_user.html | [Results](progroup/static/pictures/lighthouse_validation/a
 users/edit_user.html | [Results](progroup/static/pictures/lighthouse_validation/edit_user_mobile_validation.png)  
 users/users.html | [Results](progroup/static/pictures/lighthouse_validation/users_mobile_validation.png)  
 <br>
+
+## JSHint
+JSHint(https://jshint.com/) was used to analyse the Javascript files
+
+Page | Result | Test Detail/Screenshot
+------------ | ------------- | -------------
+js/calculation.js |  errors, 0 warnings | [Results](progroup/static/pictures/js_validation/calculation_js_validation.png)  
+js/email.js |  errors, 0 warnings | [Results](progroup/static/pictures/js_validation/email_js_validation.png)  
+js/script.js |  errors, 0 warnings | [Results](progroup/static/pictures/js_validation/script_js_validation.png)  
+ 
