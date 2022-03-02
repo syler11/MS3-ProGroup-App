@@ -91,6 +91,8 @@ users/users.html | [Results](progroup/static/pictures/lighthouse_validation/user
 ## Wave Accessibility
 * Wave accessibility(https://wave.webaim.org/) was used to test the websites accessibility
 
+Page | Result | Test Detail/Screenshot
+------------ | ------------- | -------------
 authentication/login.html | 0 errors and 0 contrast errors | [Results](progroup/static/pictures/wave_accessibility_validation/login_html_validation.png)  
 authentication/account.html | 0 errors and 0 contrast errors | [Results](progroup/static/pictures/wave_accessibility_validation/account_html_validation.png)  
 email/contact.html | 0 errors and 0 contrast errors | [Results](progroup/static/pictures/wave_accessibility_validation/contact_html_validation.png)  
