@@ -170,6 +170,10 @@ body {
     border-collapse: collapse; 
   }
 
+  .no-show {
+    display: none;
+  }
+
   .summary {
     line-height: 10px;
     font-size: 20px;
