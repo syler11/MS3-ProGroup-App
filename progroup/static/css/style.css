@@ -36,6 +36,10 @@ body {
   font-weight: bold;
 }
 
+label .active {
+  color: black;
+}
+
   /* Base.html main right hand side logo, navbar and copyright elements design */ 
   .card {
     min-height: 90vh;
