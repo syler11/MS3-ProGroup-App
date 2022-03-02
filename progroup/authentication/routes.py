@@ -65,8 +65,8 @@ def account():
     :return render_template of account.html
     """
     # If the user is not logged in, redirect them to home/landing page
-    # if 'user' not in session:
-    #    return redirect(url_for("authentication.login"))
+    if 'user' not in session:
+        return redirect(url_for("authentication.login"))
     # Find the user in the users collection
     username = session['user']
     user = mongo.db.users.find_one({"username": username})

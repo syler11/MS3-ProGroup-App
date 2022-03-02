@@ -1,5 +1,6 @@
 # Table of Contents
 - [Testing](#testing)
+  * [Manual Testing](#manual-testing)
 - [Code Validators and Website Analysis](#code-validators-and-website-analysis)
   * [HTML Markup Validation Service](#html-markup-validation-service)
   * [CSS Validation Service](#css-validation-service)
@@ -11,6 +12,20 @@
   * [PEP8online](#pep8online)
 
 # Testing
+
+## Manual Testing
+Testing was completed on the following browsers and device types
+
+Device Number | Physical/Emulator | Device Name | Device Type | Browser | Version
+------------ | ------------ | ------------- | ------------- | ------------- | -------------
+1 | Physical | iPad | Tablet |  Safari | 15.3 |
+2 | Physical | iPhone | Mobile |Safari | 15.3 |
+3 | Physical | MacBook Pro | Laptop | Safari | 15.3 |
+4 | Physical | Windows Desktop| Desktop | Microsoft Edge | 98.0 |
+5 | Physical | Windows Desktop| Desktop | Chrome | 98.0 |
+6 | Emulator | iPhone 5/SE | Mobile | Chrome Emulator | 98.0 |
+7 | Emulator | iPhone X | Mobile | Chrome Emulator | 98.0 |
+8 | Emulator | iPad | Tablet | Chrome Emulator | 98.0 |
 
 ## Bugs during the testing
 1. Aria labelledby buttons were missing
