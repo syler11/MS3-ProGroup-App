@@ -23,8 +23,9 @@ def get_profiles() -> object:
     total = "Number of Profiles: " + str(mongo.db.profiles.count_documents({}))
     stat1 = "UK Operators: " + str(mongo.db.profiles.count_documents(
         {"country": "UK"}))
-    stat2 = "International Operators: " + str(mongo.db.profiles.count_documents(
-        {})-mongo.db.profiles.count_documents({"country": "UK"}))
+    stat2 = "International Operators: " + str(
+        mongo.db.profiles.count_documents({})-mongo.db.profiles.count_documents
+        ({"country": "UK"}))
 
     profiles_list = list(mongo.db.profiles.find())
     return render_template(
@@ -65,8 +66,9 @@ def add_profile() -> object:
     total = "Number of Profiles: " + str(mongo.db.profiles.count_documents({}))
     stat1 = "UK Operators: " + str(mongo.db.profiles.count_documents(
         {"country": "UK"}))
-    stat2 = "International Operators: " + str(mongo.db.profiles.count_documents
-                                              ({})-mongo.db.profiles.count_documents({"country": "UK"}))
+    stat2 = "International Operators: " + str(
+        mongo.db.profiles.count_documents(
+            {})-mongo.db.profiles.count_documents({"country": "UK"}))
 
     profiles_list = mongo.db.profiles.find()
     return render_template(
@@ -92,8 +94,7 @@ def edit_profile(profile_id) -> object:
         return redirect(url_for("authentication.login"))
 
     if request.method == "POST":
-        updated_profile = {"$set":
-        {
+        updated_profile = {"$set": {
             "group_name": request.form.get('group_name'),
             "contact_name": request.form.get('contact_name'),
             "contact_email": request.form.get('contact_email'),
@@ -112,9 +113,9 @@ def edit_profile(profile_id) -> object:
     total = "Number of Profiles: " + str(mongo.db.profiles.count_documents({}))
     stat1 = "UK Operators: " + str(mongo.db.profiles.count_documents(
         {"country": "UK"}))
-    stat2 = "International Operators: " + str(mongo.db.profiles.count_documents
-                                              ({})-mongo.db.profiles.
-                                              count_documents({"country": "UK"}))
+    stat2 = "International Operators: " + str(
+        mongo.db.profiles.count_documents(
+            {})-mongo.db.profiles.count_documents({"country": "UK"}))
 
     profile = mongo.db.profiles.find_one({"_id": ObjectId(profile_id)})
     return render_template(

@@ -12,7 +12,7 @@ authentication = Blueprint('authentication', __name__)
 @authentication.route("/login", methods=["GET", "POST"])
 def login() -> object:
     """
-    Render login.html when user navigate to the webadress.
+    Render login.html when user navigate to the webaddress.
     Page will display the login form with username and
     password and login button. System will check whether user exist
     and if the password entered matching the database data it will
@@ -27,7 +27,7 @@ def login() -> object:
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
+             existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 return redirect(url_for('reservations.get_reservations'))
 
@@ -71,4 +71,4 @@ def account():
     username = session['user']
     user = mongo.db.users.find_one({"username": username})
     return render_template("users/account.html",
-                            user=user)
+                           user=user)
