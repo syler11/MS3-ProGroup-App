@@ -1,24 +1,24 @@
 /* Variables for email.js */
-let formName = document.getElementById('fromName');
-let formEmail = document.getElementById('email');
-let message = document.getElementById('message');
+var formName = document.getElementById('fromName');
+var formEmail = document.getElementById('email');
+var message = document.getElementById('message');
 var errorMsgName = document.getElementById('name-error');
 var errorMsgEmail = document.getElementById('email-error');
 var errorMsgMsg = document.getElementById('message-error');
 
 /* Validation to make sure that all fields have value to send */
 function validateEmailForm() {
-    const name = document.querySelector('#fromName').value;
-    const email = document.querySelector('#email').value;
-    const msg = document.querySelector('#message').value;
+    var name = document.querySelector('#fromName').value;
+    var email = document.querySelector('#email').value;
+    var msg = document.querySelector('#message').value;
     if (name === "") {
-        errorMsgName.innerHTML = `Please enter your full name`;
+        errorMsgName.innerHTML = 'Please enter your full name';
         errorMsgName.style.color = '#FF0000';
     } else if (email === "") {
-        errorMsgEmail.innerHTML = `Please enter your full email address`;
+        errorMsgEmail.innerHTML = 'Please enter your full email address';
         errorMsgEmail.style.color = '#FF0000';
     } else if (msg === "") {
-        errorMsgMsg.innerHTML = `Please enter a message`;
+        errorMsgMsg.innerHTML = 'Please enter a message';
         errorMsgMsg.style.color = '#FF0000';
     } else {
         sendEmail();
@@ -44,8 +44,8 @@ function sendEmail() {
        },
         function (error) {
             // Email failed - Error message
-           alert('Ooopsie, your message has not been sent. All the required fields are filled in correctly?');
-       },
+           alert('Error, your message has not been sent. All the required fields are filled in correctly?');
+       }
 
        );
        

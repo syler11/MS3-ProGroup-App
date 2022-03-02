@@ -1,5 +1,7 @@
-// Initialize the materialize js componenets
+// The line of code was added below to avoid linting error in JS Hint
+var $ = window.$;
 
+// Initialize the materialize js componenets
 $(document).ready(function() {
     $("#copyright").text(new Date().getFullYear());
     $('.collapsible').collapsible();
@@ -15,9 +17,13 @@ $(document).ready(function() {
     $('select').formSelect();
 
 validateMaterializeSelect();
+
 function validateMaterializeSelect() {
-    let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };
-    let classInvalid = { "border-bottom": "1px solid #f44336", "box-shadow": "0 1px 0 0 #f44336" };
+/* Will validate the Group Selector elements what are outwidth of the input element
+validation which is built in the materialize framework
+Credit to Code Institue lessons */
+    var classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };
+    var classInvalid = { "border-bottom": "1px solid #f44336", "box-shadow": "0 1px 0 0 #f44336" };
     if ($("select.validate").prop("required")) {
         $("select.validate").css({ "display": "block", "height": "0", "padding": "0", "width": "0", "position": "absolute" });
     }
@@ -46,7 +52,7 @@ function validateMaterializeSelect() {
 
 var today = new Date();
 
-// Display full date and greets the session user accoring to teh time of the day
+// Display full date and greets the session user accoring to the time of the day
 function dateGreeting() {
 var day = today.getDate();
 var monthNames = [ "January", "February", "March", "April", "May", "June",
@@ -64,7 +70,7 @@ if (hour > 18) {
 } else if (hour > 0) {
     greeting = "Good morning, ";
 } else {
-    greeting = "Welcome"
+    greeting = "Welcome";
 }
 
 document.getElementById("greeting").innerHTML = greeting;
