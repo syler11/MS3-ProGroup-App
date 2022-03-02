@@ -119,6 +119,10 @@ js/script.js |  errors, 0 warnings | [Results](progroup/static/pictures/js_valid
 
 Page | Result | Test Detail/Screenshot
 ------------ | ------------- | -------------
-js/calculation.js |  errors, 0 warnings | [Results](progroup/static/pictures/js_validation/calculation_js_validation.png) 
-
+app.py | All right | [Results](progroup/static/pictures/pep8_validation/app_py_validation.png)  
+authentication/routes.py | All right | [Results](progroup/static/pictures/pep8_validation/authentication_routes_py_validation.png)  
+error/routes.py | All right | [Results](progroup/static/pictures/pep8_validation/error_routes_py_validation.png)  
+profiles/routes.py | All right | [Results](progroup/static/pictures/pep8_validation/profiles_routes_py_validation.png)  
+reservations/routes.py | All right | [Results](progroup/static/pictures/pep8_validation/reservations_routes_py_validation.png)  
+users/routes.py | All right | [Results](progroup/static/pictures/pep8_validation/users_routes_py_validation.png)  
  
