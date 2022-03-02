@@ -19,8 +19,8 @@ def get_reservations() -> object:
     :return render_template of get_reservations.html
     """
     # Check the user is logged in
-    # if 'user' not in session:
-    #    return redirect(url_for("authentication.login"))
+    if 'user' not in session:
+        return redirect(url_for("authentication.login"))
     offset, per_page, page = util.setup_pagination()
 
     total = "Number of Groups: " + str(mongo.db.reservations.
