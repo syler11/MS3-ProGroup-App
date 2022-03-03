@@ -144,11 +144,13 @@ Device Number | Physical/Emulator | Device Name | Device Type | Browser | Versio
 ### User Story 1-1    
 * User Story 1-1: As an admin user the navigation bar is displayed with a logo on all pages for easy navigation, with a burger menu on mobile devices when user logged in  
 ### Test case steps 1-1  
+1. Navigate to the home / reservation page
 ### Expected result 1-1  
+1.The home / reservation page will be displayed with logo and navigation bar, with a burger menu on mobile devices
 ### Actual result 1-1  
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/navigation_desktop.png)  | [Tablet Result](progroup/static/pictures/testing/navigation_tablet.png) |[Mobile Result](progroup/static/pictures/testing/navigation_mobile.png) | Passed |
 <br>
 
 ### User Story 1-2
