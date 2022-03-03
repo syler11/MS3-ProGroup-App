@@ -17,7 +17,11 @@
         <ul class="users">
             <!-- User details -->
             <strong>{{ user.first_name }} {{ user.last_name }}</strong>
+<<<<<<< HEAD
             <a href="{{ url_for('users.edit_user', user_id=user._id) }}"><i class="far fa-edit right tooltipped" data-position="top" data-tooltip="Edit" aria-label="edit"><span class="no-show">Edit User</span></i></a>
+=======
+            <a href="{{ url_for('users.edit_user', user_id=user._id) }}"><i class="far fa-edit right tooltipped" data-position="top" data-tooltip="Edit"></i></a>
+>>>>>>> 97549e93b10766e8f4450c229298c304e8c9827b
             <hr>
             <li>Position: {{ user.position }}</li>
             <li>Email: <a href="mailto:{{user.email }}">{{ user.email }}</a></li>

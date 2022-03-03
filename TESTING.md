@@ -1,5 +1,118 @@
 # Table of Contents
 - [Testing](#testing)
+  * [Manual Testing](#manual-testing)
+  * [Feature One Navigation](#feature-one-navigation)
+    + [User Story 1-1](#user-story-1-1)
+    + [Test case steps 1-1](#test-case-steps-1-1)
+    + [Expected Result 1-1](#expected-result-1-1)
+    + [Actual Result 1-1](#actual-result-1-1)
+    + [User Story 1-2](#user-story-1-2)
+    + [Test case steps 1-2](#test-case-steps-1-2)
+    + [Expected Result 1-2](#expected-result-1-2)
+    + [Actual Result 1-2](#actual-result-1-2)
+    + [User Story 1-3](#user-story-1-3)
+    + [Test case steps 1-3](#test-case-steps-1-3)
+    + [Expected Result 1-3](#expected-result-1-3)
+    + [Actual Result 1-3](#actual-result-1-3)
+    + [User Story 1-4](#user-story-1-4)
+    + [Test case steps 1-4](#test-case-steps-1-4)
+    + [Expected Result 1-4](#expected-result-1-4)
+    + [Actual Result 1-4](#actual-result-1-4)
+    + [User Story 1-5](#user-story-1-5)
+    + [Test case steps 1-5](#test-case-steps-1-5)
+    + [Expected Result 1-5](#expected-result-1-5)
+    + [Actual Result 1-5](#actual-result-1-5)
+  * [Feature Two Main Page](#feature-two-main-page)
+    + [User Story 2-1](#user-story-2-1)
+    + [Test case steps 2-1](#test-case-steps-2-1)
+    + [Expected Result 2-1](#expected-result-2-1)
+    + [Actual Result 2-1](#actual-result-2-1)
+    + [User Story 2-2](#user-story-2-2)
+    + [Test case steps 2-2](#test-case-steps-2-2)
+    + [Expected Result 2-2](#expected-result-2-2)
+    + [Actual Result 2-2](#actual-result-2-2)
+    + [User Story 2-3](#user-story-2-3)
+    + [Test case steps 2-3](#test-case-steps-2-3)
+    + [Expected Result 2-3](#expected-result-2-3)
+    + [Actual Result 2-3](#actual-result-2-3)
+    + [User Story 2-4](#user-story-2-4)
+    + [Test case steps 2-4](#test-case-steps-2-4)
+    + [Expected Result 2-4](#expected-result-2-4)
+    + [Actual Result 2-4](#actual-result-2-4)
+  * [Feature Three Login](#feature-three-login)
+    + [User Story 3-1](#user-story-3-1)
+    + [Test case steps 3-1](#test-case-steps-3-1)
+    + [Expected Result 3-1](#expected-result-3-1)
+    + [Actual Result 3-1](#actual-result-3-1)
+    + [User Story 3-2](#user-story-3-2)
+    + [Test case steps 3-2](#test-case-steps-3-2)
+    + [Expected Result 3-2](#expected-result-3-2)
+    + [Actual Result 3-2](#actual-result-3-2)
+    + [User Story 3-3](#user-story-3-3)
+    + [Test case steps 3-3](#test-case-steps-3-3)
+    + [Expected Result 3-3](#expected-result-3-3)
+    + [Actual Result 3-3](#actual-result-3-3)
+    + [User Story 3-4](#user-story-3-4)
+    + [Test case steps 3-4](#test-case-steps-3-4)
+    + [Expected Result 3-4](#expected-result-3-4)
+    + [Actual Result 3-4](#actual-result-3-4)
+  * [Feature Four Reservations](#feature-four-reservations)
+    + [User Story 4-1](#user-story-4-1)
+    + [Test case steps 4-1](#test-case-steps-4-1)
+    + [Expected Result 4-1](#expected-result-4-1)
+    + [Actual Result 4-1](#actual-result-4-1)
+    + [User Story 4-2](#user-story-4-2)
+    + [Test case steps 4-2](#test-case-steps-4-2)
+    + [Expected Result 4-2](#expected-result-4-2)
+    + [Actual Result 4-2](#actual-result-4-2)
+    + [User Story 4-3](#user-story-4-3)
+    + [Test case steps 4-3](#test-case-steps-4-3)
+    + [Expected Result 4-3](#expected-result-4-3)
+    + [Actual Result 4-3](#actual-result-4-3)
+    + [User Story 4-4](#user-story-4-4)
+    + [Test case steps 4-4](#test-case-steps-4-4)
+    + [Expected Result 4-4](#expected-result-4-4)
+    + [Actual Result 4-4](#actual-result-4-4)
+  * [Feature Five Profiles](#feature-five-profiles)
+    + [User Story 5-1](#user-story-5-1)
+    + [Test case steps 5-1](#test-case-steps-5-1)
+    + [Expected Result 5-1](#expected-result-5-1)
+    + [Actual Result 5-1](#actual-result-5-1)
+    + [User Story 5-2](#user-story-5-2)
+    + [Test case steps 5-2](#test-case-steps-5-2)
+    + [Expected Result 5-2](#expected-result-5-2)
+    + [Actual Result 5-2](#actual-result-5-2)
+    + [User Story 5-3](#user-story-5-3)
+    + [Test case steps 5-3](#test-case-steps-5-3)
+    + [Expected Result 5-3](#expected-result-5-3)
+    + [Actual Result 5-3](#actual-result-5-3)
+  * [Feature Six Users](#feature-six-users)
+    + [User Story 6_1](#user-story-6-1)
+    + [Test case steps 6_1](#test-case-steps-6-1)
+    + [Expected Result 6_1](#expected-result-6-1)
+    + [Actual Result 6_1](#actual-result-6-1)
+    + [User Story 6_2](#user-story-6-2)
+    + [Test case steps 6_2](#test-case-steps-6-2)
+    + [Expected Result 6_2](#expected-result-6-2)
+    + [Actual Result 6_2](#actual-result-6-2)
+    + [User Story 6-3](#user-story-6-3)
+    + [Test case steps 6-3](#test-case-steps-6-3)
+    + [Expected Result 6-3](#expected-result-6-3)
+    + [Actual Result 6-3](#actual-result-6-3)
+  * [Feature Seven Help](#feature-seven-help)
+    + [User Story 7-1](#user-story-7-1)
+    + [Test case steps 7-1](#test-case-steps-7-1)
+    + [Expected Result 7-1](#expected-result-7-1)
+    + [Actual Result 7-1](#actual-result-7-1)
+  * [Feature Eight Account](#feature-eight-account)
+     + [User Story 8_1](#user-story-8-1)
+    + [Test case steps 8-1](#test-case-steps-8-1)
+    + [Expected Result 8-1](#expected-result-8-1)
+    + [Actual Result 8-1](#actual-result-8-1)
+    + [User Story 8-2](#user-story-8-2)
+    + [Test case steps 8-2](#test-case-steps-8-2)
+    + [Expected Result 8-2](#expected-result-8-2)
+    + [Actual Result 8-2](#actual-result-8-2)
 - [Code Validators and Website Analysis](#code-validators-and-website-analysis)
   * [HTML Markup Validation Service](#html-markup-validation-service)
   * [CSS Validation Service](#css-validation-service)
@@ -11,6 +124,298 @@
   * [PEP8online](#pep8online)
 
 # Testing
+
+## Manual Testing
+Testing was completed on the following browsers and device types
+
+Device Number | Physical/Emulator | Device Name | Device Type | Browser | Version
+------------ | ------------ | ------------- | ------------- | ------------- | -------------
+1 | Physical | iPad | Tablet |  Safari | 15.3 |
+2 | Physical | iPhone | Mobile |Safari | 15.3 |
+3 | Physical | MacBook Pro | Laptop | Safari | 15.3 |
+4 | Physical | Windows Desktop| Desktop | Microsoft Edge | 98.0 |
+5 | Physical | Windows Desktop| Desktop | Chrome | 98.0 |
+6 | Emulator | iPhone 5/SE | Mobile | Chrome Emulator | 98.0 |
+7 | Emulator | iPhone X | Mobile | Chrome Emulator | 98.0 |
+8 | Emulator | iPad | Tablet | Chrome Emulator | 98.0 |
+
+## Feature One Navigation
+
+### User Story 1-1    
+* User Story 1-1: As an admin user the navigation bar is displayed with a logo on all pages for easy navigation, with a burger menu on mobile devices when user logged in  
+### Test case steps 1-1  
+### Expected result 1-1  
+### Actual result 1-1  
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+### User Story 1-2
+-	User Story 1-2: As an admin user the navigation item selected is highlighted  
+### Test case steps 1-2
+### Expected result 1-2
+### Actual result 1-2
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+### User Story 1-3
+-	User Story 1-3: As an admin user, when logged out, the home/landing page is the default page and there is an option for Login  
+### Test case steps 1-3
+### Expected result 1-3
+### Actual result 1-3
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+### User Story 1-4
+-	User Story 1-4: As an admin user, when logged in, the reservation page is the default page and there are five options with a logo: Profiles, Account, Help, Logout   
+### Test case steps 1-4
+### Expected result 1-4
+### Actual result 1-4
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+### User Story 1-5
+-	User Story 1-5: As an admin user if I encounter a route that does not exist, I am navigated to a 404 error page 
+### Test case steps 1-5
+### Expected result 1-5
+### Actual result 1-5
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+
+## Feature Two Main Page
+
+### User Story 2-1  
+* User Story 2-1: As an admin user I can view a hero image with login on the home/landing page    
+### Test case steps 2-1  
+### Expected result 2-1  
+### Actual result 2-1 
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed | 
+<br>
+
+### User Story 2-2
+-	User Story 2-2: As an admin user I can view four reservations added on the website, with group name, arrival date, los, rooms / pax, board and status  
+### Test case steps 2-2
+### Expected result 2-2
+### Actual result 2-2
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+### User Story 2-3
+-	User Story 2-3: As an admin user if I encounter a route that does not exist I am navigated to a 404 error page  
+### Test case steps 2-3
+### Expected result 2-3
+### Actual result 2-3
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+### User Story 2-4 
+-	User Story 2-4: As an admin user if I encounter an error with the application starting up I am navigated to a 500 error page  
+### Test case steps 2-4
+### Expected result 2-4
+### Actual result 2-4
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+## Feature Three Login
+
+### User Story 3-1 
+-	User Story 3-1: As an admin user my username must be a minimum of 6 characters, and contain at least one lowercase letter, with no special characters  
+### Test case steps 3-1
+### Expected result 3-1
+### Actual result 3-1
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+### User Story 3-2 
+-	User Story 3-2: As an admin user my username and / or password must match my confirm username and / or password   
+### Test case steps 3-2
+### Expected result 3-2
+### Actual result 3-2
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+### User Story 3-3 
+-	User Story 3-3: As an admin user I can log in to my account by providing my username and password and clicking Login and I will be navigated to the reservation page. A username and password must be provided. If the username and/or password entered is incorrectly a relevant message will be displayed  
+### Test case steps 3-3
+### Expected result 3-3
+### Actual result 3-3
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+### User Story 3-4 
+-	User Story 3-4: As an admin user, when I am logged into the site, and I click Logout I am successfully logged out of the site, and brought to the home/landing page, with the Login option  
+### Test case steps 3-4
+### Expected result 3-4
+### Actual result 3-4
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+## Feature Four Reservations
+### User Story 4-1 
+-	User Story 4-1: Add Reservation - As an admin user I can add a new reservation by selecting a Group name selection, reservation details, room details, room rates and notes, when clicking on the add reservation the page would redirect to reservations and the new reservation would be added  
+### Test case steps 4-1
+### Expected result 4-1
+### Actual result 4-1
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+### User Story 4-2 
+-	User Story 4-2: Edit Reservation - As an admin user I can edit an existing reservation by updating any Group name selection, reservation details, room details, room rates and notes, when clicking on the edit reservation the page would redirect to reservations and the new reservation would be updated  
+### Test case steps 4-2
+### Expected result 4-2
+### Actual result 4-2
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+### User Story 4-3   
+-	User Story 4-3: Delete Reservation - As an admin user I can delete a reservation by confirming I want to delete  
+### Test case steps 4-3
+### Expected result 4-3
+### Actual result 4-3
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+### User Story 4-4 
+-	User Story 4-4: View Reservation - As an admin user I can view a memory by clicking on a Reservation when additional info would be revealed 
+### Test case steps 4-4
+### Expected result 4-4
+### Actual result 4-4
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+## Feature Five Profiles
+
+### User Story 5-1 
+-	User Story 5-1: Add Profile - As an admin user I can add a new profile by typing a Group name, Contact name, Contact Email, Contact Phone, Line Address, City, Post Code, Country, when clicking on the add profile the page would redirect to Profiles and the new reservation would be added  
+### Test case steps 5-1
+### Expected result 5-1
+### Actual result 5-1
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+### User Story 5-2 
+-	User Story 5-2: Edit Profile - As an admin user I can edit an existing profile by updating any Group name, Contact name, Contact Email, Contact Phone, Line Address, City, Post Code, Country, when clicking on the edit profile the page would redirect to profiles and the profiles would be updated  
+### Test case steps 5-2
+### Expected result 5-2
+### Actual result 5-2
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+### User Story 5-3 
+-	User Story 5-3: Delete Profile - As an admin user I can delete a profile by confirming I want to delete  
+### Test case steps 5-3
+### Expected result 5-3
+### Actual result 5-3
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+## Feature Six Users
+
+### User Story 6-1 
+-	User Story 6-1: Add User - As an admin user I can add a new user by typing a First name, Last name, Email, Password, Position, and select either user or admin for the Role, when clicking on the add user the page would redirect to Users and the new reservation would be added  
+### Test case steps 6-1
+### Expected result 6-1
+### Actual result 6-1
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+### User Story 6-2 
+-	User Story 6-2: Edit User - As an admin user I can edit an existing user by updating any First name, Last name, Email, Password, Position, and select either user or admin for the Role, when clicking on the edit profile the page would redirect to profiles and the user would be updated  
+### Test case steps 6-2
+### Expected result 6-2
+### Actual result 6-2
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+### User Story 6-3 
+-	User Story 6-3: Delete Profile - As an admin user I can delete a user by confirming I want to delete  
+### Test case steps 6-3
+### Expected result 6-3
+### Actual result 6-3
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+## Feature Seven Help
+
+### User Story 7-1 
+-	User Story 7-1: Help – As an admin user I can send an email to the admin by clicking on the Help button in the navbar and filling up the Name, Email address and Message and click on Send Message  
+### Test case steps 7-1
+### Expected result 7-1
+### Actual result 7-1
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+
+## Feature Eight Account
+
+### User Story 8-1  
+-	User Story 8-1: Account – As an admin user I can see my account information such as Full Name, Position, Email, Username and Role   
+### Test case steps 8-1
+### Expected result 8-1
+### Actual result 8-1
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
+### User Story 8-2   
+-	User Story 8-2: Edit Account – As an admin user I can edit my account information such as Full Name, Position, Email, Username when clicking on the Save Changes  
+### Test case steps 8-2
+### Expected result 8-2
+### Actual result 8-2
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+<br>
+
 
 ## Bugs during the testing
 1. Aria labelledby buttons were missing

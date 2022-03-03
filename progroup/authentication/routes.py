@@ -65,10 +65,24 @@ def account():
     :return render_template of account.html
     """
     # If the user is not logged in, redirect them to home/landing page
-    # if 'user' not in session:
-    #    return redirect(url_for("authentication.login"))
+    if 'user' not in session:
+        return redirect(url_for("authentication.login"))
+
+    total = "Number of Groups: " + str(mongo.db.reservations.
+                                       count_documents({}))
+    stat1 = "Confirmed Groups: " + str(mongo.db.reservations.count_documents(
+        {"status": "confirmed"}))
+    stat2 = "Provisional Groups: " + str(mongo.db.reservations.count_documents(
+        {"status": "provisional"}))
+    stat3 = "Cancelled Groups: " + str(mongo.db.reservations.count_documents(
+        {"status": "cancelled"}))
+
     # Find the user in the users collection
     username = session['user']
     user = mongo.db.users.find_one({"username": username})
     return render_template("users/account.html",
-                           user=user)
+                           user=user,
+                           total=total,
+                           stat1=stat1,
+                           stat2=stat2,
+                           stat3=stat3)
