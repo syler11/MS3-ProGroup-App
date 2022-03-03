@@ -83,7 +83,21 @@ body {
   }
 
   .navbar a:hover {
-    font-size: 120%;
+    font-size: 110%;
+    text-transform: uppercase;
+    text-shadow: 0.5px 0.5px white;
+  }
+
+  button:hover {
+    font-size: large;
+  }
+
+  .btn:hover {
+    font-size: large;
+  }
+  
+  .btn-large:hover {
+    font-size: large;
   }
 
 /* Button designs  */

@@ -154,13 +154,15 @@ Step 1 | [Desktop Result](progroup/static/pictures/testing/navigation_desktop.pn
 <br>
 
 ### User Story 1-2
--	User Story 1-2: As an admin user the navigation item selected is highlighted  
+-	User Story 1-2: As an admin user the navigation item hovered is highlighted  
 ### Test case steps 1-2
+1. Hover the mouse over the required navigation item
 ### Expected result 1-2
+1. In desktop size the font is bigger and has white shadow in tablet and mobile size the background has darker background
 ### Actual result 1-2
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/navigation_highlighted_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/navigation_highlighted_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/navigation_highlighted_mobile.png)  | Passed |
 <br>
 
 ### User Story 1-3
