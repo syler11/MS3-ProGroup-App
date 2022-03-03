@@ -13,14 +13,14 @@
             <div class="row">
                 <div class="input-field col xl6 l8 m10 s12">
                     <i class="fas fa-folder-open prefix right light-blue-text text-darken-4"></i>
-                    <select id="group_name" name="group_name" class="validate" required>
+                    <select id="group_name" name="group_name" class="validate" aria-label="select_group" required>
                         <option value="" disabled selected>Select Group Profile</option>
                         {% for profile in profiles %}
                         <option value="{{ profile.group_name }}">{{ profile.group_name }}</option>
                         {% endfor %}
                         
                     </select>
-                    <label for="group_name"></label>
+                    <label for="group_name" aria-label="group_name"><span class="no_show">Group Name</span></label>
                     <br>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                             <option value="cancelled">Cancelled</option>
                             <option value="provisional">Provisional</option>
                           </select>
-                          <label for="status"></label>
+                          <label for="status"><span class="no_show">Status</span></label>
                     </div>
                     <!-- Board -->
                     <div class="input-field grey lighten-3 s12">
@@ -55,7 +55,7 @@
                             <option value="BB">BB</option>
                             <option value="DBB">DBB</option>
                           </select>
-                          <label for="status"></label>
+                          <label for="board"><span class="no_show">Board</span></label>
                     </div>
                     <!-- Porterage -->
                     <div class="input-field grey lighten-3 s12">
@@ -65,7 +65,7 @@
                             <option value="one-way">ONE WAY</option>
                             <option value="return">RETURN</option>
                           </select>
-                          <label for="status"></label>
+                          <label for="porterage"><span class="no_show">Porterage</span></label>
                     </div>
                 </div>
                         <div class="col l3 m6">
@@ -137,7 +137,7 @@
                     <p>Notes</p>
                     <div class="input-field s12">
                         <textarea id="notes" name="notes" style="width:80%;height:150px;"></textarea>
-                        <label for="notes"></label>
+                        <label for="notes"><span class="no_show">Notes</span></label>
                     </div>
                 </div>
             </div>

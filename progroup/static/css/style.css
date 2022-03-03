@@ -193,6 +193,10 @@ body {
   margin-bottom: 0;
 }
 
+.add-edit {
+  margin-bottom: 0;
+}
+
 /* Pagination */ 
 
 .pagination-row {

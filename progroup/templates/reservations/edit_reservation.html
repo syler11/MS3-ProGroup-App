@@ -19,7 +19,7 @@
                             <option value="{{ profile.group_name }}">{{ profile.group_name }}</option>
                         {% endfor %}
                     </select>
-                    <label for="group_name"></label>
+                    <label for="group_name"><span class="no_show">group name</span></label>
                     <br>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                     <!-- Arrival Date -->
                     <div class="input-field s12">
                         <input id="arrival_date" name="arrival_date" minlength="10"
-                            maxlength="10" value="{{ reservation.arrival_date }}" type="text" class="datepicker validate" required>
+                            maxlength="10" value="{{ reservation.arrival_date }}" type="text" class="datepicker validate" aria-label="arrival date" required>
                         <label for="arrival_date">Arrival Date</label>
                     </div>
                     <!-- LOS -->
@@ -45,7 +45,7 @@
                             <option value="cancelled">Cancelled</option>
                             <option value="provisional">Provisional</option>
                           </select>
-                          <label for="status"></label>
+                          <label for="status"><span class="no_show">Status</span></label>
                     </div>
                     <!-- Board -->
                     <div class="input-field grey lighten-3 s12">
@@ -54,7 +54,7 @@
                             <option value="BB">BB</option>
                             <option value="DBB">DBB</option>
                           </select>
-                          <label for="status"></label>
+                          <label for="board"><span class="no_show">board</span></label>
                     </div>
                     <!-- Porterage -->
                     <div class="input-field grey lighten-3 s12">
@@ -64,7 +64,7 @@
                             <option value="one-way">ONE WAY</option>
                             <option value="return">RETURN</option>
                           </select>
-                          <label for="status"></label>
+                          <label for="porterage"><span class="no_show">porterage</span></label>
                     </div>
                 </div>
                         <div class="col l3 m6 s12">
@@ -137,7 +137,7 @@
                     <p>Notes</p>
                     <div class="input-field s12">
                         <textarea id="notes" name="notes" value="{{ reservation.notes }}" style="width:80%;height:150px;"></textarea>
-                        <label for="notes"></label>
+                        <label for="notes"><span class="no_show">notes</span></label>
                     </div>
                 </div>
             </div>

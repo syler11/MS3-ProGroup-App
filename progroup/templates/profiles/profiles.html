@@ -5,42 +5,44 @@
 
 
 <div class="row">
-    <div class="col s12 card-panel">
-        <div class="col s4">
-            <h4>Profiles</h4>
-        </div>
-        <div class="col s8 right">
-            <!-- Add New User button navigate to add_user.html page -->
-            <a href="{{ url_for('profiles.add_profile') }}"><button class="right btn-large light-blue darken-3 text-shadow">
-                    <i class="fas fa-plus-square right"></i>Add New</button></a>
-        </div>
+  <div class="col s12 card-panel">
+    <div class="col s4">
+      <h4>Profiles</h4>
     </div>
+    <div class="col s8 right">
+      <!-- Add New User button navigate to add_user.html page -->
+      <a href="{{ url_for('profiles.add_profile') }}"><button class="right btn-large light-blue darken-3 text-shadow">
+          <i class="fas fa-plus-square right"></i>Add New</button></a>
+    </div>
+  </div>
 
-    {% for profile in profiles_list %}
-    <!-- Iterate through all the profiles and displays on the page  -->
-    <div class="card-panel col  xl4 l6 s12">
-        <ul class="users">
-            <!-- Group name -->
-            <h6><strong>{{ profile.group_name }}</strong>
-            <a href="{{ url_for('profiles.edit_profile', profile_id=profile._id) }}"><i class="far fa-edit right tooltipped" data-position="top" data-tooltip="Edit" aria-labelledby="edit"></i></a>
-            <button data-target="deleteProfile{{ profile._id }}" class="right modal-trigger" aria-labelledby="delete"><i class="far fa-trash-alt right tooltipped" data-position="top" data-tooltip="Delete"></i></button>
-            </h6>
-    
-            <hr>
-            <!-- Contact details -->
-            <li><strong>Contact Details</strong></li>
-            <li>Contact Name: {{ profile.contact_name }}</li>
-            <li>Contact Email: <a href="mailto:{{ profile.contact_email }}">{{ profile.contact_email }}</a></li>
-            <li>Contact Phone: <a href="tel:{{ profile.contact_phone }}">{{ profile.contact_phone }}</a></li>
-            <li><strong>Contact Address</strong></li>
-            <li>{{ profile.line_address }}
-                <br>{{ profile.city }}
-                <br>{{ profile.postcode.upper() }}
-                <br>{{ profile.country }}
-            </li>
-        </ul>
-    </div>
-     <!-- Modal Structure for Delete profile confirmation -->
+  {% for profile in profiles_list %}
+  <!-- Iterate through all the profiles and displays on the page  -->
+  <div class="card-panel col  xl4 l6 s12">
+    <ul class="users">
+      <!-- Group name -->
+      <h6><strong>{{ profile.group_name }}</strong>
+        <a href="{{ url_for('profiles.edit_profile', profile_id=profile._id) }}"><i class="far fa-edit right tooltipped"
+            data-position="top" data-tooltip="Edit" aria-label="edit"></i><span class="no-show">edit</span></a>
+        <button data-target="deleteProfile{{ profile._id }}" class="right modal-trigger" aria-label="delete"><i
+            class="far fa-trash-alt right tooltipped" data-position="top" data-tooltip="Delete"></i></button>
+      </h6>
+
+      <hr>
+      <!-- Contact details -->
+      <li><strong>Contact Details</strong></li>
+      <li>Contact Name: {{ profile.contact_name }}</li>
+      <li>Contact Email: <a href="mailto:{{ profile.contact_email }}">{{ profile.contact_email }}</a></li>
+      <li>Contact Phone: <a href="tel:{{ profile.contact_phone }}">{{ profile.contact_phone }}</a></li>
+      <li><strong>Contact Address</strong></li>
+      <li>{{ profile.line_address }}
+        <br>{{ profile.city }}
+        <br>{{ profile.postcode.upper() }}
+        <br>{{ profile.country }}
+      </li>
+    </ul>
+  </div>
+  <!-- Modal Structure for Delete profile confirmation -->
   <div id="deleteProfile{{ profile._id }}" class="modal">
     <div class="modal-content">
       <h4>Delete Profile</h4>
@@ -49,12 +51,13 @@
     </div>
     <hr>
     <div class="modal-footer">
-        <button class="modal-close btn-large red">Cancel</button>
-      <a href="{{ url_for('profiles.delete_profile', profile_id=profile._id) }}" class="modal-close waves-effect waves-green light-blue btn-large">Delete</a>
+      <button class="modal-close btn-large red">Cancel</button>
+      <a href="{{ url_for('profiles.delete_profile', profile_id=profile._id) }}"
+        class="modal-close waves-effect waves-green light-blue btn-large">Delete</a>
     </div>
   </div>
 
-    {% endfor %}
+  {% endfor %}
 
 </div>
 
