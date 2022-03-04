@@ -311,7 +311,7 @@ Step 3 | [Desktop Result](progroup/static/pictures/testing/new_reservation_added
 ### User Story 4-2 
 -	User Story 4-2: Edit Reservation - As an admin user I can edit an existing reservation by updating any Group name selection, reservation details, room details, room rates and notes, when clicking on the edit reservation the page would redirect to reservations and the new reservation would be updated  
 ### Test case steps 4-2
-1. An admin or regular users would click on the dit symbol on the required reservation
+1. An admin or regular users would click on the edit symbol on the required reservation
 2. After the values are updated by clicking the save cnahges button the database values would be updated and reservation page would display again
 ### Expected result 4-2
 1. An admin or regular users would edit Reservation display for value to be updated
@@ -326,11 +326,16 @@ Step 2 | [Desktop Result](progroup/static/pictures/testing/reservation_updated_d
 ### User Story 4-3   
 -	User Story 4-3: Delete Reservation - As an admin user I can delete a reservation by confirming I want to delete  
 ### Test case steps 4-3
+1. An admin or regular users would click on the delete symbol on the required reservation and then confirmation panel would
+2. By clicking on the delete button the reservation would be moved from the database
 ### Expected result 4-3
+1. Delete confirmation panel appear
+2. Reservation is deleted from the database
 ### Actual result 4-3
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/delete_reservation_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/delete_reservation_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/delete_reservation_mobile.png)  | Passed |
+Step 2 | [Desktop Result](progroup/static/pictures/testing/reservation_deleted_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/reservation_deleted_tablet.png) |[Mobile Result](progroup/static/pictures/testing/reservation_deleted_mobile.png)  | Passed |
 <br>
 
 ### User Story 4-4 
