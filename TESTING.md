@@ -295,7 +295,11 @@ Step 1 | [Desktop Result](progroup/static/pictures/testing/landing_page_desktop.
 ### User Story 4-1 
 -	User Story 4-1: Add Reservation - As an admin user I can add a new reservation by selecting a Group name selection, reservation details, room details, room rates and notes, when clicking on the add reservation the page would redirect to reservations and the new reservation would be added  
 ### Test case steps 4-1
+1. An admin or regular user clicks on the Add New button on the reservation page and the add reservation display
+2. An admin or regular user would fill all the required input fields and click Add Reservation button and the page would redirect to reservations with the new reservation added
 ### Expected result 4-1
+1. Add reservation page displays
+2. Page redirect to reservations and the new reseration added to the database (+1 reservations in total)
 ### Actual result 4-1
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
