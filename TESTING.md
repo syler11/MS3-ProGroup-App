@@ -341,11 +341,13 @@ Step 2 | [Desktop Result](progroup/static/pictures/testing/reservation_deleted_d
 ### User Story 4-4 
 -	User Story 4-4: View Reservation - As an admin user I can view a memory by clicking on a Reservation when additional info would be revealed 
 ### Test case steps 4-4
+1. An admin or regular users would click on the required reservation and then the reservation details would reveal below
 ### Expected result 4-4
+1. A collapsible would open and reveal additional info
 ### Actual result 4-4
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/reservation_collapsible_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/reservation_collapsible_tablet.png) |[Mobile Result](progroup/static/pictures/testing/reservation_collapsible_mobile.png)  | Passed |
 <br>
 
 ## Feature Five Profiles
