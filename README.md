@@ -406,9 +406,9 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 #### Delete Profile Mobile
 ![Delete Profile mobile](progroup/static/pictures/testing/delete_profile_confirmation_mobile.png)
 #### View Profile Desktop
-![View Profile desktop](progroup/static/pictures/testing/profiles_desktop.png)
+![View Profile desktop](progroup/static/pictures/testing/profiles_page_desktop.png)
 #### View Profile Mobile
-![View Profile mobile](progroup/static/pictures/testing/profiles_mobile.png)
+![View Profile mobile](progroup/static/pictures/testing/profiles_page_mobile.png)
 
 #### User Stories Feature Five
 -	User Story 5.1: Add Profile - As an admin user I can add a new profile by typing a Group name, Contact name, Contact Email, Contact Phone, Line Address, City, Post Code, Country, when clicking on the add profile the page would redirect to Profiles and the new reservation would be added  
@@ -418,6 +418,27 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 
 ### Feature Six Users
 #### Description Feature Six
+- Users can add user to the database by entering all the mandatory fields and clicking the add user button. 
+- Users can edit existing reservations by clicking the edit (pen & envelope) icon.
+- Users can delete existing user by clicking the delete (trash can) icon.
+- Users can check existing users by navigating to the users page
+
+#### Add User Desktop
+![Add User desktop](progroup/static/pictures/testing/add_user_desktop.png)
+#### Add User Mobile
+![Add User mobile](progroup/static/pictures/testing/add_user_mobile.png)
+#### Edit User Desktop
+![Edit User desktop](progroup/static/pictures/testing/edit_user_desktop.png)
+#### Edit User Mobile
+![Edit User mobile](progroup/static/pictures/testing/edit_user_mobile.png)
+#### Delete User Desktop
+![Delete User desktop](progroup/static/pictures/testing/delete_user_confirmation_desktop.png)
+#### Delete User Mobile
+![Delete User mobile](progroup/static/pictures/testing/delete_user_confirmation_mobile.png)
+#### View User Desktop
+![View User desktop](progroup/static/pictures/testing/users_page_desktop.png)
+#### View User Mobile
+![View User mobile](progroup/static/pictures/testing/users_page_mobile.png)
 #### User Stories Feature Six
 -	User Story 6.1: Add User - As an admin user I can add a new user by typing a First name, Last name, Email, Password, Position, and select either user or admin for the Role, when clicking on the add user the page would redirect to Users and the new reservation would be added  
 -	User Story 6.2: Edit User - As an admin user I can edit an existing user by updating any First name, Last name, Email, Password, Position, and select either user or admin for the Role, when clicking on the edit profile the page would redirect to profiles and the user would be updated  
