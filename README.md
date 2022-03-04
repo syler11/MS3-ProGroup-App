@@ -259,6 +259,7 @@ Users | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_us
 Add Users | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_addUsers.png)
 Edit Users | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_editUsers.png)
 Help | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_help.png)
+Help | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_account.png)
 
 ## Surface
 
@@ -357,6 +358,28 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 
 ### Feature Four Reservations
 #### Description Feature Four
+- Users can add reservation to the database by entering all the mandatory fields and clikcking the add reservation button. 
+- Users can edit existing reservations by clicking the edit (pen & envelope) icon.
+- Users can delete existing reservation by clicking the delete (trash can) icon.
+- User can view more details about reservation by clicking on the reservation line itself. (collapsible feature)
+
+#### Add Reservation Desktop
+![Add reservation desktop](progroup/static/pictures/testing/add_reservation_desktop.png)
+#### Add Reservation Mobile
+![Add reservation mobile](progroup/static/pictures/testing/add_reservation_mobile.png)
+#### Edit Reservation Desktop
+![Edit reservation desktop](progroup/static/pictures/testing/edit_reservation_desktop.png)
+#### Edit Reservation Mobile
+![Edit reservation mobile](progroup/static/pictures/testing/edit_reservation_mobile.png)
+#### Delete Reservation Desktop
+![Delete reservation desktop](progroup/static/pictures/testing/delete_reservation_confirmation_desktop.png)
+#### Delete Reservation Mobile
+![Delete reservation mobile](progroup/static/pictures/testing/delete_reservation_confirmation_mobile.png)
+#### View Reservation Desktop
+![View reservation desktop](progroup/static/pictures/testing/reservation_collapsible_desktop.png)
+#### View Reservation Mobile
+![View reservation mobile](progroup/static/pictures/testing/reservation_collapsible_mobile.png)
+
 #### User Stories Feature Four
 -	User Story 4.1: Add Reservation - As an admin user I can add a new reservation by selecting a Group name selection, reservation details, room details, room rates and notes, when clicking on the add reservation the page would redirect to reservations and the new reservation would be added  
 -	User Story 4.2: Edit Reservation - As an admin user I can edit an existing reservation by updating any Group name selection, reservation details, room details, room rates and notes, when clicking on the edit reservation the page would redirect to reservations and the new reservation would be updated  
