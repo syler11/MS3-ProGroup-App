@@ -282,11 +282,21 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 ## Existing Features
 ### Feature One Navigation
 #### Description Feature One
+* There is no navigation available for users on the login/landing only the login facility what will be covered in feature three.   
+* When the user is logged in there are five options with a logo: Reservations Profiles, Account, Help, Logout (Users can be seen only by admin users).  
+*  The navigation for the logged in users ensure the easy use of the website. 
+[Navigation desktop](progroup/static/pictures/testing/navigation_desktop.png)
+[Navigation mobile](progroup/static/pictures/testing/navigation_mobile.png)
+[Login desktop](progroup/static/pictures/testing/login_desktop.png)
+[Login mobile](progroup/static/pictures/testing/login_mobile.png)
+
+
+
 #### User Stories Feature One
 -	User Story 1.1: As an admin user the navigation bar is displayed with a logo on all pages for easy navigation, with a burger menu on mobile devices when user logged in  
 -	User Story 1.2: As an admin user the navigation item selected is highlighted  
 -	User Story 1.3: As an admin user, when logged out, the home/landing page is the default page and there is an option for Login  
--	User Story 1.4: As an admin user, when logged in, the reservation page is the default page and there are five options with a logo: Profiles, Account, Help, Logout  
+-	User Story 1.4: As an admin user, when logged in, the reservation page is the default page and there are five options with a logo: Reservations Profiles, Account, Help, Logout (Users can be seen only by admin users)  
 -	User Story 1.5: As an admin user if I encounter a route that does not exist, I am navigated to a 404 error page 
 
 ### Feature Two Main Page
