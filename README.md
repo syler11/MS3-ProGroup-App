@@ -171,6 +171,11 @@ The website contains 18 pages in a logical structure, information and purpose.
 
 #### Conceptual Database
 
+### Physical Database Model
+
+![Users](progroup/static/pictures/databases/databas_model.png)
+
+
 #### MongoDB Database Information
 - One production database(group_manager) was created to store site information, it contains three collections described below
 1. profiles - contains contact information for a group operator
