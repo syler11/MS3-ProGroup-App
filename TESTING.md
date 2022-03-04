@@ -430,17 +430,17 @@ Step 3 | [Desktop Result](progroup/static/pictures/testing/new_user_added_deskto
 
 ### User Story 6-2 
 -	User Story 6-2: Edit User - As an admin user I can edit an existing user by updating any First name, Last name, Email, Password, Position, and select either user or admin for the Role, when clicking on the edit profile the page would redirect to profiles and the user would be updated  
-### Test case steps 5-2
-1. An admin or regular users would click on the edit symbol on the required profile
-2. After the values are updated by clicking the save cnahges button the database values would be updated and profiles page would display again
-### Expected result 5-2
-1. An admin or regular users would be redirected to Edit Profile page for value/s to be updated
-2. Profiles page would display the profiles with the updated values
-### Actual result 5-2
+### Test case steps 6-2
+1. An admin users would click on the edit symbol on the required user
+2. After the values are updated by clicking the save changes button the database values would be updated and users page would display again
+### Expected result 6-2
+1. An admin users would be redirected to Edit User page for value/s to be updated
+2. Users page would display the profiles with the updated values
+### Actual result 6-2
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result](progroup/static/pictures/testing/edit_profile_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/edit_profile_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/edit_profile_mobile.png)  | Passed |
-Step 2 | [Desktop Result](progroup/static/pictures/testing/profile_updated_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/profile_updated_tablet.png) |[Mobile Result](progroup/static/pictures/testing/profile_updated_mobile.png)  | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/edit_user_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/edit_user_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/edit_user_mobile.png)  | Passed |
+Step 2 | [Desktop Result](progroup/static/pictures/testing/user_updated_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/user_updated_tablet.png) |[Mobile Result](progroup/static/pictures/testing/user_updated_mobile.png)  | Passed |
 <br>
 
 ### User Story 6-3 
