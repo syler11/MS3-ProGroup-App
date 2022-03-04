@@ -240,13 +240,15 @@ Step 1 | [Desktop Result](progroup/static/pictures/testing/500_page_desktop.png)
 ## Feature Three Login
 
 ### User Story 3-1 
--	User Story 3-1: As an admin user my username must be a minimum of 6 characters, and contain at least one lowercase letter, with no special characters  
+-	User Story 3-1: As an admin or regular user my username must be a minimum of 5 characters, and can contain lowercase, uppercase letters and number but no special characters  
 ### Test case steps 3-1
+1. Changed one of the existing username from 5 to 4 characters (admin to admi)
 ### Expected result 3-1
+1. An admin or regular user shall receive a warning that the format is not accepted
 ### Actual result 3-1
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/username_error_desktop.png)  | [Tablet Result](progroup/static/pictures/testing/username_error_tablet.png) |[Mobile Result](progroup/static/pictures/testing/username_error_mobile.png) | Passed |
 <br>
 
 ### User Story 3-2 
