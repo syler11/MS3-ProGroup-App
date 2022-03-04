@@ -218,13 +218,15 @@ Step 1 | [Desktop Result](progroup/static/pictures/testing/landing_page_desktop.
 <br>
 
 ### User Story 2-2
--	User Story 2-2: As an admin user I can view four reservations added on the website, with group name, arrival date, los, rooms / pax, board and status  
+-	User Story 2-2: As an admin user I can view four reservations added on the website, with group name, arrival date, los, rooms / pax, board and status an delete and edit button and also a search facility for group name status on the top of the page
 ### Test case steps 2-2
+1. Navigate to reservations page (or simply log in)
 ### Expected result 2-2
+1. After uccesfully navigating to reservation page the admin and user would see 4 result for the existing group bookings with group name, arrival date, los, rooms / pax, board and status and delete and edit button and the search facility on the top of the page
 ### Actual result 2-2
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/reservations_page_desktop.png)  | [Tablet Result](progroup/static/pictures/testing/reservations_page_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/reservations_page_mobile.png)  | Passed |
 <br>
 
 ### User Story 2-3
