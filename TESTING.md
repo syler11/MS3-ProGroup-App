@@ -510,11 +510,16 @@ Step 1 | [Desktop Result](progroup/static/pictures/testing/acount_page_desktop.p
 ### User Story 8-2   
 -	User Story 8-2: Edit Account – As an admin user I can edit my account information such as Full Name, Position, Email, Username when clicking on the Save Changes  
 ### Test case steps 8-2
+1. The users would click on the edit symbol on the required on their account profile
+2. After the values are updated by clicking the save changes button the database values would be updated and users account would display again
 ### Expected result 8-2
+1. A users would be redirected to Edit User page for value/s to be updated
+2. Account page would display the  account profile with the updated values
 ### Actual result 8-2
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/edit_account_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/edit_account_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/edit_account_mobile.png)  | Passed |
+Step 2 | [Desktop Result](progroup/static/pictures/testing/account_updated_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/account_updated_tablet.png) |[Mobile Result](progroup/static/pictures/testing/account_updated_mobile.png)  | Passed |
 <br>
 
 
