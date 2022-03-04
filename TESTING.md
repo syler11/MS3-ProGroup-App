@@ -410,48 +410,64 @@ Step Number | Desktop | Tablet | Mobile | Result
 Step 1 | [Desktop Result](progroup/static/pictures/testing/profiles_page_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/profiles_page_tablet.png) |[Mobile Result](progroup/static/pictures/testing/profiles_page_mobile.png)  | Passed |
 <br>
 
-## Feature Six Users
+## Feature Six Users (admin users only)
 
 ### User Story 6-1 
 -	User Story 6-1: Add User - As an admin user I can add a new user by typing a First name, Last name, Email, Password, Position, and select either user or admin for the Role, when clicking on the add user the page would redirect to Users and the new reservation would be added  
 ### Test case steps 6-1
+1. An admin user click on the Add New button on the users page and the add user page will display
+2. An admin user would fill all the required input fields and click Add User button and the page would redirect to the Users page with the new User added
 ### Expected result 6-1
+1. Add user page displays
+2. Page redirect to users and the new user added to the database (+1 users in total)
 ### Actual result 6-1
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/add_user_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/add_user_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/add_user_mobile.png)  | Passed |
+Step 2 | [Desktop Result](progroup/static/pictures/testing/add_user_filled_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/add_user_filled_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/add_user_filled_mobile.png)  | Passed |
+Step 3 | [Desktop Result](progroup/static/pictures/testing/new_user_added_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/new_user_added_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/new_user_added_mobile.png)  | Passed |
 <br>
 
 ### User Story 6-2 
 -	User Story 6-2: Edit User - As an admin user I can edit an existing user by updating any First name, Last name, Email, Password, Position, and select either user or admin for the Role, when clicking on the edit profile the page would redirect to profiles and the user would be updated  
-### Test case steps 6-2
-### Expected result 6-2
-### Actual result 6-2
+### Test case steps 5-2
+1. An admin or regular users would click on the edit symbol on the required profile
+2. After the values are updated by clicking the save cnahges button the database values would be updated and profiles page would display again
+### Expected result 5-2
+1. An admin or regular users would be redirected to Edit Profile page for value/s to be updated
+2. Profiles page would display the profiles with the updated values
+### Actual result 5-2
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/edit_profile_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/edit_profile_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/edit_profile_mobile.png)  | Passed |
+Step 2 | [Desktop Result](progroup/static/pictures/testing/profile_updated_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/profile_updated_tablet.png) |[Mobile Result](progroup/static/pictures/testing/profile_updated_mobile.png)  | Passed |
 <br>
 
 ### User Story 6-3 
 -	User Story 6-3: Delete Profile - As an admin user I can delete a user by confirming I want to delete  
-### Test case steps 6-3
-### Expected result 6-3
-### Actual result 6-3
+### Test case steps 5-3
+1. An admin or regular users would click on the delete symbol on the required profile and then confirmation panel would
+2. By clicking on the delete button the profile would be moved from the database
+### Expected result 5-3
+1. Delete confirmation panel appear
+2. Profile is deleted from the database
+### Actual result 5-3
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/delete_profile_confirmation_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/delete_profile_confirmation_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/delete_profile_confirmation_mobile.png)  | Passed |
+Step 2 | [Desktop Result](progroup/static/pictures/testing/profile_deleted_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/profile_deleted_tablet.png) |[Mobile Result](progroup/static/pictures/testing/profile_deleted_mobile.png)  | Passed |
 <br>
 
 ### User Story 6-4 
--	User Story 4-4: View Users - As an admin or regular user I can see existing profiles by navigating to the Profiles page
-### Test case steps 5-4
-1. An admin or regular users would navigate t the Profiles page
-### Expected result 5-4
-1. Profiles page would display all existing profiles
-### Actual result 5-4
+-	User Story 4-4: View Users - As an admin user I can see existing users by navigating to the users page
+### Test case steps 6-4
+1. An admin user I would navigate to the users page
+### Expected result 6-4
+1. Users page would display all existing users
+### Actual result 6-4
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result](progroup/static/pictures/testing/profiles_page_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/profiles_page_tablet.png) |[Mobile Result](progroup/static/pictures/testing/profiles_page_mobile.png)  | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/users_page_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/users_page_tablet.png) |[Mobile Result](progroup/static/pictures/testing/users_page_mobile.png)  | Passed |
 <br>
 
 ## Feature Seven Help
@@ -465,7 +481,7 @@ Step 1 | [Desktop Result](progroup/static/pictures/testing/profiles_page_desktop
 ### Actual result 7-1
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result](progroup/static/pictures/testing/message_sent_desktop.png)  | [Tablet Result]message_sent_tablet.png) |[Mobile Result]message_sent_mobile.png) | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/message_sent_desktop.png)  | [Tablet Result](progroup/static/pictures/testing/message_sent_tablet.png) |[Mobile Result](progroup/static/pictures/testing/message_sent_mobile.png) | Passed |
 <br>
 
 
