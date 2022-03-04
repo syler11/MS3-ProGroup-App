@@ -290,12 +290,12 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 ![Navigation desktop](progroup/static/pictures/testing/navigation_desktop.png)  
 #### Mobile Navigation
 ![Navigation mobile](progroup/static/pictures/testing/navigation_mobile.png)  
-#### Desktop Login
-![Login desktop](progroup/static/pictures/testing/login_desktop.png)  
-#### Mobile Login
-![Login mobile](progroup/static/pictures/testing/login_mobile.png)  
-
-
+#### Desktop 404 Error Page
+![Navigation desktop](progroup/static/pictures/testing/404_page_desktop.png)  
+#### Mobile 404 Error Page
+![Navigation desktop](progroup/static/pictures/testing/404_page_mobile.png)  
+  
+ 
 
 #### User Stories Feature One
 -	User Story 1.1: As an admin user the navigation bar is displayed with a logo on all pages for easy navigation, with a burger menu on mobile devices when user logged in  
@@ -306,6 +306,22 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 
 ### Feature Two Main Page
 #### Description Feature Two
+* The login/landing page is displayed when the user first accessing the site or i they log out.  
+* It displays a hero image and login facilities.
+
+#### Desktop Login Page
+![Login desktop](progroup/static/pictures/testing/login_desktop.png)  
+#### Mobile Login Page
+![Login mobile](progroup/static/pictures/testing/login_mobile.png) 
+#### Desktop Reservation Page
+![Login desktop](progroup/static/pictures/testing/reservations_desktop.png)  
+#### Mobile Reservation Page
+![Login mobile](progroup/static/pictures/testing/reservations_mobile.png) 
+#### Desktop 500 Error Page
+![Login desktop](progroup/static/pictures/testing/50_page_desktop.png)
+#### Mobile 500 Error Page
+![Login desktop](progroup/static/pictures/testing/50_page_mobile.png)
+
 
 #### User Stories Feature Two
 -	User Story 2.1: As an admin user I can view a hero image with login on the home/landing page  
