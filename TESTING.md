@@ -254,36 +254,41 @@ Step 1 | [Desktop Result](progroup/static/pictures/testing/username_error_deskto
 ### User Story 3-2 
 -	User Story 3-2: As an admin or regular user my username and / or password must match my confirm username and / or password   
 ### Test case steps 3-2
+1. An admin or regular user would enter the correct username / password combination and click login the application would log them in and would display the reservation page
+### Expected result 3-2
+1. Successful login the reservation page is displayed
+### Actual result 3-2
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/reservations_page_desktop.png)  | [Tablet Result](progroup/static/pictures/testing/reservations_page_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/reservations_page_mobile.png)  | Passed |
+<br>
+
+### User Story 3-3 
+-	User Story 3-3: As an admin user I can log in to my account by providing my username and password and clicking Login and I will be navigated to the reservation page. A username and password must be provided. If the username and/or password entered is incorrectly a relevant message will be displayed  
+### Test case steps 3-3
 1. An admin or regular user type the wrong username
 2. An admin or regular user type the wrong password
-### Expected result 3-2
+### Expected result 3-3
 1. Flash message appear on the top of page displaying Inccorect username
 2. Flash message appear on the top of page displaying Inccorect password
-### Actual result 3-2
+### Actual result 3-3
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
 Step 1 | [Desktop Result](progroup/static/pictures/testing/incorrect_username_desktop.png)  | [Tablet Result](progroup/static/pictures/testing/incorrect_username_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/incorrect_username_mobile.png)  | Passed |
 Step 2 | [Desktop Result](progroup/static/pictures/testing/incorrect_password_desktop.png)  | [Tablet Result](progroup/static/pictures/testing/incorrect_password_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/incorrect_password_mobile.png)  | Passed |
 <br>
 
-### User Story 3-3 
--	User Story 3-3: As an admin user I can log in to my account by providing my username and password and clicking Login and I will be navigated to the reservation page. A username and password must be provided. If the username and/or password entered is incorrectly a relevant message will be displayed  
-### Test case steps 3-3
-### Expected result 3-3
-### Actual result 3-3
-Step Number | Desktop | Tablet | Mobile | Result 
------------- | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
-<br>
-
 ### User Story 3-4 
 -	User Story 3-4: As an admin user, when I am logged into the site, and I click Logout I am successfully logged out of the site, and brought to the home/landing page, with the Login option  
 ### Test case steps 3-4
+1. As an admin or reguklar user the log out button is available in the navigation
+2. After clicking on the navigation button an admin or regular user is successfully logged out 
 ### Expected result 3-4
+1. Admin or regular user is looged out and login/landing page displayed
 ### Actual result 3-4
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/landing_page_desktop.png)  | [Tablet Result](progroup/static/pictures/testing/landing_page_tablet.png) |[Mobile Result](progroup/static/pictures/testing/landing_page_mobile.png) | Passed | 
 <br>
 
 ## Feature Four Reservations
