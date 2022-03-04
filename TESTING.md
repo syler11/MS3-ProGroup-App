@@ -334,7 +334,7 @@ Step 2 | [Desktop Result](progroup/static/pictures/testing/reservation_updated_d
 ### Actual result 4-3
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result](progroup/static/pictures/testing/delete_reservation_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/delete_reservation_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/delete_reservation_mobile.png)  | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/delete_reservation_confirmation_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/delete_reservation_confirmation_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/delete_reservation_confirmation_mobile.png)  | Passed |
 Step 2 | [Desktop Result](progroup/static/pictures/testing/reservation_deleted_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/reservation_deleted_tablet.png) |[Mobile Result](progroup/static/pictures/testing/reservation_deleted_mobile.png)  | Passed |
 <br>
 
@@ -386,11 +386,28 @@ Step 2 | [Desktop Result](progroup/static/pictures/testing/profile_updated_deskt
 ### User Story 5-3 
 -	User Story 5-3: Delete Profile - As an admin user I can delete a profile by confirming I want to delete  
 ### Test case steps 5-3
+1. An admin or regular users would click on the delete symbol on the required profile and then confirmation panel would
+2. By clicking on the delete button the profile would be moved from the database
 ### Expected result 5-3
+1. Delete confirmation panel appear
+2. Profile is deleted from the database
 ### Actual result 5-3
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/delete_profile_confirmation_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/delete_profile_confirmation_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/delete_profile_confirmation_mobile.png)  | Passed |
+Step 2 | [Desktop Result](progroup/static/pictures/testing/profile_deleted_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/profile_deleted_tablet.png) |[Mobile Result](progroup/static/pictures/testing/profile_deleted_mobile.png)  | Passed |
+<br>
+
+### User Story 5-4 
+-	User Story 4-4: View Reservation - As an admin user I can view a memory by clicking on a Reservation when additional info would be revealed 
+### Test case steps 5-4
+1. An admin or regular users would click on the required reservation and then the reservation details would reveal below
+### Expected result 5-4
+1. A collapsible would open and reveal additional info
+### Actual result 5-4
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/reservation_collapsible_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/reservation_collapsible_tablet.png) |[Mobile Result](progroup/static/pictures/testing/reservation_collapsible_mobile.png)  | Passed |
 <br>
 
 ## Feature Six Users
