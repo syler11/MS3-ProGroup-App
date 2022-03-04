@@ -206,13 +206,15 @@ Step 1 | [Desktop Result](progroup/static/pictures/testing/404_page_desktop.png)
 ## Feature Two Main Page
 
 ### User Story 2-1  
-* User Story 2-1: As an admin user I can view a hero image with login on the home/landing page    
+* User Story 2-1: As an admin or regular user I can view a hero image with login on the login/landing page    
 ### Test case steps 2-1  
+1. An admin or regular user navigate to the login landing page 
 ### Expected result 2-1  
+1. An admin or regular user would be displayed the login/landing page with a hero image and login facilities
 ### Actual result 2-1 
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed | 
+Step 1 | [Desktop Result](progroup/static/pictures/testing/landing_page_desktop.png)  | [Tablet Result](progroup/static/pictures/testing/landing_page_tablet.png) |[Mobile Result](progroup/static/pictures/testing/landing_page_mobile.png) | Passed | 
 <br>
 
 ### User Story 2-2
