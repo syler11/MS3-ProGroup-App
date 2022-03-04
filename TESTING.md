@@ -136,7 +136,7 @@ Device Number | Physical/Emulator | Device Name | Device Type | Browser | Versio
 ------------ | ------------ | ------------- | ------------- | ------------- | -------------
 1 | Physical | iPad | Tablet |  Safari | 15.3 |
 2 | Physical | iPhone | Mobile |Safari | 15.3 |
-3 | Physical | MacBook Pro | Laptop | Safari | 15.3 |
+3 | Physical | MacBook Pro | Laptop | Safari | 14.1 |
 4 | Physical | Windows Desktop| Desktop | Microsoft Edge | 98.0 |
 5 | Physical | Windows Desktop| Desktop | Chrome | 98.0 |
 6 | Emulator | iPhone 5/SE | Mobile | Chrome Emulator | 98.0 |
@@ -146,7 +146,7 @@ Device Number | Physical/Emulator | Device Name | Device Type | Browser | Versio
 ## Feature One Navigation
 
 ### User Story 1-1    
-* User Story 1-1: As an admin user the navigation bar is displayed with a logo on all pages for easy navigation, with a burger menu on mobile devices when user logged in  
+* User Story 1-1: As an admin or regular user the navigation bar is displayed with a logo on all pages for easy navigation, with a burger menu on mobile devices when user logged in  
 ### Test case steps 1-1  
 1. Navigate to the home / reservation page
 ### Expected result 1-1  
@@ -190,8 +190,7 @@ Step 1 | [Desktop Result](progroup/static/pictures/testing/login_desktop.png)  |
 ### Actual result 1-4
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result](progroup/static/pictures/testing/reservations_desktop.png)  | [Tablet Result](progroup/static/pictures/testing/reservations_tablet
-.png) |[Mobile Result](progroup/static/pictures/testing/reservations_mobile.png) | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/reservations_desktop.png) |[Tablet Result](progroup/static/pictures/testing/reservations_tablet.png) | [Mobile Result](progroup/static/pictures/testing/reservations_mobile.png) | Passed |
 <br>
 
 
@@ -528,7 +527,8 @@ Step 2 | [Desktop Result](progroup/static/pictures/testing/account_updated_deskt
 2. div and from tags in the wrong order
 3. hotel logo wasn't resized to minimum 
 4. let were cahnged var to pass js hint validation without warnings
-5. ```var $ = window.$;``` was added to script to avoid linting errorsby js hint validation
+5. ```var $ = window.$;``` was added to script to avoid linting errors by js hint validation
+6. add reservation page was redirecting back to the same page after adding a new user
 
 # Code Validators and Website Analysis
 
