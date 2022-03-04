@@ -191,13 +191,15 @@ Step 1 | [Desktop Result](progroup/static/pictures/testing/reservations_desktop.
 <br>
 
 ### User Story 1-5
--	User Story 1-5: As an admin user if I encounter a route that does not exist, I am navigated to a 404 error page 
+-	User Story 1-5: As an admin or regular user if I encounter a route that does not exist, I am navigated to a 404 error page 
 ### Test case steps 1-5
+1. As an admin/regular user try to access a path ehat doesn't exist
 ### Expected result 1-5
+1. A 404 error page would display informing that page doesn't exist and offers a link back to the reservations page
 ### Actual result 1-5
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/404_page_desktop.png)  | [Tablet Result](progroup/static/pictures/testing/404_page_tablet.png) |[Mobile Result](progroup/static/pictures/testing/404_page_mobile.png) | Passed |
 <br>
 
 
