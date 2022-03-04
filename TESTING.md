@@ -180,11 +180,14 @@ Step 1 | [Desktop Result](progroup/static/pictures/testing/login_desktop.png)  |
 ### User Story 1-4
 -	User Story 1-4: As an admin user, when logged in, the reservation page is the default page and there are five options with a logo: Profiles, Account, Help, Logout   
 ### Test case steps 1-4
+1.As an admin/regular user login to the website
 ### Expected result 1-4
+1. The reservation page is the default page and there are six options with a logo: Reservations, Profiles, Users (admin only), Help, Account, Logout
 ### Actual result 1-4
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/reservations_desktop.png)  | [Tablet Result](progroup/static/pictures/testing/reservations_tablet
+.png) |[Mobile Result](progroup/static/pictures/testing/reservations_mobile.png) | Passed |
 <br>
 
 ### User Story 1-5
