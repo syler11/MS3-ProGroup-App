@@ -299,7 +299,8 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 #### User Stories Feature Five
 -	User Story 5.1: Add Profile - As an admin user I can add a new profile by typing a Group name, Contact name, Contact Email, Contact Phone, Line Address, City, Post Code, Country, when clicking on the add profile the page would redirect to Profiles and the new reservation would be added  
 -	User Story 5.2: Edit Profile - As an admin user I can edit an existing profile by updating any Group name, Contact name, Contact Email, Contact Phone, Line Address, City, Post Code, Country, when clicking on the edit profile the page would redirect to profiles and the profiles would be updated  
--	User Story 5.3: Delete Profile - As an admin user I can delete a profile by confirming I want to delete  
+-	User Story 5.3: Delete Profile - As an admin user I can delete a profile by confirming I want to delete
+-	User Story 5.4: View Profile - As an admin user I can see all the existing Profiles by navigating to the Profiles page
 
 ### Feature Six Users
 #### Description Feature Six
@@ -307,6 +308,7 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 -	User Story 6.1: Add User - As an admin user I can add a new user by typing a First name, Last name, Email, Password, Position, and select either user or admin for the Role, when clicking on the add user the page would redirect to Users and the new reservation would be added  
 -	User Story 6.2: Edit User - As an admin user I can edit an existing user by updating any First name, Last name, Email, Password, Position, and select either user or admin for the Role, when clicking on the edit profile the page would redirect to profiles and the user would be updated  
 -	User Story 6.3: Delete Profile - As an admin user I can delete a user by confirming I want to delete  
+-	User Story 6.4: View users - As an admin user I can see all the existing users by navigating to the Users page
 
 ### Feature Seven Help
 #### Description Feature Seven
@@ -329,6 +331,7 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 7. Adding payments to reservations
 8. Adding customized items to reservation e.g. Dinner including net value and VAT
 9. Summary report to hotel owners in pdf format
+10. make that group_selected variable dynamic (see comment on the reservation/route.py file line 147-152)
  
 
 
@@ -336,25 +339,25 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 
 ## Languages
 
-- Html
-- Css
-- Javascript
-- Python
-- Jinja
+- [Html](https://en.wikipedia.org/wiki/HTML)
+- [Css](https://en.wikipedia.org/wiki/CSS)
+- [Javascript](https://www.javascript.com/)
+- [Python](https://www.python.org/)
+- [Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
 
 ## Libraries and other resources
 
-- JQuery
-- Materialize
-- Fontawesome
-- Heroku
-- Flask framework
-- Balsamiq
-- Google Font
-- GitHub
-- GitPod
-- MongoDB
-- Coolors - Color palette generator 
+- [JQuery](https://jquery.com/)
+- [Materialize](https://materializecss.com/)
+- [Fontawesome](https://fontawesome.com/)
+- [Heroku](https://id.heroku.com/)
+- [Flask framework](https://flask.palletsprojects.com/en/2.0.x/)
+- [Balsamiq](https://balsamiq.com/)
+- [Google Font](https://fonts.google.com/)
+- [GitHub](https://github.com/)
+- [GitPod](https://www.gitpod.io/)
+- [MongoDB](https://www.mongodb.com/)
+- [Coolors - Color palette generator](https://coolors.co/) 
 
 # Testing
 The testing information and results for this project are documented in [TESTING.md](TESTING.md)
@@ -441,6 +444,7 @@ Credit to https://www.emailjs.com/ for email sending functionality for the websi
 Credit to https://www.google.com/ for the Lighthouse report  
 Credit to https://stackoverflow.com/ for being a valuabe source for various functions
 Credit to https://www.youtube.com/watch?v=Zcw1cgXwKCg & https://prettyprinted.com/ for Flask Blueprint structure
+Credit to Paul Meeneghan whose project's readme and testing files inspisred me a more extensive documentation
 
 
 # Content

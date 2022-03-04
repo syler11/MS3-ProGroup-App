@@ -498,11 +498,13 @@ Step 1 | [Desktop Result](progroup/static/pictures/testing/message_sent_desktop.
 ### User Story 8-1  
 -	User Story 8-1: View Account – As an admin user I can see my account information such as Full Name, Position, Email, Username and Role   
 ### Test case steps 8-1
+1. An admin or regular user navigate to Account page
 ### Expected result 8-1
+1. As an admin or regular user I would see details on the account page
 ### Actual result 8-1
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/acount_page_desktop.png)  | [Tablet Result](progroup/static/pictures/testing/acount_page_tablet.png) |[Mobile Result](progroup/static/pictures/testing/acount_page_mobile.png) | Passed |
 <br>
 
 ### User Story 8-2   

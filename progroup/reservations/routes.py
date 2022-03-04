@@ -144,6 +144,13 @@ def search() -> object:
         {"status": "cancelled"}))
     flash("Search filter applied '" + query.upper() + "'")
 
+    """
+    group selected variable has one of the group as a value,
+    as a future feature to implement I would like to make it dynamic so when it
+    is triggered would show the corresponding profile collection value in the
+    pop window (modal)
+    """
+
     group_selected = "CIE Tours"
     profile = mongo.db.profiles.find_one({"group_name": group_selected})
 
