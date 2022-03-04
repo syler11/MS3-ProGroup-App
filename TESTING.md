@@ -355,11 +355,17 @@ Step 1 | [Desktop Result](progroup/static/pictures/testing/reservation_collapsib
 ### User Story 5-1 
 -	User Story 5-1: Add Profile - As an admin user I can add a new profile by typing a Group name, Contact name, Contact Email, Contact Phone, Line Address, City, Post Code, Country, when clicking on the add profile the page would redirect to Profiles and the new reservation would be added  
 ### Test case steps 5-1
+1. An admin or regular user clicks on the Add New button on the profile page and the add profile page will display
+2. An admin or regular user would fill all the required input fields and click Add Profile button and the page would redirect to the Profiles page with the new Profile added
 ### Expected result 5-1
+1. Add profile page displays
+2. Page redirect to profiles and the newprofile added to the database (+1 profiles in total)
 ### Actual result 5-1
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/add_profile_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/add_profile_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/add_profile_mobile.png)  | Passed |
+Step 2 | [Desktop Result](progroup/static/pictures/testing/add_profile_filled_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/add_profile_filled_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/add_profile_filled_mobile.png)  | Passed |
+Step 3 | [Desktop Result](progroup/static/pictures/testing/new_profile_added_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/new_profile_added_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/new_profile_added_mobile.png)  | Passed |
 <br>
 
 ### User Story 5-2 
