@@ -17,7 +17,10 @@ Login for user: username: nikolett password:
 - [Project overview](#project-overview)
 - [UX](#ux)
   * [Strategy](#strategy)
-    + [Primary Goal](#primary-goal)
+    + [Project Goal](#project-goal)
+    + [User experience](#user-experience)
+      - [Target audience](#target-audience)
+      - [User requierements and expectations](#user-requierements-and-expectations)
   * [Structure](#structure)
     + [Website pages](#website-pages)
     + [Code structure](#code-structure)
@@ -85,7 +88,7 @@ Login for user: username: nikolett password:
 
 # UX
 ## Strategy
-### Primary Goal
+### Project Goal
 The primary goal of the website from the site 
 owners perspective is as follows:
 - To create/edit/delete profiles so users can add a reservation
@@ -101,6 +104,22 @@ The primary goal of the website from a site users perspective is as follows:
 - To allow users delete profiles and / or profiles
 - To send messages to the owners
 - To view statistics on the usage of the site
+
+### User Experience
+#### Target audience
+- The applications was designed to use in hospitality setting
+- Main target audience are reservations workforce and hotel managers
+- Secodnary target audience are owner / sharholders who could look at various statistics
+
+#### User requierements and expectations
+- A simple and intuitive navigation system
+- Quickly and easily find relevant information
+- Links and functions that work as expected
+- Good presentation and a visually appealing design regardless of screen size
+- An easy way to contact the admin/s
+- Simple content that the user can skim read
+- Accessibility
+
 
 ## Structure
 ### Website pages
@@ -331,7 +350,7 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 7. Adding payments to reservations
 8. Adding customized items to reservation e.g. Dinner including net value and VAT
 9. Summary report to hotel owners in pdf format
-10. make that group_selected variable dynamic (see comment on the reservation/route.py file line 147-152)
+10. Make that group_selected variable dynamic (see comment on the reservation/route.py file line 147-152)
  
 
 
