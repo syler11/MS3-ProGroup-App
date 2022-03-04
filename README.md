@@ -306,6 +306,7 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 
 ### Feature Two Main Page
 #### Description Feature Two
+
 #### User Stories Feature Two
 -	User Story 2.1: As an admin user I can view a hero image with login on the home/landing page  
 -	User Story 2.2: As an admin user I can view four reservations added on the website, with group name, arrival date, los, rooms / pax, board and status  
