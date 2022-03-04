@@ -37,28 +37,28 @@ Login for user: username: nikolett password:
     + [Typography](#typography)
 - [Features](#features)
   * [Existing features](#existing-features)
-    + [Feature One Navigation](feature-one-navigation)
+    + [Feature One Navigation](#feature-one-navigation)
       - [Description feature one](#description-feature-one)
       - [User stories feature one](#user-stories-feature-one)
-    + [Feature Two Main page](feature-two-main-page)
+    + [Feature Two Main page](#feature-two-main-page)
       - [Description feature two](#description-feature-two)
       - [User stories feature two](#user-stories-feature-two)
-    + [Feature Three Login](feature-three-login)
+    + [Feature Three Login](#feature-three-login)
       - [Description feature three](#description-feature-three)
       - [User stories feature three](#user-stories-feature-three)
-    + [Feature Four Reservations](feature-four-reservations)
+    + [Feature Four Reservations](#feature-four-reservations)
       - [Description feature four](#description-feature-four)
       - [User stories feature four](#user-stories-feature-four)
-    + [Feature Five Profiles](feature-five-profiles)
+    + [Feature Five Profiles](#feature-five-profiles)
       - [Description feature five](#description-feature-five)
       - [User stories feature five](#user-stories-feature-five)
-    + [Feature Six Users](feature-six-users)
+    + [Feature Six Users](#feature-six-users)
       - [Description feature six](#description-feature-six)
       - [User stories feature six](#user-stories-feature-six)
-    + [Feature Seven Help](feature-seven-help)
+    + [Feature Seven Help](#feature-seven-help)
       - [Description feature seven](#description-feature-seven)
       - [User stories feature seven](#user-stories-feature-seven)
-    + [Feature Eight Acount](feature-eight-account)
+    + [Feature Eight Acount](#feature-eight-account)
       - [Description feature eight](#description-feature-eight)
       - [User stories feature eight](#user-stories-feature-eight)
   * [Features left to implement](#features-left-to-implement)
@@ -282,9 +282,9 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 ## Existing Features
 ### Feature One Navigation
 #### Description Feature One
-* There is no navigation available for users on the login/landing only the login facility what will be covered in feature three.   
-* When the user is logged in there are five options with a logo: Reservations Profiles, Account, Help, Logout (Users can be seen only by admin users).  
-*  The navigation for the logged in users ensure the easy use of the website.  
+- There is no navigation available for users on the login/landing only the login facility what will be covered in feature three.   
+- When the user is logged in there are five options with a logo: Reservations Profiles, Account, Help, Logout (Users can be seen only by admin users).  
+-  The navigation for the logged in users ensure the easy use of the website.  
 
 #### Desktop Navigation
 ![Navigation desktop](progroup/static/pictures/testing/navigation_desktop.png)  
@@ -318,9 +318,9 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 #### Mobile Reservation Page
 ![Login mobile](progroup/static/pictures/testing/reservations_mobile.png) 
 #### Desktop 500 Error Page
-![Login desktop](progroup/static/pictures/testing/50_page_desktop.png)
+![Login desktop](progroup/static/pictures/testing/500_page_desktop.png)
 #### Mobile 500 Error Page
-![Login desktop](progroup/static/pictures/testing/50_page_mobile.png)
+![Login desktop](progroup/static/pictures/testing/500_page_mobile.png)
 
 
 #### User Stories Feature Two
@@ -331,8 +331,26 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 
 ### Feature Three Login
 #### Description Feature Three
+- The user cannot register on the website but admin can add users to ensure unauthorized access to sensitive business infromation.
+- username is manadtory fields and if they are not entered correctly error message will appear.
+- password is manadtory fields and if they are not entered correctly error message will appear.
+- After logout the user will be redirected to the login / landing page.
+
+#### Incorrect Username Desktop
+![Incorrect username desktop](progroup/static/pictures/testing/incorrect_username_desktop.png)
+#### Incorrect Username Mobile
+![Incorrect username mobile](progroup/static/pictures/testing/incorrect_username_mobile.png)
+#### Incorrect Password Desktop
+![Incorrect password desktop](progroup/static/pictures/testing/incorrect_password_desktop.png)
+#### Incorrect Password Mobile
+![Incorrect password mobile](progroup/static/pictures/testing/incorrect_username_mobile.png)
+#### After logout Desktop
+![Login desktop](progroup/static/pictures/testing/login_desktop.png)  
+#### After logout Mobile
+![Login mobile](progroup/static/pictures/testing/login_mobile.png) 
+
 #### User Stories Feature Three
--	User Story 3.1: As an admin user my username must be a minimum of 6 characters, and contain at least one lowercase letter, with no special characters  
+-	User Story 3.1: As an admin user my username must be a minimum of 5 characters, and contain lowercase, uppercase letters and numbers, but no special characters  
 -	User Story 3.2: As an admin user my username and / or password must match my confirm username and / or password  
 -	User Story 3.3: As an admin user I can log in to my account by providing my username and password and clicking Login and I will be navigated to the reservation page. A username and password must be provided. If the username and/or password entered is incorrectly a relevant message will be displayed  
 -	User Story 3.4: As an admin user, when I am logged into the site, and I click Logout I am successfully logged out of the site, and brought to the home/landing page, with the Login option  
