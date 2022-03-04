@@ -82,6 +82,10 @@
     + [Test case steps 5-3](#test-case-steps-5-3)
     + [Expected Result 5-3](#expected-result-5-3)
     + [Actual Result 5-3](#actual-result-5-3)
+    + [User Story 5-4](#user-story-5-4)
+    + [Test case steps 5-4](#test-case-steps-5-4)
+    + [Expected Result 5-4](#expected-result-5-4)
+    + [Actual Result 5-4](#actual-result-5-4)
   * [Feature Six Users](#feature-six-users)
     + [User Story 6_1](#user-story-6-1)
     + [Test case steps 6_1](#test-case-steps-6-1)
@@ -95,6 +99,10 @@
     + [Test case steps 6-3](#test-case-steps-6-3)
     + [Expected Result 6-3](#expected-result-6-3)
     + [Actual Result 6-3](#actual-result-6-3)
+    + [User Story 6-4](#user-story-6-4)
+    + [Test case steps 6-4](#test-case-steps-6-4)
+    + [Expected Result 6-4](#expected-result-6-4)
+    + [Actual Result 6-4](#actual-result-6-4)
   * [Feature Seven Help](#feature-seven-help)
     + [User Story 7-1](#user-story-7-1)
     + [Test case steps 7-1](#test-case-steps-7-1)
@@ -445,17 +453,17 @@ Step 2 | [Desktop Result](progroup/static/pictures/testing/user_updated_desktop.
 
 ### User Story 6-3 
 -	User Story 6-3: Delete Profile - As an admin user I can delete a user by confirming I want to delete  
-### Test case steps 5-3
-1. An admin or regular users would click on the delete symbol on the required profile and then confirmation panel would
-2. By clicking on the delete button the profile would be moved from the database
-### Expected result 5-3
+### Test case steps 6-3
+1. An admin user would click on the delete symbol on the required user and then confirmation panel would appear
+2. By clicking on the delete button the user would be moved from the database
+### Expected result 6-3
 1. Delete confirmation panel appear
-2. Profile is deleted from the database
-### Actual result 5-3
+2. User is deleted from the database
+### Actual result 6-3
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result](progroup/static/pictures/testing/delete_profile_confirmation_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/delete_profile_confirmation_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/delete_profile_confirmation_mobile.png)  | Passed |
-Step 2 | [Desktop Result](progroup/static/pictures/testing/profile_deleted_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/profile_deleted_tablet.png) |[Mobile Result](progroup/static/pictures/testing/profile_deleted_mobile.png)  | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/delete_user_confirmation_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/delete_user_confirmation_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/delete_user_confirmation_mobile.png)  | Passed |
+Step 2 | [Desktop Result](progroup/static/pictures/testing/user_deleted_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/user_deleted_tablet.png) |[Mobile Result](progroup/static/pictures/testing/user_deleted_mobile.png)  | Passed |
 <br>
 
 ### User Story 6-4 
