@@ -73,6 +73,7 @@ def add_reservation() -> object:
         try:
             reservation = {
                 "group_name": request.form.get('group_name'),
+                "arrival_date": request.form.get('arrival_date'),
                 "los": request.form.get('los'),
                 "status": request.form.get('status'),
                 "board": request.form.get('board'),
@@ -94,10 +95,10 @@ def add_reservation() -> object:
 
             mongo.db.reservations.insert_one(reservation)
             flash("Reservation Added")
+            return redirect(url_for("reservations.get_reservations"))
         except Exception as e:
             flash("An exception occurred when adding the reservation: " +
                   getattr(e, 'message', repr(e)))
-            return redirect(url_for("reservations.get_reservations"))
 
     total = "Number of Groups: " + str(mongo.db.reservations.
                                        count_documents({}))

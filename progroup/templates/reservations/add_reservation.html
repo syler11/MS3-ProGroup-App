@@ -65,7 +65,7 @@
                             <option value="one-way">ONE WAY</option>
                             <option value="return">RETURN</option>
                           </select>
-                          <label for="porterage"><span class="no_-show">Porterage</span></label>
+                          <label for="porterage"><span class="no-show">Porterage</span></label>
                     </div>
                 </div>
                         <div class="col l3 m6 s12">
@@ -136,7 +136,7 @@
                 <div class="col l3 m6 s12">
                     <p>Notes</p>
                     <div class="input-field s12">
-                        <textarea id="notes" name="notes" style="width:80%;height:150px;"></textarea>
+                        <textarea id="notes" name="notes" style="width:80%;height:200px;"></textarea>
                         <label for="notes"><span class="no-show">Notes</span></label>
                     </div>
                 </div>
@@ -144,6 +144,9 @@
             <div class="row">
                 <!-- Submit button -->
                 <div class="col s12 center-align">
+                    <a href="{{ url_for('reservations.get_reservations') }}" class="btn-large red darken-3 text-shadow">Cancel
+                        <i class="fas fa-times-square left"></i>
+                    </a>
                     <button class="btn-large light-blue darken-3 text-shadow" type="submit">
                         <i class="fas fa-plus-square left"></i>
                         Add Reservation

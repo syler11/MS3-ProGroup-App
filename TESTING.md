@@ -303,7 +303,9 @@ Step 1 | [Desktop Result](progroup/static/pictures/testing/landing_page_desktop.
 ### Actual result 4-1
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/add_reservation_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/add_reservation_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/add_reservation_mobile.png)  | Passed |
+Step 2 | [Desktop Result](progroup/static/pictures/testing/add_reservation_filled_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/add_reservation_filled_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/add_reservation_filled_mobile.png)  | Passed |
+Step 3 | [Desktop Result](progroup/static/pictures/testing/new_reservation_added_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/new_reservation_added_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/new_reservation_added_mobile.png)  | Passed |
 <br>
 
 ### User Story 4-2 
