@@ -371,11 +371,16 @@ Step 3 | [Desktop Result](progroup/static/pictures/testing/new_profile_added_des
 ### User Story 5-2 
 -	User Story 5-2: Edit Profile - As an admin user I can edit an existing profile by updating any Group name, Contact name, Contact Email, Contact Phone, Line Address, City, Post Code, Country, when clicking on the edit profile the page would redirect to profiles and the profiles would be updated  
 ### Test case steps 5-2
+1. An admin or regular users would click on the edit symbol on the required profile
+2. After the values are updated by clicking the save cnahges button the database values would be updated and profiles page would display again
 ### Expected result 5-2
+1. An admin or regular users would be redirected to Edit Profile page for value/s to be updated
+2. Profiles page would display the profiles with the updated values
 ### Actual result 5-2
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/edit_profile_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/edit_profile_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/edit_profile_mobile.png)  | Passed |
+Step 2 | [Desktop Result](progroup/static/pictures/testing/profile_updated_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/profile_updated_tablet.png) |[Mobile Result](progroup/static/pictures/testing/profile_updated_mobile.png)  | Passed |
 <br>
 
 ### User Story 5-3 
