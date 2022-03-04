@@ -358,7 +358,7 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 
 ### Feature Four Reservations
 #### Description Feature Four
-- Users can add reservation to the database by entering all the mandatory fields and clikcking the add reservation button. 
+- Users can add reservation to the database by entering all the mandatory fields and clicking the add reservation button. 
 - Users can edit existing reservations by clicking the edit (pen & envelope) icon.
 - Users can delete existing reservation by clicking the delete (trash can) icon.
 - User can view more details about reservation by clicking on the reservation line itself. (collapsible feature)
@@ -388,6 +388,28 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 
 ### Feature Five Profiles
 #### Description Feature Five
+- Users can add profile to the database by entering all the mandatory fields and clicking the add profile button. 
+- Users can edit existing reservations by clicking the edit (pen & envelope) icon.
+- Users can delete existing profile by clicking the delete (trash can) icon.
+- Users can check existing profiles by navigating to the Profiles page
+
+#### Add Profile Desktop
+![Add Profile desktop](progroup/static/pictures/testing/add_profile_desktop.png)
+#### Add Profile Mobile
+![Add Profile mobile](progroup/static/pictures/testing/add_profile_mobile.png)
+#### Edit Profile Desktop
+![Edit Profile desktop](progroup/static/pictures/testing/edit_profile_desktop.png)
+#### Edit Profile Mobile
+![Edit Profile mobile](progroup/static/pictures/testing/edit_profile_mobile.png)
+#### Delete Profile Desktop
+![Delete Profile desktop](progroup/static/pictures/testing/delete_profile_confirmation_desktop.png)
+#### Delete Profile Mobile
+![Delete Profile mobile](progroup/static/pictures/testing/delete_profile_confirmation_mobile.png)
+#### View Profile Desktop
+![View Profile desktop](progroup/static/pictures/testing/profiles_desktop.png)
+#### View Profile Mobile
+![View Profile mobile](progroup/static/pictures/testing/profiles_mobile.png)
+
 #### User Stories Feature Five
 -	User Story 5.1: Add Profile - As an admin user I can add a new profile by typing a Group name, Contact name, Contact Email, Contact Phone, Line Address, City, Post Code, Country, when clicking on the add profile the page would redirect to Profiles and the new reservation would be added  
 -	User Story 5.2: Edit Profile - As an admin user I can edit an existing profile by updating any Group name, Contact name, Contact Email, Contact Phone, Line Address, City, Post Code, Country, when clicking on the edit profile the page would redirect to profiles and the profiles would be updated  
