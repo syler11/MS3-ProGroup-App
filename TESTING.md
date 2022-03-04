@@ -399,15 +399,15 @@ Step 2 | [Desktop Result](progroup/static/pictures/testing/profile_deleted_deskt
 <br>
 
 ### User Story 5-4 
--	User Story 4-4: View Reservation - As an admin user I can view a memory by clicking on a Reservation when additional info would be revealed 
+-	User Story 4-4: View Profiles - As an admin or regular user I can see existing profiles by navigating to the Profiles page
 ### Test case steps 5-4
-1. An admin or regular users would click on the required reservation and then the reservation details would reveal below
+1. An admin or regular users would navigate t the Profiles page
 ### Expected result 5-4
-1. A collapsible would open and reveal additional info
+1. Profiles page would display all existing profiles
 ### Actual result 5-4
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result](progroup/static/pictures/testing/reservation_collapsible_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/reservation_collapsible_tablet.png) |[Mobile Result](progroup/static/pictures/testing/reservation_collapsible_mobile.png)  | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/profiles_page_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/profiles_page_tablet.png) |[Mobile Result](progroup/static/pictures/testing/profiles_page_mobile.png)  | Passed |
 <br>
 
 ## Feature Six Users
