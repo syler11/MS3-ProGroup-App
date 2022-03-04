@@ -442,23 +442,37 @@ Step Number | Desktop | Tablet | Mobile | Result
 Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
 <br>
 
+### User Story 6-4 
+-	User Story 4-4: View Users - As an admin or regular user I can see existing profiles by navigating to the Profiles page
+### Test case steps 5-4
+1. An admin or regular users would navigate t the Profiles page
+### Expected result 5-4
+1. Profiles page would display all existing profiles
+### Actual result 5-4
+Step Number | Desktop | Tablet | Mobile | Result 
+------------ | ------------ | ------------- | ------------- | ------------- |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/profiles_page_desktop.png)   | [Tablet Result](progroup/static/pictures/testing/profiles_page_tablet.png) |[Mobile Result](progroup/static/pictures/testing/profiles_page_mobile.png)  | Passed |
+<br>
+
 ## Feature Seven Help
 
 ### User Story 7-1 
--	User Story 7-1: Help – As an admin user I can send an email to the admin by clicking on the Help button in the navbar and filling up the Name, Email address and Message and click on Send Message  
+-	User Story 7-1: Help – As an admin or regular user I can send an email to the admin by clicking on the Help button in the navbar and filling up the Name, Email address and Message and click on Send Message  
 ### Test case steps 7-1
+1. An admin or regular user Navigate to help page and fill up all required fields and click on send
 ### Expected result 7-1
+1. Email form would reset and flash message would appear that email was successfully sent
 ### Actual result 7-1
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/message_sent_desktop.png)  | [Tablet Result]message_sent_tablet.png) |[Mobile Result]message_sent_mobile.png) | Passed |
 <br>
 
 
 ## Feature Eight Account
 
 ### User Story 8-1  
--	User Story 8-1: Account – As an admin user I can see my account information such as Full Name, Position, Email, Username and Role   
+-	User Story 8-1: View Account – As an admin user I can see my account information such as Full Name, Position, Email, Username and Role   
 ### Test case steps 8-1
 ### Expected result 8-1
 ### Actual result 8-1
