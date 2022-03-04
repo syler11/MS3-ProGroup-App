@@ -166,13 +166,15 @@ Step 1 | [Desktop Result](progroup/static/pictures/testing/navigation_highlighte
 <br>
 
 ### User Story 1-3
--	User Story 1-3: As an admin user, when logged out, the home/landing page is the default page and there is an option for Login  
+-	User Story 1-3: As an admin user, when logged out, the login /landing page is the default page and there is an option for Login  
 ### Test case steps 1-3
+1. As an admin/regular user, navigate to the login/landing page by first logging in
 ### Expected result 1-3
+1. The user is navigated to the login/landing page and there is the logo and Login facility displayed
 ### Actual result 1-3
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/login_desktop.png)  | [Tablet Result](progroup/static/pictures/testing/login_tablet.png) |[Mobile Result](progroup/static/pictures/testing/login_mobile.png) | Passed |
 <br>
 
 ### User Story 1-4
