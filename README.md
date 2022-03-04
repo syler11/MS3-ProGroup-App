@@ -284,11 +284,16 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 #### Description Feature One
 * There is no navigation available for users on the login/landing only the login facility what will be covered in feature three.   
 * When the user is logged in there are five options with a logo: Reservations Profiles, Account, Help, Logout (Users can be seen only by admin users).  
-*  The navigation for the logged in users ensure the easy use of the website. 
-[Navigation desktop](progroup/static/pictures/testing/navigation_desktop.png)
-[Navigation mobile](progroup/static/pictures/testing/navigation_mobile.png)
-[Login desktop](progroup/static/pictures/testing/login_desktop.png)
-[Login mobile](progroup/static/pictures/testing/login_mobile.png)
+*  The navigation for the logged in users ensure the easy use of the website.  
+
+#### Desktop Navigation
+![Navigation desktop](progroup/static/pictures/testing/navigation_desktop.png)  
+#### Mobile Navigation
+![Navigation mobile](progroup/static/pictures/testing/navigation_mobile.png)  
+#### Desktop Login
+![Login desktop](progroup/static/pictures/testing/login_desktop.png)  
+#### Mobile Login
+![Login mobile](progroup/static/pictures/testing/login_mobile.png)  
 
 
 
