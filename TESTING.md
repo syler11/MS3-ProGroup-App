@@ -18,10 +18,6 @@
     + [Test case steps 1-4](#test-case-steps-1-4)
     + [Expected Result 1-4](#expected-result-1-4)
     + [Actual Result 1-4](#actual-result-1-4)
-    + [User Story 1-5](#user-story-1-5)
-    + [Test case steps 1-5](#test-case-steps-1-5)
-    + [Expected Result 1-5](#expected-result-1-5)
-    + [Actual Result 1-5](#actual-result-1-5)
   * [Feature Two Main Page](#feature-two-main-page)
     + [User Story 2-1](#user-story-2-1)
     + [Test case steps 2-1](#test-case-steps-2-1)
@@ -190,18 +186,6 @@ Step 1 | [Desktop Result](progroup/static/pictures/testing/reservations_desktop.
 .png) |[Mobile Result](progroup/static/pictures/testing/reservations_mobile.png) | Passed |
 <br>
 
-### User Story 1-5
--	User Story 1-5: As an admin or regular user if I encounter a route that does not exist, I am navigated to a 404 error page 
-### Test case steps 1-5
-1. As an admin/regular user try to access a path ehat doesn't exist
-### Expected result 1-5
-1. A 404 error page would display informing that page doesn't exist and offers a link back to the reservations page
-### Actual result 1-5
-Step Number | Desktop | Tablet | Mobile | Result 
------------- | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result](progroup/static/pictures/testing/404_page_desktop.png)  | [Tablet Result](progroup/static/pictures/testing/404_page_tablet.png) |[Mobile Result](progroup/static/pictures/testing/404_page_mobile.png) | Passed |
-<br>
-
 
 ## Feature Two Main Page
 
@@ -230,23 +214,27 @@ Step 1 | [Desktop Result](progroup/static/pictures/testing/reservations_page_des
 <br>
 
 ### User Story 2-3
--	User Story 2-3: As an admin user if I encounter a route that does not exist I am navigated to a 404 error page  
+-	User Story 2-3: As an admin or regular user if I encounter a route that does not exist, I am navigated to a 404 error page 
 ### Test case steps 2-3
+1. As an admin/regular user try to access a path ehat doesn't exist
 ### Expected result 2-3
+1. A 404 error page would display informing that page doesn't exist and offers a link back to the reservations page
 ### Actual result 2-3
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/404_page_desktop.png)  | [Tablet Result](progroup/static/pictures/testing/404_page_tablet.png) |[Mobile Result](progroup/static/pictures/testing/404_page_mobile.png) | Passed |
 <br>
 
 ### User Story 2-4 
 -	User Story 2-4: As an admin user if I encounter an error with the application starting up I am navigated to a 500 error page  
 ### Test case steps 2-4
+1. In your local environment in the env.py file modify the MONGO_URI to set an incorrect Password
 ### Expected result 2-4
+1. On application start up the website would display a 500 error page
 ### Actual result 2-4
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/500_page_desktop.png)  | [Tablet Result](progroup/static/pictures/testing/500_page_tablet.png) |[Mobile Result](progroup/static/pictures/testing/500_page_mobile.png) | Passed |
 <br>
 
 ## Feature Three Login
