@@ -252,13 +252,18 @@ Step 1 | [Desktop Result](progroup/static/pictures/testing/username_error_deskto
 <br>
 
 ### User Story 3-2 
--	User Story 3-2: As an admin user my username and / or password must match my confirm username and / or password   
+-	User Story 3-2: As an admin or regular user my username and / or password must match my confirm username and / or password   
 ### Test case steps 3-2
+1. An admin or regular user type the wrong username
+2. An admin or regular user type the wrong password
 ### Expected result 3-2
+1. Flash message appear on the top of page displaying Inccorect username
+2. Flash message appear on the top of page displaying Inccorect password
 ### Actual result 3-2
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result]()  | [Tablet Result]() |[Mobile Result]() | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/incorrect_username_desktop.png)  | [Tablet Result](progroup/static/pictures/testing/incorrect_username_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/incorrect_username_mobile.png)  | Passed |
+Step 2 | [Desktop Result](progroup/static/pictures/testing/incorrect_password_desktop.png)  | [Tablet Result](progroup/static/pictures/testing/incorrect_password_tablet.png)  |[Mobile Result](progroup/static/pictures/testing/incorrect_password_mobile.png)  | Passed |
 <br>
 
 ### User Story 3-3 
