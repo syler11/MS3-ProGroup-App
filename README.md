@@ -173,7 +173,7 @@ The website contains 18 pages in a logical structure, information and purpose.
 
 ### Physical Database Model
 
-![Users](progroup/static/pictures/databases/databas_model.png)
+![Users](progroup/static/pictures/databases/database_model.png)
 
 
 #### MongoDB Database Information
@@ -452,6 +452,15 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 
 ### Feature Seven Help
 #### Description Feature Seven
+- Users can send emails to the admins directly on the website. 
+- The process is straightforward when the full name and email address and message filled the email can be sent with the send button.
+- Flash message will confirm that message was sent. 
+
+#### Add User Desktop
+![Email sent desktop](progroup/static/pictures/testing/email_sent_desktop.png)
+#### Add User Mobile
+![Email sent mobile](progroup/static/pictures/testing/email_sent_mobile.png)
+
 #### User Stories Feature Seven
 -	User Story 7.1: Help – As an admin user I can send an email to the admin by clicking on the Help button in the navbar and filling up the Name, Email address and Message and click on Send Message  
 
