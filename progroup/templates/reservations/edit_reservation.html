@@ -3,12 +3,12 @@
 {% block content %}
 
 
-
 <div class="row">
     <!-- Card panel to display the user form -->
     <div class="col s12 card-panel center-align">
         <h4>Edit Reservation</h4>
-        <form class="col s12" method="POST" action="{{ url_for('reservations.edit_reservation', reservation_id=reservation._id) }}">
+        <form class="col s12" method="POST"
+            action="{{ url_for('reservations.edit_reservation', reservation_id=reservation._id) }}">
             <!-- Group Selector -->
             <div class="row">
                 <div class="input-field col xl6 l8 m10 s12">
@@ -16,7 +16,7 @@
                     <select id="group_name" name="group_name" class="validate" required>
                         <option value="{{ reservation.group_name }}" selected>{{ reservation.group_name }}</option>
                         {% for profile in profiles %}
-                            <option value="{{ profile.group_name }}">{{ profile.group_name }}</option>
+                        <option value="{{ profile.group_name }}">{{ profile.group_name }}</option>
                         {% endfor %}
                     </select>
                     <label for="group_name"><span class="no_show">group name</span></label>
@@ -28,8 +28,9 @@
                     <p>Reservation details</p>
                     <!-- Arrival Date -->
                     <div class="input-field s12">
-                        <input id="arrival_date" name="arrival_date" minlength="10"
-                            maxlength="10" value="{{ reservation.arrival_date }}" type="text" class="datepicker validate" aria-label="arrival date" required>
+                        <input id="arrival_date" name="arrival_date" minlength="10" maxlength="10"
+                            value="{{ reservation.arrival_date }}" type="text" class="datepicker validate"
+                            aria-label="arrival date" required>
                         <label for="arrival_date">Arrival Date</label>
                     </div>
                     <!-- LOS -->
@@ -44,8 +45,8 @@
                             <option value="confirmed">Confirmed</option>
                             <option value="cancelled">Cancelled</option>
                             <option value="provisional">Provisional</option>
-                          </select>
-                          <label for="status"><span class="no_show">Status</span></label>
+                        </select>
+                        <label for="status"><span class="no_show">Status</span></label>
                     </div>
                     <!-- Board -->
                     <div class="input-field grey lighten-3 s12">
@@ -53,50 +54,51 @@
                             <option value="{{ reservation.board }}" selected>{{ reservation.board }}</option>
                             <option value="BB">BB</option>
                             <option value="DBB">DBB</option>
-                          </select>
-                          <label for="board"><span class="no_show">board</span></label>
+                        </select>
+                        <label for="board"><span class="no_show">board</span></label>
                     </div>
                     <!-- Porterage -->
                     <div class="input-field grey lighten-3 s12">
                         <select id="porterage" name="porterage" class="validate" required>
-                            <option value="{{ reservation.porterage }}" selected>{{ reservation.porterage.capitalize() }}</option>
+                            <option value="{{ reservation.porterage }}" selected>
+                                {{ reservation.porterage.capitalize() }}</option>
                             <option value="no">NO</option>
                             <option value="one-way">ONE WAY</option>
                             <option value="return">RETURN</option>
-                          </select>
-                          <label for="porterage"><span class="no_show">porterage</span></label>
+                        </select>
+                        <label for="porterage"><span class="no_show">porterage</span></label>
                     </div>
                 </div>
-                        <div class="col l3 m6 s12">
+                <div class="col l3 m6 s12">
                     <p>Room Configuration</p>
                     <!-- Single Room-->
                     <div class="input-field">
-                        <input id="single_room" name="single_room" type="text"
-                            value="{{ reservation.single_room }}" class="validate room" required>
+                        <input id="single_room" name="single_room" type="text" value="{{ reservation.single_room }}"
+                            class="validate room" required>
                         <label for="single_room">Single Rooms</label>
                     </div>
                     <!-- Double Room-->
                     <div class="input-field">
-                        <input id="double_room" name="double_room" type="text"
-                            value="{{ reservation.double_room }}" class="validate room" required>
+                        <input id="double_room" name="double_room" type="text" value="{{ reservation.double_room }}"
+                            class="validate room" required>
                         <label for="double_room">Double Rooms</label>
                     </div>
                     <!-- Twin Room-->
                     <div class="input-field s12">
                         <input id="twin_room" name="twin_room" type="text" value="{{ reservation.twin_room }}"
-                             class="validate room"
-                            required>
+                            class="validate room" required>
                         <label for="twin_room">Twin Rooms</label>
                     </div>
                     <!-- Triple Room-->
                     <div class="input-field s12">
-                        <input id="triple_room" name="triple_room" type="text" value="{{ reservation.triple_room }}" class="validate room"
-                            required>
+                        <input id="triple_room" name="triple_room" type="text" value="{{ reservation.triple_room }}"
+                            class="validate room" required>
                         <label for="triple_room">Triple Rooms</label>
                     </div>
                     <!-- Total Rooms-->
                     <div class="input-field s12">
-                        <input id="rooms" name="rooms" type="text" class="validate center-align" value="{{ reservation.rooms }}">
+                        <input id="rooms" name="rooms" type="text" class="validate center-align"
+                            value="{{ reservation.rooms }}">
                         <label for="rooms">Total Rooms</label>
                     </div>
                 </div>
@@ -104,31 +106,32 @@
                     <p>Room Rates</p>
                     <!-- Single Rate -->
                     <div class="input-field">
-                        <input id="single_rate" name="single_rate" type="text"
-                            value="{{ reservation.single_rate }}" class="validate" required>
+                        <input id="single_rate" name="single_rate" type="text" value="{{ reservation.single_rate }}"
+                            class="validate" required>
                         <label for="single_rate">Single Rates</label>
                     </div>
                     <!-- Double Rate -->
                     <div class="input-field">
-                        <input id="double_rate" name="double_rate" type="text"
-                            value="{{ reservation.double_rate}}" class="s6 validate" required>
+                        <input id="double_rate" name="double_rate" type="text" value="{{ reservation.double_rate}}"
+                            class="s6 validate" required>
                         <label for="double_rate">Double Rates</label>
                     </div>
                     <!-- Twin Rate -->
                     <div class="input-field">
-                        <input id="twin_rate" name="twin_rate" type="text" 
-                        value="{{ reservation.twin_rate }}" class="validate" required>
+                        <input id="twin_rate" name="twin_rate" type="text" value="{{ reservation.twin_rate }}"
+                            class="validate" required>
                         <label for="twin_rate">Twin Rates</label>
                     </div>
                     <!-- Triple Rate -->
                     <div class="input-field s12">
-                        <input id="triple_rate" name="triple_rate" type="text" 
-                        value="{{ reservation.triple_rate }}" class="validate" required>
+                        <input id="triple_rate" name="triple_rate" type="text" value="{{ reservation.triple_rate }}"
+                            class="validate" required>
                         <label for="triple_rate">Triple Rates</label>
                     </div>
-                     <!-- PAX -->
-                     <div class="input-field s12">
-                        <input id="pax" name="pax" type="text" class="validate center-align" value="{{ reservation.pax }}">
+                    <!-- PAX -->
+                    <div class="input-field s12">
+                        <input id="pax" name="pax" type="text" class="validate center-align"
+                            value="{{ reservation.pax }}">
                         <label for="pax">PAX</label>
                     </div>
                 </div>
@@ -136,7 +139,8 @@
                 <div class="col l3 s12">
                     <p>Notes</p>
                     <div class="input-field s12">
-                        <textarea id="notes" name="notes" value="{{ reservation.notes }}" style="width:80%;height:150px;">{{ reservation.notes }}</textarea>
+                        <textarea id="notes" name="notes" value="{{ reservation.notes }}"
+                            style="width:80%;height:150px;">{{ reservation.notes }}</textarea>
                         <label for="notes"><span class="no-show">notes</span></label>
                     </div>
                 </div>
@@ -144,7 +148,8 @@
             <div class="row">
                 <!-- Cancel and Submit button -->
                 <div class="col s12 center-align">
-                    <a href="{{ url_for('reservations.get_reservations') }}" class="btn-large red darken-3 text-shadow">Cancel
+                    <a href="{{ url_for('reservations.get_reservations') }}"
+                        class="btn-large red darken-3 text-shadow">Cancel
                         <i class="fas fa-times-square left"></i>
                     </a>
                     <button class="btn-large light-blue darken-3 text-shadow" type="submit">

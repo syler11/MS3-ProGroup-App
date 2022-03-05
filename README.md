@@ -3,10 +3,10 @@ ProGroup is a website that allows hotels to keep track and organize their group 
 Users will be able to create/update/delete new Group Profiles and New Reservations based on the Profiles.   
 Users also able to see basic statistics and send email to the owner of the website.  
 There are two type of users: user and admin.  
-Users are able to create/update and delete profiles and reservations but not able to add new users.   
+Users are able to create/update and delete profiles and reservations but not able to add new users or edit and delete existing users.   
 Admin will be able to add new users.   
-Login for admin: username: admin password:   
-Login for user: username: nikolett password:   
+Login for admin: username: admin password: code2545
+Login for user: username: nikolett password: 12345678
 <br>
 
 **View the live site [here](https://progroup-app.herokuapp.com/)**
@@ -26,7 +26,7 @@ Login for user: username: nikolett password:
     + [Code structure](#code-structure)
     + [Database](#database)
     + [Conceptual Database](#conceptual-database)
-    + [Physical Database](#conceptual-database)
+    + [Physical Database](#physical-database)
     + [MongoDB Database Information](#mongodb-database-information)
   * [Scope](#scope)
     + [User Stories](#user-stories)
@@ -279,8 +279,7 @@ There are six main colors what I used throughout of this project.
 - #ECECEC - Light grey colour for background
 - #37474F - main background clor for the navigation theme
 - #CF9109 - Font color for the navigation
-- #039be5 - Add Button colour
-- #01579B - Save / Search button color
+- #039be5 - Add / Save / Search Button colour
 - #F44336 - Delete button color
 
 I choose those colours after testing a number of palettes while making sure the colour palette met accessibility standards.

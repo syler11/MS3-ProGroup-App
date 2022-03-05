@@ -3,7 +3,6 @@
 {% block content %}
 
 
-
 <div class="row">
     <!-- Card panel to display the user form -->
     <div class="col offset-l3 l6 offset-l3 s12 card-panel center-align">
@@ -13,9 +12,8 @@
                 <!-- First Name -->
                 <div class="input-field col s12">
                     <i class="fas fa-user prefix left"></i>
-                    <input id="first_name" name="first_name" minlength="5" maxlength="30" 
-                        value="{{ user.first_name }}" type="text" class="validate"
-                        required>
+                    <input id="first_name" name="first_name" minlength="5" maxlength="30" value="{{ user.first_name }}"
+                        type="text" class="validate" required>
                     <label for="first_name">First Name</label>
                 </div>
             </div>
@@ -23,9 +21,8 @@
                 <!-- Last Name -->
                 <div class="input-field col s12">
                     <i class="fas fa-user prefix left"></i>
-                    <input id="last_name" name="last_name" minlength="5" maxlength="30" 
-                        value="{{ user.last_name }}" type="text" class="validate"
-                        required>
+                    <input id="last_name" name="last_name" minlength="5" maxlength="30" value="{{ user.last_name }}"
+                        type="text" class="validate" required>
                     <label for="last_name">Last Name</label>
                 </div>
             </div>
@@ -33,9 +30,8 @@
                 <!-- Email -->
                 <div class="input-field col s12">
                     <i class="fas fa-envelope prefix left"></i>
-                    <input id="email" name="email" minlength="5" maxlength="30" 
-                        value="{{ user.email }}" type="text" class="validate"
-                        required>
+                    <input id="email" name="email" minlength="5" maxlength="30" value="{{ user.email }}" type="text"
+                        class="validate" required>
                     <label for="email">Email</label>
                 </div>
             </div>
@@ -44,9 +40,8 @@
                 <!-- Username -->
                 <div class="input-field col s12">
                     <i class="fas fa-lock prefix left"></i>
-                    <input id="username" name="username" minlength="5" maxlength="30" 
-                        value="{{ user.username }}" type="text" class="validate"
-                        required>
+                    <input id="username" name="username" minlength="5" maxlength="30" value="{{ user.username }}"
+                        type="text" class="validate" required>
                     <label for="username">Username</label>
                 </div>
             </div>
@@ -55,9 +50,8 @@
                 <!-- Position -->
                 <div class="input-field col s12">
                     <i class="fas fa-user-tag prefix left"></i>
-                    <input id="position" name="position" minlength="5" maxlength="30" 
-                        value="{{ user.position }}" type="text" class="validate"
-                        required>
+                    <input id="position" name="position" minlength="5" maxlength="30" value="{{ user.position }}"
+                        type="text" class="validate" required>
                     <label for="position">Position</label>
                 </div>
             </div>
@@ -70,10 +64,10 @@
                     <label for="is_admin" class="black-text">
                         User
                         {% if user.is_admin == "admin" %}
-                                <input type="checkbox" id="is_admin" name="is_admin" checked>
-                            {% else %}
-                                <input type="checkbox" id="is_admin" name="is_admin">
-                            {% endif %}
+                        <input type="checkbox" id="is_admin" name="is_admin" checked>
+                        {% else %}
+                        <input type="checkbox" id="is_admin" name="is_admin">
+                        {% endif %}
                         <span class="lever"></span>
                         Admin
                     </label>

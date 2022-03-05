@@ -3,7 +3,6 @@
 {% block content %}
 
 
-
 <div class="row">
     <!-- Card panel to display the user form -->
     <div class="col s12 card-panel center-align">
@@ -18,7 +17,7 @@
                         {% for profile in profiles %}
                         <option value="{{ profile.group_name }}">{{ profile.group_name }}</option>
                         {% endfor %}
-                        
+
                     </select>
                     <label for="group_name" aria-label="group_name"><span class="no-show">Group Name</span></label>
                     <br>
@@ -29,8 +28,8 @@
                     <p>Reservation details</p>
                     <!-- Arrival Date -->
                     <div class="input-field s12">
-                        <input id="arrival_date" name="arrival_date" minlength="10"
-                            maxlength="10" type="text" class="datepicker validate" required>
+                        <input id="arrival_date" name="arrival_date" minlength="10" maxlength="10" type="text"
+                            class="datepicker validate" required>
                         <label for="arrival_date">Arrival Date</label>
                     </div>
                     <!-- LOS -->
@@ -45,8 +44,8 @@
                             <option value="confirmed">Confirmed</option>
                             <option value="cancelled">Cancelled</option>
                             <option value="provisional">Provisional</option>
-                          </select>
-                          <label for="status"><span class="no-show">Status</span></label>
+                        </select>
+                        <label for="status"><span class="no-show">Status</span></label>
                     </div>
                     <!-- Board -->
                     <div class="input-field grey lighten-3 s12">
@@ -54,8 +53,8 @@
                             <option value="" selected>Select Board</option>
                             <option value="BB">BB</option>
                             <option value="DBB">DBB</option>
-                          </select>
-                          <label for="board"><span class="no-show">Board</span></label>
+                        </select>
+                        <label for="board"><span class="no-show">Board</span></label>
                     </div>
                     <!-- Porterage -->
                     <div class="input-field grey lighten-3 s12">
@@ -64,34 +63,30 @@
                             <option value="no">NO</option>
                             <option value="one-way">ONE WAY</option>
                             <option value="return">RETURN</option>
-                          </select>
-                          <label for="porterage"><span class="no-show">Porterage</span></label>
+                        </select>
+                        <label for="porterage"><span class="no-show">Porterage</span></label>
                     </div>
                 </div>
-                        <div class="col l3 m6 s12">
+                <div class="col l3 m6 s12">
                     <p>Room Configuration</p>
                     <!-- Single Room-->
                     <div class="input-field">
-                        <input id="single_room" name="single_room" type="number"
-                             class="validate room" required>
+                        <input id="single_room" name="single_room" type="number" class="validate room" required>
                         <label for="single_room">Single Rooms</label>
                     </div>
                     <!-- Double Room-->
                     <div class="input-field">
-                        <input id="double_room" name="double_room" type="number"
-                            class="s6 validate room" required>
+                        <input id="double_room" name="double_room" type="number" class="s6 validate room" required>
                         <label for="double_room">Double Rooms</label>
                     </div>
                     <!-- Twin Room-->
                     <div class="input-field s12">
-                        <input id="twin_room" name="twin_room" type="text" class="validate room"
-                            required>
+                        <input id="twin_room" name="twin_room" type="text" class="validate room" required>
                         <label for="twin_room">Twin Rooms</label>
                     </div>
                     <!-- Triple Room-->
                     <div class="input-field s12">
-                        <input id="triple_room" name="triple_room" type="text" class="validate room"
-                            required>
+                        <input id="triple_room" name="triple_room" type="text" class="validate room" required>
                         <label for="triple_room">Triple Rooms</label>
                     </div>
                     <!-- Total Rooms-->
@@ -104,26 +99,22 @@
                     <p>Room Rates</p>
                     <!-- Single Rate -->
                     <div class="input-field">
-                        <input id="single_rate" name="single_rate" type="text"
-                            class="validate" required>
+                        <input id="single_rate" name="single_rate" type="text" class="validate" required>
                         <label for="single_rate">Single Rates</label>
                     </div>
                     <!-- Double Rate -->
                     <div class="input-field">
-                        <input id="double_rate" name="double_rate" type="text"
-                            class="s6 validate" required>
+                        <input id="double_rate" name="double_rate" type="text" class="s6 validate" required>
                         <label for="double_rate">Double Rates</label>
                     </div>
                     <!-- Twin Rate -->
                     <div class="input-field">
-                        <input id="twin_rate" name="twin_rate" type="text" class="validate"
-                            required>
+                        <input id="twin_rate" name="twin_rate" type="text" class="validate" required>
                         <label for="twin_rate">Twin Rates</label>
                     </div>
                     <!-- Triple Rate -->
                     <div class="input-field s12">
-                        <input id="triple_rate" name="triple_rate" type="text" class="validate"
-                        required>
+                        <input id="triple_rate" name="triple_rate" type="text" class="validate" required>
                         <label for="triple_rate">Triple Rates</label>
                     </div>
                     <!-- PAX -->
@@ -144,7 +135,8 @@
             <div class="row">
                 <!-- Submit button -->
                 <div class="col s12 center-align">
-                    <a href="{{ url_for('reservations.get_reservations') }}" class="btn-large red darken-3 text-shadow">Cancel
+                    <a href="{{ url_for('reservations.get_reservations') }}"
+                        class="btn-large red darken-3 text-shadow">Cancel
                         <i class="fas fa-times-square left"></i>
                     </a>
                     <button class="btn-large light-blue darken-3 text-shadow" type="submit">

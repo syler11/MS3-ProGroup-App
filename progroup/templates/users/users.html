@@ -3,7 +3,6 @@
 {% block content %}
 
 
-
 <div class="row">
     <div class="col s12 card-panel">
         <div class="col s4">
@@ -22,8 +21,8 @@
         <ul class="users">
             <!-- User details -->
             <strong>{{ user.first_name }} {{ user.last_name }}</strong>
-            <a href="{{ url_for('users.edit_user', user_id=user._id) }}"><span class="no-show">edit</span><i class="far fa-edit right tooltipped"
-                    data-position="top" data-tooltip="Edit" aria-label="edit">
+            <a href="{{ url_for('users.edit_user', user_id=user._id) }}"><span class="no-show">edit</span><i
+                    class="far fa-edit right tooltipped" data-position="top" data-tooltip="Edit" aria-label="edit">
                 </i></a>
             <button data-target="deleteUser{{ user._id }}" class="right modal-trigger" aria-label="delete"><i
                     class="far fa-trash-alt right tooltipped" data-position="top" data-tooltip="Delete"></i>

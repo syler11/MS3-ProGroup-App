@@ -3,34 +3,34 @@
 {% block content %}
 
 
-
 <div class="row">
-    <div class="col s12 card-panel">
-        <div class="col s4">
-            <h4>Account</h4>
-        </div>
-        <div class="col s8 right">
-        </div>
+  <div class="col s12 card-panel">
+    <div class="col s4">
+      <h4>Account</h4>
     </div>
+    <div class="col s8 right">
+    </div>
+  </div>
 
-    <div class="card-panel col offset-l3 l6 offset-l3 s12">
-        <ul class="users">
-            <!-- User details -->
-            <strong>{{ user.first_name }} {{ user.last_name }}</strong>
-            <a href="{{ url_for('authentication.edit_account', user_id=user._id) }}"><i class="far fa-edit right tooltipped" data-position="top" data-tooltip="Edit" aria-label="edit"><span class="no-show">Edit User</span></i></a>
-            <hr>
-            <li>Position: {{ user.position }}</li>
-            <li>Email: <a href="mailto:{{user.email }}">{{ user.email }}</a></li>
-            <li>Username: {{ user.username }}</li>
-            <li>Role: 
-                {% if user.is_admin == "admin" %}
-                    admin
-                {% else %}
-                    user
-                {% endif %}
-            </li>
-        </ul>
-    </div>
+  <div class="card-panel col offset-l3 l6 offset-l3 s12">
+    <ul class="users">
+      <!-- User details -->
+      <strong>{{ user.first_name }} {{ user.last_name }}</strong>
+      <a href="{{ url_for('authentication.edit_account', user_id=user._id) }}"><i class="far fa-edit right tooltipped"
+          data-position="top" data-tooltip="Edit" aria-label="edit"><span class="no-show">Edit User</span></i></a>
+      <hr>
+      <li>Position: {{ user.position }}</li>
+      <li>Email: <a href="mailto:{{user.email }}">{{ user.email }}</a></li>
+      <li>Username: {{ user.username }}</li>
+      <li>Role:
+        {% if user.is_admin == "admin" %}
+        admin
+        {% else %}
+        user
+        {% endif %}
+      </li>
+    </ul>
+  </div>
   <!-- Modal Structure for Delete user confirmation -->
   <div id="deleteUser{{ user._id }}" class="modal">
     <div class="modal-content">
@@ -40,8 +40,9 @@
     </div>
     <hr>
     <div class="modal-footer">
-        <button class="modal-close btn-large red">Cancel</button>
-      <a href="{{ url_for('users.delete_user', user_id=user._id) }}" class="modal-close waves-effect waves-green light-blue btn-large">Delete</a>
+      <button class="modal-close btn-large red">Cancel</button>
+      <a href="{{ url_for('users.delete_user', user_id=user._id) }}"
+        class="modal-close waves-effect waves-green light-blue btn-large">Delete</a>
     </div>
   </div>
 
