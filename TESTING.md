@@ -503,7 +503,7 @@ Step 1 | [Desktop Result](progroup/static/pictures/testing/message_sent_desktop.
 ### Actual result 8-1
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
-Step 1 | [Desktop Result](progroup/static/pictures/testing/acount_page_desktop.png)  | [Tablet Result](progroup/static/pictures/testing/acount_page_tablet.png) |[Mobile Result](progroup/static/pictures/testing/acount_page_mobile.png) | Passed |
+Step 1 | [Desktop Result](progroup/static/pictures/testing/account_page_desktop.png)  | [Tablet Result](progroup/static/pictures/testing/account_page_tablet.png) |[Mobile Result](progroup/static/pictures/testing/account_page_mobile.png) | Passed |
 <br>
 
 ### User Story 8-2   
