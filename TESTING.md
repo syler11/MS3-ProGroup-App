@@ -611,14 +611,13 @@ errors/404.html | 0 errors and 0 contrast errors | [Results](progroup/static/pic
 profiles/add_profile.html | 0 errors and 0 contrast errors | [Results](progroup/static/pictures/wave_accessibility_validation/add_profile_html_validation.png)  
 profiles/edit_profile.html | 0 errors and 0 contrast errors | [Results](progroup/static/pictures/wave_accessibility_validation/edit_profile_html_validation.png)  
 profiles/profiles.html | 0 errors and 0 contrast errors | [Results](progroup/static/pictures/wave_accessibility_validation/profiles_html_validation.png)  
-reservations/add_reservation.html | 5 errors and 0 contrast errors (Note: these errors came from the built in materialize dropdown menu and datepicker  
-function which are not in my control) | [Results](progroup/static/pictures/wave_accessibility_validation/add_reservation_html_validation.png)  
-reservations/edit_reservation.html | 5 errors and 0 contrast errors (Note: these errors came from the built in materialize dropdown menu and datepicker  
-function which are not in my control) | [Results](progroup/static/pictures/wave_accessibility_validation/edit_reservation_html_validation.png)  
+reservations/add_reservation.html | 5 errors and 0 contrast errors *See Note | [Results](progroup/static/pictures/wave_accessibility_validation/add_reservation_html_validation.png)  
+reservations/edit_reservation.html | 5 errors and 0 contrast errors *See Note | [Results](progroup/static/pictures/wave_accessibility_validation/edit_reservation_html_validation.png)  
 reservations/reservations.html | 0 errors and 0 contrast errors | [Results](progroup/static/pictures/wave_accessibility_validation/reservations_html_validation.png) 
 users/add_user.html | 0 errors and 0 contrast errors | [Results](progroup/static/pictures/wave_accessibility_validation/add_user_html_validation.png)  
 users/edit_user.html | 0 errors and 0 contrast errors | [Results](progroup/static/pictures/wave_accessibility_validation/edit_user_html_validation.png)  
 users/users.html | 0 errors and 0 contrast errors | [Results](progroup/static/pictures/wave_accessibility_validation/users_html_validation.png)
+* (Note: these errors came from the built in materialize dropdown menu and datepicker function which are not in my control)
 
 ## JSHint
 * JSHint(https://jshint.com/) was used to analyse the Javascript files
