@@ -169,11 +169,16 @@ The website contains 18 pages in a logical structure, information and purpose.
 - The website is a data-centric one with html, javascript, css used with the materialize framework as a frontend
 - The backend consists of Python, flask and jinja templates with a database of a mongodb open-source document-oriented database
 
-#### Conceptual Database
+### Conceptual Database
+Once I designed the conceptual database model it help to have a better understanding of database strucutre and their realations between them. 
+
+![Conceptual database model](progroup/static/pictures/databases/conceptual_database_model.png)
 
 ### Physical Database Model
+With the conceptual database model in place I created the physical database model.  
+The model is the exact copy of the MongoDB collection data structure and name fields.
 
-![Users](progroup/static/pictures/databases/database_model.png)
+![Physical database model](progroup/static/pictures/databases/database_model.png)
 
 
 #### MongoDB Database Information
