@@ -260,16 +260,16 @@ Page | Wireframe |
 ------------ | ------------- 
 Login | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_login.png)
 Reservations | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_reservations.png)
-Add Reservations | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_addReservations.png)
-Edit Reservations | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_editReservations.png)
+Add Reservations | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_addReservation.png)
+Edit Reservations | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_editReservation.png)
 Profiles | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_profiles.png)
-Add Profiles | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_addProfiles.png)
-Edit Profiles | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_editProfiles.png)
+Add Profiles | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_addProfile.png)
+Edit Profiles | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_editProfile.png)
 Users | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_users.png)
-Add Users | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_addUsers.png)
-Edit Users | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_editUsers.png)
+Add Users | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_addUser.png)
+Edit Users | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_editUser.png)
 Help | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_help.png)
-Help | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_account.png)
+Account | [Desktop/Tablet/Mobile](progroup/static/pictures/wireframes/wireframe_account.png)
 
 ## Surface
 
