@@ -501,6 +501,7 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 8. Adding customized items to reservation e.g. Dinner including net value and VAT
 9. Summary report to hotel owners in pdf format
 10. Make that group_selected variable dynamic (see comment on the reservation/route.py file line 147-152)
+11. Repo was forked to work on future implementation and fulfill CI requirements and do not commit after submission
  
 
 
