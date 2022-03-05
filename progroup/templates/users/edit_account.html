@@ -7,8 +7,8 @@
 <div class="row">
     <!-- Card panel to display the user form -->
     <div class="col offset-l3 l6 offset-l3 s12 card-panel center-align">
-        <h4>Edit User</h4>
-        <form class="col s12" method="POST" action="{{ url_for('users.edit_user', user_id=user._id) }}">
+        <h4>Edit Account</h4>
+        <form class="col s12" method="POST" action="{{ url_for('authentication.edit_account', user_id=user._id) }}">
             <div class="row">
                 <!-- First Name -->
                 <div class="input-field col s12">

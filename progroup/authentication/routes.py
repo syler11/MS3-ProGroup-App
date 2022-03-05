@@ -1,5 +1,6 @@
 from flask import (
     flash, render_template, redirect, request, session, url_for, Blueprint)
+from bson.objectid import ObjectId
 from werkzeug.security import check_password_hash
 from progroup import mongo
 
@@ -86,3 +87,45 @@ def account():
                            stat1=stat1,
                            stat2=stat2,
                            stat3=stat3)
+
+
+@authentication.route("/edit_account/<user_id>", methods=["GET", "POST"])
+def edit_account(user_id):
+    """
+    Render edit_account.html page after the user clicked on the edit button
+    once all changes are entered in the input fields the selected documents
+    values will be updated by clicking on the Save Changes button or Abort the
+    process with the Cancel button and return to gaccount.html page
+    :return render_template of account.html page
+    """
+
+    # Check the user is logged in
+    if 'user' not in session:
+        return redirect(url_for("authentication.login"))
+
+    if request.method == "POST":
+        is_admin = "admin" if request.form.get("is_admin") else "user"
+        updated_user = {"$set": {
+            "first_name": request.form.get('first_name'),
+            "last_name": request.form.get('last_name'),
+            "email": request.form.get('email'),
+            "position": request.form.get('position'),
+            "is_admin": is_admin
+        }
+        }
+
+        mongo.db.users.update_one({"_id": ObjectId(user_id)}, updated_user)
+        flash("Account Updated")
+        return redirect(url_for("authentication.account"))
+
+    total = "Total Users: " + str(mongo.db.users.count_documents({}))
+    stat1 = "Admins: " + str(mongo.db.users.count_documents(
+        {"is_admin": "admin"}))
+    stat2 = "Users: " + str(mongo.db.users.count_documents(
+        {"is_admin": "user"}))
+    user = mongo.db.users.find_one({"_id": ObjectId(user_id)})
+    return render_template("users/edit_account.html",
+                           total=total,
+                           stat1=stat1,
+                           stat2=stat2,
+                           user=user)
