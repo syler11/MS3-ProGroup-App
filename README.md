@@ -456,9 +456,9 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 - The process is straightforward when the full name and email address and message filled the email can be sent with the send button.
 - Flash message will confirm that message was sent. 
 
-#### Add User Desktop
+#### Email Sent Desktop
 ![Email sent desktop](progroup/static/pictures/testing/email_sent_desktop.png)
-#### Add User Mobile
+#### Email Sent Mobile
 ![Email sent mobile](progroup/static/pictures/testing/email_sent_mobile.png)
 
 #### User Stories Feature Seven
@@ -466,6 +466,19 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 
 ### Feature Eight Account
 #### Description Feature Eight
+- User can access their basic profile information.
+- All information displayed can be update byclicking on the edit (pen & envelope) symbol. 
+- All changes executed by the user will be saved. 
+
+#### Account Page Desktop
+![Account Page desktop](progroup/static/pictures/testing/account_page_desktop.png)
+#### Account Page Mobile
+![Account Page mobile](progroup/static/pictures/testing/account_page_mobile.png)
+#### Account Updated Desktop
+![Account updated desktop](progroup/static/pictures/testing/account_updated_desktop.png)
+#### Account Updated Mobile
+![Account updated mobile](progroup/static/pictures/testing/account_updated_mobile.png)
+
 #### User Stories Feature Eight
 -	User Story 8.1: Account – As an admin user I can see my account information such as Full Name, Position, Email, Username and Role   
 -	User Story 8.2: Edit Account – As an admin user I can edit my account information such as Full Name, Position, Email, Username when clicking on the Save Changes  
