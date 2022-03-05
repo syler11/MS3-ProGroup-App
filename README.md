@@ -245,9 +245,11 @@ The user stories for the website owner(admin user) are described as follows: The
 -	User Story 5.1: Add Profile - As an admin user I can add a new profile by typing a Group name, Contact name, Contact Email, Contact Phone, Line Address, City, Post Code, Country, when clicking on the add profile the page would redirect to Profiles and the new reservation would be added  
 -	User Story 5.2: Edit Profile - As an admin user I can edit an existing profile by updating any Group name, Contact name, Contact Email, Contact Phone, Line Address, City, Post Code, Country, when clicking on the edit profile the page would redirect to profiles and the profiles would be updated  
 -	User Story 5.3: Delete Profile - As an admin user I can delete a profile by confirming I want to delete  
+- User Story 5.4: View Profiles - As an admin or regular user I can see existing profiles by navigating to the Profiles page
 -	User Story 6.1: Add User - As an admin user I can add a new user by typing a First name, Last name, Email, Password, Position, and select either user or admin for the Role, when clicking on the add user the page would redirect to Users and the new reservation would be added  
 -	User Story 6.2: Edit User - As an admin user I can edit an existing user by updating any First name, Last name, Email, Password, Position, and select either user or admin for the Role, when clicking on the edit profile the page would redirect to profiles and the user would be updated  
 -	User Story 6.3: Delete Profile - As an admin user I can delete a user by confirming I want to delete  
+- User Story 6.4: View Users - As an admin user I can see existing users by navigating to the users page
 -	User Story 7.1: Help – As an admin user I can send an email to the admin by clicking on the Help button in the navbar and filling up the Name, Email address and Message and click on Send Message  
 -	User Story 8.1: Account – As an admin user I can see my account information such as Full Name, Position, Email, Username and Role   
 -	User Story 8.2: Edit Account – As an admin user I can edit my account information such as Full Name, Position, Email, Username when clicking on the Save Changes   
@@ -426,12 +428,12 @@ The Roboto font is the main font used throughout the whole website with Sans Ser
 -	User Story 5.3: Delete Profile - As an admin user I can delete a profile by confirming I want to delete
 -	User Story 5.4: View Profile - As an admin user I can see all the existing Profiles by navigating to the Profiles page
 
-### Feature Six Users
+### Feature Six Users (admin users only)
 #### Description Feature Six
-- Users can add user to the database by entering all the mandatory fields and clicking the add user button. 
-- Users can edit existing reservations by clicking the edit (pen & envelope) icon.
-- Users can delete existing user by clicking the delete (trash can) icon.
-- Users can check existing users by navigating to the users page
+- Admin users can add user to the database by entering all the mandatory fields and clicking the add user button. 
+- Admin users can edit existing reservations by clicking the edit (pen & envelope) icon.
+- Admin users can delete existing user by clicking the delete (trash can) icon.
+- Admin users can check existing users by navigating to the users page
 
 #### Add User Desktop
 ![Add User desktop](progroup/static/pictures/testing/add_user_desktop.png)

@@ -396,8 +396,8 @@ Step 2 | [Desktop Result](progroup/static/pictures/testing/profile_updated_deskt
 1. An admin or regular users would click on the delete symbol on the required profile and then confirmation panel would
 2. By clicking on the delete button the profile would be moved from the database
 ### Expected result 5-3
-1. Delete confirmation panel appear
-2. Profile is deleted from the database
+1. Delete confirmation panel would appear
+2. After clicking delete the profile is deleted from the database
 ### Actual result 5-3
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
@@ -406,7 +406,7 @@ Step 2 | [Desktop Result](progroup/static/pictures/testing/profile_deleted_deskt
 <br>
 
 ### User Story 5-4 
--	User Story 4-4: View Profiles - As an admin or regular user I can see existing profiles by navigating to the Profiles page
+-	User Story 5-4: View Profiles - As an admin or regular user I can see existing profiles by navigating to the Profiles page
 ### Test case steps 5-4
 1. An admin or regular users would navigate t the Profiles page
 ### Expected result 5-4
@@ -456,8 +456,8 @@ Step 2 | [Desktop Result](progroup/static/pictures/testing/user_updated_desktop.
 1. An admin user would click on the delete symbol on the required user and then confirmation panel would appear
 2. By clicking on the delete button the user would be moved from the database
 ### Expected result 6-3
-1. Delete confirmation panel appear
-2. User is deleted from the database
+1. Delete confirmation panel would appear
+2. After clicking delete the user is deleted from the database
 ### Actual result 6-3
 Step Number | Desktop | Tablet | Mobile | Result 
 ------------ | ------------ | ------------- | ------------- | ------------- |
@@ -466,7 +466,7 @@ Step 2 | [Desktop Result](progroup/static/pictures/testing/user_deleted_desktop.
 <br>
 
 ### User Story 6-4 
--	User Story 4-4: View Users - As an admin user I can see existing users by navigating to the users page
+-	User Story 6-4: View Users - As an admin user I can see existing users by navigating to the users page
 ### Test case steps 6-4
 1. An admin user I would navigate to the users page
 ### Expected result 6-4
