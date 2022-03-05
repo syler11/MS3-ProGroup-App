@@ -26,6 +26,7 @@ Login for user: username: nikolett password:
     + [Code structure](#code-structure)
     + [Database](#database)
     + [Conceptual Database](#conceptual-database)
+    + [Physical Database](#conceptual-database)
     + [MongoDB Database Information](#mongodb-database-information)
   * [Scope](#scope)
     + [User Stories](#user-stories)
@@ -174,7 +175,7 @@ Once I designed the conceptual database model it help to have a better understan
 
 ![Conceptual database model](progroup/static/pictures/databases/conceptual_database_model.png)
 
-### Physical Database Model
+### Physical Database
 With the conceptual database model in place I created the physical database model.  
 The model is the exact copy of the MongoDB collection data structure and name fields.
 
